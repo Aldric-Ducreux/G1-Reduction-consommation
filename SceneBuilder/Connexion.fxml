@@ -13,29 +13,29 @@
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <MenuBar VBox.vgrow="NEVER" />
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="504.0" prefWidth="728.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="365.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
       <children>
-            <Label layoutX="265.0" layoutY="50.0" prefHeight="32.0" prefWidth="111.0" text="Connexion" textAlignment="CENTER">
+            <Label layoutX="265.0" layoutY="48.0" prefHeight="32.0" prefWidth="111.0" text="Connexion" textAlignment="CENTER">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Label layoutX="109.0" layoutY="116.0" text="Identifiant">
+            <Label layoutX="110.0" layoutY="129.0" text="Identifiant">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="89.0" layoutY="164.0" prefHeight="26.0" prefWidth="111.0" text="Mot de passe">
+            <Label layoutX="90.0" layoutY="187.0" prefHeight="26.0" prefWidth="111.0" text="Mot de passe">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <TextField id="Connexion_TF_ID" layoutX="206.0" layoutY="115.0" prefHeight="26.0" prefWidth="293.0" promptText="Identifiant">
+            <TextField id="Connexion_TF_ID" layoutX="207.0" layoutY="128.0" prefHeight="26.0" prefWidth="293.0" promptText="Identifiant">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Button id="Connexion_BT_Connexion" accessibleText="t*" contentDisplay="CENTER" layoutX="184.0" layoutY="254.0" mnemonicParsing="false" text="Connexion">
+            <Button id="Connexion_BT_Connexion" accessibleText="t*" contentDisplay="CENTER" layoutX="174.0" layoutY="270.0" mnemonicParsing="false" text="Connexion">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -43,7 +43,7 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button id="Connexion_BT_Inscription" contentDisplay="CENTER" layoutX="375.0" layoutY="254.0" mnemonicParsing="false" text="Inscription">
+            <Button id="Connexion_BT_Inscription" contentDisplay="CENTER" layoutX="382.0" layoutY="270.0" mnemonicParsing="false" text="Inscription">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -51,7 +51,7 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <PasswordField id="Connexion_TF_MDP" layoutX="206.0" layoutY="164.0" prefHeight="26.0" prefWidth="294.0" promptText="Mot de passe" />
+            <PasswordField id="Connexion_TF_MDP" layoutX="206.0" layoutY="187.0" prefHeight="26.0" prefWidth="294.0" promptText="Mot de passe" />
       </children>
          <cursor>
             <Cursor fx:constant="HAND" />
