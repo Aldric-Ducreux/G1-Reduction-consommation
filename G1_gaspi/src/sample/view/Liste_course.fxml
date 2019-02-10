@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="404.0" prefWidth="640.0">
+         <children>
+            <AutoCompleteTextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher" style="-fx-background-color: #e6e8ed;" />
+            <Button layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
+            <TableView layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
+              <columns>
+                <TableColumn prefWidth="266.4000244140625" text="Produits" />
+                  <TableColumn minWidth="0.0" prefWidth="127.20001220703125" text="Quantité" />
+                  <TableColumn minWidth="0.0" prefWidth="165.5999755859375" text="Modification" />
+                  <TableColumn minWidth="0.0" prefWidth="56.800048828125" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
