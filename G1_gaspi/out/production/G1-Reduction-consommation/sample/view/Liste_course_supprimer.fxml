@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="299.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="209.0" prefWidth="522.0" VBox.vgrow="ALWAYS">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Button blendMode="HARD_LIGHT" layoutX="486.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="36.0" style="-fx-background-color: #dbf0fa;" text="X" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Spinner editable="true" layoutX="248.0" layoutY="92.0" prefHeight="26.0" prefWidth="63.0" />
+            <DatePicker layoutX="333.0" layoutY="92.0" promptText="Date limite" />
+            <Button layoutX="360.0" layoutY="141.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
+            <Label layoutX="26.0" layoutY="64.0" prefHeight="18.0" prefWidth="63.0" text="Produit ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="248.0" layoutY="65.0" text="Quantité">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="333.0" layoutY="65.0" text="Date limite de consommation">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="25.0" prefHeight="26.0" prefWidth="341.0" text="Ajout du produit dans Mes Produits">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="94.0" prefHeight="22.0" prefWidth="185.0" text="Placeholder">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="190.0" prefHeight="26.0" prefWidth="341.0" text="Suppression du produit">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="360.0" layoutY="229.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Supprimer" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
