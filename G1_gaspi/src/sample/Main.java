@@ -13,22 +13,22 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader();
 
         //create controller
-        Controller controller = new Controller();
+        ConnexionController controller_connexion = new ConnexionController();
 
         //attach controller
-        loader.setController();
+        loader.setController(controller_connexion);
 
         //attach xml
-        Parent root = loader.load(getClass().getResourceAsStream(View.XML_FILE));
+        Parent root = loader.load(getClass().getResourceAsStream(View.XML_FILE_Connex));
 
         //attach css
-        root.getStylesheets().add(View.CSS);
+        //root.getStylesheets().add(View.CSS);
 
         //init controller
-        controller.init();
+        controller_connexion.initConnexion(primaryStage);
 
         //display view
-        primaryStage.setTitle(View.LABEL);
+        primaryStage.setTitle(View.LABEL_Insc);
         primaryStage.setScene(new Scene(root,View.WIDTH, View.HEIGHT));
         primaryStage.show();
     }
