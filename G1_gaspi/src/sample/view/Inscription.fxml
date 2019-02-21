@@ -38,26 +38,26 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button id="Inscription_BT_Inscription" layoutX="119.0" layoutY="455.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="102.0" text="Inscription">
+            <Button fx:id="Inscription_BT_Inscription" layoutX="119.0" layoutY="455.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="102.0" text="Inscription">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button id="Inscription_BT_Retour" cache="true" layoutX="296.0" layoutY="455.0" prefHeight="32.0" prefWidth="67.0" text="Retour">
+            <Button fx:id="Inscription_BT_Retour" cache="true" layoutX="296.0" layoutY="455.0" prefHeight="32.0" prefWidth="67.0" text="Retour">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <CheckBox id="Inscription_CB_Conditions" layoutX="39.0" layoutY="397.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="365.0" text="J'ai lu et j'accepte les conditions générales d'utilisateur">
+            <CheckBox fx:id="Inscription_CB_Conditions" layoutX="39.0" layoutY="397.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="365.0" text="J'ai lu et j'accepte les conditions générales d'utilisateur">
                <font>
                   <Font size="14.0" />
                </font>
             </CheckBox>
-            <TextField id="Inscription_TF_ID" layoutX="67.0" layoutY="107.0" prefHeight="26.0" prefWidth="277.0" />
-            <PasswordField id="Inscription_TF_MDP" layoutX="67.0" layoutY="247.0" prefHeight="26.0" prefWidth="278.0" />
-            <PasswordField id="Inscription_TF_MDPV" layoutX="67.0" layoutY="318.0" prefHeight="26.0" prefWidth="278.0" />
-            <TextField id="Inscription_TF_Mail" layoutX="67.0" layoutY="177.0" prefHeight="26.0" prefWidth="278.0" />
-            <Button id="Inscription_BT_Conditions" layoutX="404.0" layoutY="391.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" text="Lire" />
+            <TextField fx:id="Inscription_TF_ID" layoutX="67.0" layoutY="107.0" prefHeight="26.0" prefWidth="277.0" />
+            <PasswordField fx:id="Inscription_TF_MDP" layoutX="67.0" layoutY="247.0" prefHeight="26.0" prefWidth="278.0" />
+            <PasswordField fx:id="Inscription_TF_MDPV" layoutX="67.0" layoutY="318.0" prefHeight="26.0" prefWidth="278.0" />
+            <TextField fx:id="Inscription_TF_Mail" layoutX="67.0" layoutY="177.0" prefHeight="26.0" prefWidth="278.0" />
+            <Button fx:id="Inscription_BT_Conditions" layoutX="404.0" layoutY="391.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" text="Lire" />
       </children>
     </AnchorPane>
   </children>
