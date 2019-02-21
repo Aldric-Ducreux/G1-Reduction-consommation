@@ -33,6 +33,7 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
+          <PasswordField fx:id="Connexion_TF_MDP" layoutX="185.0" layoutY="171.0" prefHeight="26.0" prefWidth="294.0" promptText="Mot de passe" />
             <Button fx:id="Connexion_BT_Connexion" accessibleText="t*" contentDisplay="CENTER" layoutX="126.0" layoutY="247.0" mnemonicParsing="false" text="Connexion">
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -49,7 +50,6 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <PasswordField fx:id="Connexion_TF_MDP" layoutX="185.0" layoutY="171.0" prefHeight="26.0" prefWidth="294.0" promptText="Mot de passe" />
       </children>
          <cursor>
             <Cursor fx:constant="HAND" />
