@@ -6,10 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import sun.plugin.javascript.navig.Anchor;
+
+import javax.xml.soap.Node;
 import javax.xml.soap.Text;
 import java.io.IOException;
+import java.util.Collection;
 
 public class MenuController {
     private Stage primaryStage;
@@ -27,12 +32,27 @@ public class MenuController {
     private Button MonCompte;
     @FXML
     private VBox Fenetre;
+    @FXML
+    private AnchorPane Content;
 
 
-    public void initMenu(Stage primaryStage)  throws Exception {
+    public void initMenu(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
         primaryStage.setHeight(Fenetre.getPrefHeight());
+        fillAnchorContent();
     }
 
+    public void fillAnchorContent() throws Exception{
+        //Affichage du contenu dans l'AnchorPane
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Produits));
+        MesProduitsController controller_produits = new MesProduitsController();
+        loader.setController(controller_produits);
+        try {
+            VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Produits));
+            Content.getChildren().setAll(newPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

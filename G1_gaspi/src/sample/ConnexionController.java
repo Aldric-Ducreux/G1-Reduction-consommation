@@ -75,7 +75,6 @@ public class ConnexionController {
             controller_inscription.initInscription(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -91,8 +90,6 @@ public class ConnexionController {
             controller_menu.initMenu(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);
-            primaryStage.setHeight(primaryStage.getHeight());
-            primaryStage.setWidth(primaryStage.getWidth());
         } catch (IOException e) {
             e.printStackTrace();
         }
