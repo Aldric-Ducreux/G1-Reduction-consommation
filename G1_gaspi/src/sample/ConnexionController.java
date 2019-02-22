@@ -10,6 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import sun.security.util.Password;
 
@@ -36,6 +37,10 @@ public class ConnexionController {
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
         primaryStage.setHeight(Fenetre.getPrefHeight());
+        //Replace la fenétre au centre de l'écran de l'utilisateur
+        javafx.geometry.Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+        primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
+        primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
         TextIncorrect.setVisible(false);
         //Event en cas de clic sur le bouton de connexion
         Connexion_BT_Connexion.setOnMouseClicked( event ->{

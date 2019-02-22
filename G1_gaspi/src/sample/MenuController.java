@@ -9,11 +9,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import sun.plugin.javascript.navig.Anchor;
-
 import javax.xml.soap.Node;
 import javax.xml.soap.Text;
+import java.awt.geom.Rectangle2D;
 import java.io.IOException;
 import java.util.Collection;
 
@@ -42,6 +43,11 @@ public class MenuController {
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
         primaryStage.setHeight(Fenetre.getPrefHeight());
+        //Replace la fenétre au centre de l'écran de l'utilisateur
+        javafx.geometry.Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+        primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
+        primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
+
         MenuNameBlue(MesProduits);
         fillAnchorContent();
     }

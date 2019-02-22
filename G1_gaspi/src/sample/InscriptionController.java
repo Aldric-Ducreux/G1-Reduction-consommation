@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javax.xml.soap.Text;
 import java.io.IOException;
@@ -41,6 +42,10 @@ public class InscriptionController {
         //On change la taille de la fenétre pour qu'elle corresponde à la taille attendue
         primaryStage.setWidth(Fenetre.getPrefWidth());
         primaryStage.setHeight(Fenetre.getPrefHeight());
+        //Replace la fenétre au centre de l'écran de l'utilisateur
+        javafx.geometry.Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+        primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
+        primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
         //On cache le message d'erreur
         TextIncorrect.setVisible(false);
         //Event si clic sur le bouton "Inscription"
