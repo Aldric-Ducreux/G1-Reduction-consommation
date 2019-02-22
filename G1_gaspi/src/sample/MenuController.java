@@ -181,13 +181,14 @@ public class MenuController {
     }
 
     public void MenuNameBlue(Button boutton){
-        //Change le nom du menu actuellement en cours d'utilisation en bleu
+        //Change le nom de tout les menus en noir
         MesProduits.setTextFill(Color.BLACK);
         Historique.setTextFill(Color.BLACK);
         MesAmis.setTextFill(Color.BLACK);
         MonCompte.setTextFill(Color.BLACK);
         Annonces.setTextFill(Color.BLACK);
         ListeDeCourse.setTextFill(Color.BLACK);
+        //Change le nom du menu actuellement en cours d'utilisation uniquement en bleu
         boutton.setTextFill(Color.BLUE);
     }
 }
