@@ -23,7 +23,7 @@ public class Main extends Application {
         controller_connexion.initConnexion(primaryStage);
         //display view
         primaryStage.setTitle(View.LABEL_Insc);
-        primaryStage.setScene(new Scene(root,View.WIDTH, View.HEIGHT));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
