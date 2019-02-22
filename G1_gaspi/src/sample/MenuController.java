@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import sun.plugin.javascript.navig.Anchor;
 
@@ -40,6 +41,7 @@ public class MenuController {
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
         primaryStage.setHeight(Fenetre.getPrefHeight());
+        MenuNameBlue(MesProduits);
         fillAnchorContent();
     }
 
@@ -54,5 +56,9 @@ public class MenuController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void MenuNameBlue(Button boutton){
+        boutton.setTextFill(Color.BLUE);
     }
 }
