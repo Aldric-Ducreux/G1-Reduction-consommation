@@ -12,9 +12,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import sun.security.util.Password;
-
-import javax.xml.soap.Text;
 import java.io.IOException;
 
 public class ConnexionController {
@@ -78,12 +75,12 @@ public class ConnexionController {
 
     public void InscriptionStage() throws  Exception{
         //Affichage de la page d'inscription
-        String fxmlFile = "/view/Inscription.fxml";
+        String fxmlFile = View.XML_FILE_Insc;
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
         InscriptionController controller_inscription = new InscriptionController();
         loader.setController(controller_inscription);
         try {
-            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Insc));
+            Parent page = loader.load(getClass().getResourceAsStream(fxmlFile));
             controller_inscription.initInscription(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);

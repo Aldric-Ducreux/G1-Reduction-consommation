@@ -9,7 +9,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import javax.xml.soap.Text;
 import java.io.IOException;
 
 
@@ -112,12 +111,12 @@ public class InscriptionController {
 
     public void ConnexionStage()throws  Exception{
         //Changement de la page pour afficher la page de connexion
-        String fxmlFile = "/view/Connexion.fxml";
+        String fxmlFile = View.XML_FILE_Connex;
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
         ConnexionController controller_connexion = new ConnexionController();
         loader.setController(controller_connexion);
         try {
-            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Connex));
+            Parent page = loader.load(getClass().getResourceAsStream(fxmlFile));
             controller_connexion.initConnexion(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);
