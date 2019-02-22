@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<!--<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>-->
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -12,7 +12,7 @@
    <children>
       <AnchorPane prefHeight="404.0" prefWidth="640.0">
          <children>
-            <AutoCompleteTextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher un ami" style="-fx-background-color: #e6e8ed;" />
+            <!--<AutoCompleteTextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher un ami" style="-fx-background-color: #e6e8ed;" />-->
             <Button layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter un ami" />
             <ListView editable="true" layoutX="14.0" layoutY="78.0" prefHeight="308.0" prefWidth="146.0" />
             <ListView editable="true" layoutX="175.0" layoutY="78.0" prefHeight="308.0" prefWidth="454.0" />
