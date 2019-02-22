@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="358.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="Fenetre" prefHeight="358.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="359.0" prefWidth="590.0" VBox.vgrow="ALWAYS">
       <children>
@@ -50,6 +50,11 @@
                   <Font size="15.0" />
                </font>
             </Button>
+          <Label fx:id ="TextIncorrect" layoutX="165.0" layoutY="205.0" prefHeight="32.0" prefWidth="250.0" text="Identifiant ou mot de passe incorrect" textAlignment="CENTER">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
       </children>
          <cursor>
             <Cursor fx:constant="HAND" />

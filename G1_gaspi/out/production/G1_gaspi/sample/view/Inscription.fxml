@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="Fenetre" prefHeight="535.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="575.0" VBox.vgrow="ALWAYS">
       <children>
             <Label layoutX="190.0" layoutY="29.0" text="Inscription">
                <font>
@@ -59,6 +59,11 @@
                   <Font size="15.0" />
               </font>
             </Button>
+          <Label fx:id ="TextIncorrect" layoutX="125.0" layoutY="415.0" prefHeight="32.0" prefWidth="350.0" text="Champ incorrect ou conditions non acceptées" textAlignment="CENTER">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
       </children>
     </AnchorPane>
   </children>

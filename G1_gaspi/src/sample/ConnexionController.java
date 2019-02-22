@@ -5,7 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javax.xml.soap.Text;
 import java.io.IOException;
@@ -20,9 +23,16 @@ public class ConnexionController {
     private TextField Connexion_TF_ID;
     @FXML
     private TextField Connexion_TF_MDP;
+    @FXML
+    private Label TextIncorrect;
+    @FXML
+    private VBox Fenetre;
 
     public void initConnexion(Stage primaryStage)  throws Exception {
         this.primaryStage = primaryStage;
+        primaryStage.setWidth(Fenetre.getPrefWidth());
+        primaryStage.setHeight(Fenetre.getPrefHeight());
+        TextIncorrect.setVisible(false);
         Connexion_BT_Connexion.setOnMouseClicked( event ->{
             try {
                 connect(Connexion_TF_ID.getText(),Connexion_TF_MDP.getText());
@@ -40,15 +50,16 @@ public class ConnexionController {
     }
 
     public void connect(String id, String mdp)  throws Exception {
-        if (id.equals("admin") && mdp.equals("admin")){
-            System.out.println("Compte valide");
+        if (id.equals("admin") && mdp.equals("admin")) {
             try {
                 MenuStage();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
-            System.out.println("Compte invalide");}
+            TextIncorrect.setTextFill(Color.RED);
+            TextIncorrect.setVisible(true);
+        }
     }
 
     public void InscriptionStage() throws  Exception{

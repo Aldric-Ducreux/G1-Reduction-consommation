@@ -6,7 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javax.xml.soap.Text;
 import java.io.IOException;
@@ -30,11 +33,16 @@ public class InscriptionController {
     private TextField Inscription_TF_Mail;
     @FXML
     private CheckBox Inscription_CB_Conditions;
-    public void valid(char operation) {
+    @FXML
+    private Label TextIncorrect;
+    @FXML
+    private VBox Fenetre;
 
-    }
     public void initInscription(Stage primaryStage)throws  Exception{
         this.primaryStage = primaryStage;
+        primaryStage.setWidth(Fenetre.getPrefWidth());
+        primaryStage.setHeight(Fenetre.getPrefHeight());
+        TextIncorrect.setVisible(false);
         Inscription_BT_Inscription.setOnMouseClicked( event -> {
             try{
                 inscription(Inscription_TF_ID.getText(),Inscription_TF_MDP.getText(), Inscription_TF_MDPV.getText(), Inscription_TF_Mail.getText(), Inscription_CB_Conditions);
@@ -61,7 +69,8 @@ public class InscriptionController {
 
     public void inscription (String id, String mdp, String mdpv, String mail, CheckBox condition) throws  Exception{
         if (id.isEmpty() || mdp.isEmpty() || mdpv.isEmpty() || mail.isEmpty() || !(condition.isSelected())){
-            System.out.println("Champ vide ou conditions non acceptées");
+            TextIncorrect.setTextFill(Color.RED);
+            TextIncorrect.setVisible(true);
         } else {
             System.out.println("Compte ajouté");
             ConnexionStage();
