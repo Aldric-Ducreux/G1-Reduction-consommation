@@ -72,7 +72,6 @@ public class InscriptionController {
             TextIncorrect.setTextFill(Color.RED);
             TextIncorrect.setVisible(true);
         } else {
-            System.out.println("Compte ajouté");
             ConnexionStage();
         }
     }
