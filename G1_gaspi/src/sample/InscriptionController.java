@@ -36,10 +36,14 @@ public class InscriptionController {
     private VBox Fenetre;
 
     public void initInscription(Stage primaryStage)throws  Exception{
+        //Initialisation de la fenètre d'Inscription
         this.primaryStage = primaryStage;
+        //On change la taille de la fenétre pour qu'elle corresponde à la taille attendue
         primaryStage.setWidth(Fenetre.getPrefWidth());
         primaryStage.setHeight(Fenetre.getPrefHeight());
+        //On cache le message d'erreur
         TextIncorrect.setVisible(false);
+        //Event si clic sur le bouton "Inscription"
         Inscription_BT_Inscription.setOnMouseClicked( event -> {
             try{
                 inscription(Inscription_TF_ID.getText(),Inscription_TF_MDP.getText(), Inscription_TF_MDPV.getText(), Inscription_TF_Mail.getText(), Inscription_CB_Conditions);
@@ -47,6 +51,7 @@ public class InscriptionController {
                 e.printStackTrace();
             }
         });
+        //Event si clic sur le bouton "Lire" des conditions
         Inscription_BT_Conditions.setOnMouseClicked( event -> {
             try{
                 conditions();
@@ -54,6 +59,7 @@ public class InscriptionController {
                 e.printStackTrace();
             }
         });
+        //Event si clic sur le bouton "Retour"
         Inscription_BT_Retour.setOnMouseClicked(event -> {
             try {
                 retour();
@@ -65,6 +71,7 @@ public class InscriptionController {
     }
 
     public void inscription (String id, String mdp, String mdpv, String mail, CheckBox condition) throws  Exception{
+        //En cas de clic sur le bouton inscription
         if (id.isEmpty() || mdp.isEmpty() || mdpv.isEmpty() || mail.isEmpty() || !(condition.isSelected())){
             TextIncorrect.setTextFill(Color.RED);
             TextIncorrect.setVisible(true);
@@ -74,10 +81,12 @@ public class InscriptionController {
     }
 
     public void retour()throws  Exception {
+        //En cas de clic sur le bouton retour
         ConnexionStage();
     }
 
     public void conditions()throws Exception{
+        //En cas de clic sur le bouton "Lire"
         String fxmlFile = "/view/Conditions.fxml";
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
         ConditionsController controller_conditions = new ConditionsController();
@@ -97,6 +106,7 @@ public class InscriptionController {
     }
 
     public void ConnexionStage()throws  Exception{
+        //Changement de la page pour afficher la page de connexion
         String fxmlFile = "/view/Connexion.fxml";
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
         ConnexionController controller_connexion = new ConnexionController();

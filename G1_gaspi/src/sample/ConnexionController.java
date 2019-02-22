@@ -32,10 +32,12 @@ public class ConnexionController {
     private VBox Fenetre;
 
     public void initConnexion(Stage primaryStage)  throws Exception {
+        //Initialisation de la page de Connexionn
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
         primaryStage.setHeight(Fenetre.getPrefHeight());
         TextIncorrect.setVisible(false);
+        //Event en cas de clic sur le bouton de connexion
         Connexion_BT_Connexion.setOnMouseClicked( event ->{
             try {
                 connect(Connexion_TF_ID.getText(),Connexion_TF_MDP.getText());
@@ -43,6 +45,7 @@ public class ConnexionController {
                 e.printStackTrace();
             }
                 });
+        //Event en cas de clic sur le bouton d'Inscription
         Connexion_BT_Inscription.setOnMouseClicked(event -> {
             try {
                 InscriptionStage();
@@ -53,19 +56,23 @@ public class ConnexionController {
     }
 
     public void connect(String id, String mdp)  throws Exception {
+        //Si clic sur le bouton de connection
         if (id.equals("admin") && mdp.equals("admin")) {
+            //Si correct, on affiche la page du Menu
             try {
                 MenuStage();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
+            //Si incorrect, on affiche le texte d'erreur, et le met en rouge
             TextIncorrect.setTextFill(Color.RED);
             TextIncorrect.setVisible(true);
         }
     }
 
     public void InscriptionStage() throws  Exception{
+        //Affichage de la page d'inscription
         String fxmlFile = "/view/Inscription.fxml";
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
         InscriptionController controller_inscription = new InscriptionController();
@@ -81,6 +88,7 @@ public class ConnexionController {
     }
 
     public void MenuStage() throws Exception{
+        //Affichage du menu
         String fxmlFile = "/view/Menu.fxml";
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
         MenuController controller_menu = new MenuController();

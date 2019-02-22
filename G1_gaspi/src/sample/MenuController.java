@@ -38,6 +38,7 @@ public class MenuController {
 
 
     public void initMenu(Stage primaryStage) throws Exception {
+        //Initialisation du Menu
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
         primaryStage.setHeight(Fenetre.getPrefHeight());
@@ -51,6 +52,7 @@ public class MenuController {
         MesProduitsController controller_produits = new MesProduitsController();
         loader.setController(controller_produits);
         try {
+            //On affiche dans l'Anchor pane "Content" le contenu
             VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Produits));
             Content.getChildren().setAll(newPane);
         } catch (IOException e) {
@@ -59,6 +61,7 @@ public class MenuController {
     }
 
     public void MenuNameBlue(Button boutton){
+        //Change le nom du menu actuellement en cours d'utilisation en bleu
         boutton.setTextFill(Color.BLUE);
     }
 }
