@@ -6,10 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import sun.security.util.Password;
+
 import javax.xml.soap.Text;
 import java.io.IOException;
 
@@ -22,7 +25,7 @@ public class ConnexionController {
     @FXML
     private TextField Connexion_TF_ID;
     @FXML
-    private TextField Connexion_TF_MDP;
+    private PasswordField Connexion_TF_MDP;
     @FXML
     private Label TextIncorrect;
     @FXML

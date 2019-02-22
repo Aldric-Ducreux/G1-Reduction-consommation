@@ -4,10 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -26,9 +23,9 @@ public class InscriptionController {
     @FXML
     private TextField Inscription_TF_ID;
     @FXML
-    private TextField Inscription_TF_MDP;
+    private PasswordField Inscription_TF_MDP;
     @FXML
-    private TextField Inscription_TF_MDPV;
+    private PasswordField Inscription_TF_MDPV;
     @FXML
     private TextField Inscription_TF_Mail;
     @FXML
