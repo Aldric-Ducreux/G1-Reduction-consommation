@@ -12,4 +12,5 @@ public class View {
     public static final String XML_FILE_Annonces = "view/Annonces.fxml";
     public static final String XML_FILE_Amis = "view/Mes_amis.fxml";
     public static final String XML_FILE_Compte = "view/Mon_compte.fxml";
+    public static final String XML_FILE_Ajout = "view/Ajout.fxml";
 }

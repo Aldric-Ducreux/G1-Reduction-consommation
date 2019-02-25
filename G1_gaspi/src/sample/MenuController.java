@@ -93,6 +93,7 @@ public class MenuController {
         loader.setController(controller_produits);
         try {
             VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Produits));
+            controller_produits.initMesProduits();
             Content.getChildren().setAll(newPane);
         } catch (IOException e) {
             e.printStackTrace();
