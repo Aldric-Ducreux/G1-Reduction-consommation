@@ -23,6 +23,7 @@ public class AjoutController {
     private Button BT_Annuler;
 
     public void initAjout() throws Exception {
+        RestrictNumbersOnly(TF_Nombre);
         BT_Ajouter.setOnMouseClicked( event -> {
             try{
                 addProduit(TF_Produit.getText(), TF_Nombre.getText());
@@ -37,7 +38,6 @@ public class AjoutController {
                 e.printStackTrace();
             }
         });
-        RestrictNumbersOnly(TF_Nombre);
     }
 
     public void addProduit(String produit,String nombre){
