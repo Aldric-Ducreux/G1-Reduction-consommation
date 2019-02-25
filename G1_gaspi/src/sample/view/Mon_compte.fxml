@@ -8,6 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.PasswordField?>
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="483.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
@@ -47,20 +48,30 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="87.0" layoutY="195.0" prefHeight="25.0" prefWidth="188.0" />
+            <PasswordField fx:id="OldMDP" layoutX="87.0" layoutY="195.0" prefHeight="25.0" prefWidth="188.0" />
             <Label layoutX="84.0" layoutY="230.0" text="Nouveau mot de passe :">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="87.0" layoutY="251.0" prefHeight="25.0" prefWidth="188.0" />
+            <PasswordField fx:id="NewMDP" layoutX="87.0" layoutY="251.0" prefHeight="25.0" prefWidth="188.0" />
             <Label layoutX="83.0" layoutY="285.0" text="Vérification de mot de passe :">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="87.0" layoutY="306.0" prefHeight="25.0" prefWidth="188.0" />
-            <Button layoutX="155.0" layoutY="345.0" mnemonicParsing="false" text="Modifier" />
+            <PasswordField fx:id="NewMDPV" layoutX="87.0" layoutY="306.0" prefHeight="25.0" prefWidth="188.0" />
+            <Button fx:id="BT_ModifierMDP" layoutX="155.0" layoutY="365.0" mnemonicParsing="false" text="Modifier" />
+            <Label fx:id="Error" layoutX="105.0" layoutY="330.0" text="Informations erronées">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+            <Label fx:id="Success" layoutX="95.0" layoutY="330.0" text="Mot de passe bien modifié">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
             <Label layoutX="347.0" layoutY="28.0" text="Récupération de mes informations">
                <font>
                   <Font size="18.0" />
@@ -71,14 +82,14 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button layoutX="397.0" layoutY="94.0" mnemonicParsing="false" text="Télécharger mes informations" />
-            <Button layoutX="397.0" layoutY="208.0" mnemonicParsing="false" text="Supprimer mon compte" />
+            <Button fx:id="BT_GetInfo" layoutX="397.0" layoutY="94.0" mnemonicParsing="false" text="Télécharger mes informations" />
+            <Button fx:id="BT_SupprAccount" layoutX="397.0" layoutY="208.0" mnemonicParsing="false" text="Supprimer mon compte" />
             <Label layoutX="347.0" layoutY="160.0" text="Suppression de compte">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="414.0" layoutY="316.0" mnemonicParsing="false" text="Déconnexion">
+            <Button fx:id="LogOut" layoutX="414.0" layoutY="316.0" mnemonicParsing="false" text="Déconnexion">
                <font>
                   <Font size="15.0" />
                </font></Button>

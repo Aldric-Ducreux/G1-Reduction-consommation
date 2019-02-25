@@ -79,7 +79,7 @@ public class MenuController {
         });
         MonCompte.setOnMouseClicked( event -> {
             try{
-                MonCompteStage();
+                MonCompteStage(primaryStage);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -146,13 +146,14 @@ public class MenuController {
             e.printStackTrace();
         }
     }
-    private void MonCompteStage() throws Exception{
+    private void MonCompteStage(Stage primaryStage) throws Exception{
         MenuNameBlue(MonCompte);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Compte));
         MonCompteController controller_compte = new MonCompteController();
         loader.setController(controller_compte);
         try {
-            VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Compte));
+            VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Compte));
+            controller_compte.initMonCompte(primaryStage);
             Content.getChildren().setAll(newPane);
         } catch (IOException e) {
             e.printStackTrace();
