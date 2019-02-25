@@ -1,10 +1,10 @@
 package sample;
 
-public class Model {
+public class Connexion {
     private String id;
     private String mdp;
 
-    public Model(String id, String mdp){
+    public Connexion(String id, String mdp){
         this.id = id;
         this.mdp = mdp;
     }
