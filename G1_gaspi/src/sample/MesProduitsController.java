@@ -12,10 +12,10 @@ import java.io.IOException;
 
 public class MesProduitsController {
     @FXML
-    private Button Ajout;
+    private Button MesProduitsAjout;
 
     public void initMesProduits() {
-        Ajout.setOnMouseClicked( event -> {
+        MesProduitsAjout.setOnMouseClicked( event -> {
             try{
                 addProduit();
             } catch (Exception e) {
