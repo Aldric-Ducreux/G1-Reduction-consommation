@@ -84,6 +84,7 @@ public class ConnexionController {
             controller_inscription.initInscription(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);
+            primaryStage.setTitle(View.LABEL_Insc);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -100,6 +101,7 @@ public class ConnexionController {
             controller_menu.initMenu(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);
+            primaryStage.setTitle(View.LABEL_Produits);
         } catch (IOException e) {
             e.printStackTrace();
         }

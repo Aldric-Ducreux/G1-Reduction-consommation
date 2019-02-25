@@ -110,6 +110,7 @@ public class MonCompteController {
             controller_connexion.initConnexion(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);
+            primaryStage.setTitle(View.LABEL_Connex);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -95,6 +95,7 @@ public class MenuController {
             VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Produits));
             controller_produits.initMesProduits();
             Content.getChildren().setAll(newPane);
+            primaryStage.setTitle(View.LABEL_Produits);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -107,6 +108,7 @@ public class MenuController {
         try {
             VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Course));
             Content.getChildren().setAll(newPane);
+            primaryStage.setTitle(View.LABEL_Course);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -119,6 +121,7 @@ public class MenuController {
         try {
             VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Historique));
             Content.getChildren().setAll(newPane);
+            primaryStage.setTitle(View.LABEL_Historique);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -131,6 +134,7 @@ public class MenuController {
         try {
             VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Historique));
             Content.getChildren().setAll(newPane);
+            primaryStage.setTitle(View.LABEL_Annonces);
         } catch (IOException e) {
             e.printStackTrace();
         }*/
@@ -143,6 +147,7 @@ public class MenuController {
         try {
             VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Amis));
             Content.getChildren().setAll(newPane);
+            primaryStage.setTitle(View.LABEL_Amis);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -156,6 +161,7 @@ public class MenuController {
             VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Compte));
             controller_compte.initMonCompte(primaryStage);
             Content.getChildren().setAll(newPane);
+            primaryStage.setTitle(View.LABEL_Compte);
         } catch (IOException e) {
             e.printStackTrace();
         }
