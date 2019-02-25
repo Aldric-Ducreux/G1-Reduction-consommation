@@ -66,7 +66,7 @@ public class InscriptionController {
         //Event si clic sur le bouton "Retour"
         Inscription_BT_Retour.setOnMouseClicked(event -> {
             try {
-                retour();
+                ConnexionStage();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -82,11 +82,6 @@ public class InscriptionController {
         } else {
             ConnexionStage();
         }
-    }
-
-    public void retour()throws  Exception {
-        //En cas de clic sur le bouton retour
-        ConnexionStage();
     }
 
     public void conditions()throws Exception{
