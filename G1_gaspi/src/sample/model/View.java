@@ -1,0 +1,26 @@
+package sample.model;
+
+public class View {
+    public static final String XML_FILE_Connex = "/sample/view/Connexion.fxml";
+    public static final String XML_FILE_Insc = "/sample/view/Inscription.fxml";
+    public static final String XML_FILE_Menu = "/sample/view/Menu.fxml";
+    public static final String XML_FILE_Cond = "/sample/view/Conditions.fxml";
+    public static final String XML_FILE_Produits = "/sample/view/Mes_produits.fxml";
+    public static final String XML_FILE_Course= "/sample/view/Liste_course.fxml";
+    public static final String XML_FILE_Historique = "/sample/view/Historique.fxml";
+    public static final String XML_FILE_Annonces = "/sample/view/Annonces.fxml";
+    public static final String XML_FILE_Amis = "/sample/view/Mes_amis.fxml";
+    public static final String XML_FILE_Compte = "/sample/view/Mon_compte.fxml";
+    public static final String XML_FILE_Produit_Ajout = "/sample/view/Ajout.fxml";
+
+    public static final String LABEL_Connex = "Connexion";
+    public static final String LABEL_Insc = "Inscription";
+    public static final String LABEL_Condition = "Condition d'utilisateur";
+    public static final String LABEL_Produits = "Mes Produits";
+    public static final String LABEL_Course = "Liste de Course";
+    public static final String LABEL_Historique = "Historique";
+    public static final String LABEL_Annonces = "Les Annonces";
+    public static final String LABEL_Amis = "Mes Amis";
+    public static final String LABEL_Compte = "Mon Compte";
+    public static final String LABEL_Produit_Ajout = "Mes Produit - Ajout";
+}
