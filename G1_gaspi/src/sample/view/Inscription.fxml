@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="548.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="Fenetre" prefHeight="535.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="513.0" prefWidth="495.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="575.0" VBox.vgrow="ALWAYS">
       <children>
             <Label layoutX="190.0" layoutY="29.0" text="Inscription">
                <font>
@@ -38,26 +38,32 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button id="Inscription_BT_Inscription" layoutX="119.0" layoutY="455.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="102.0" text="Inscription">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <Button id="Inscription_BT_Retour" cache="true" layoutX="296.0" layoutY="455.0" prefHeight="32.0" prefWidth="67.0" text="Retour">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <CheckBox id="Inscription_CB_Conditions" layoutX="39.0" layoutY="397.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="365.0" text="J'ai lu et j'accepte les conditions générales d'utilisateur">
-               <font>
+
+            <TextField fx:id="Inscription_TF_ID" layoutX="67.0" layoutY="107.0" prefHeight="26.0" prefWidth="277.0" />
+            <TextField fx:id="Inscription_TF_Mail" layoutX="67.0" layoutY="177.0" prefHeight="26.0" prefWidth="278.0" />
+            <PasswordField fx:id="Inscription_TF_MDP" layoutX="67.0" layoutY="247.0" prefHeight="26.0" prefWidth="278.0" />
+            <PasswordField fx:id="Inscription_TF_MDPV" layoutX="67.0" layoutY="318.0" prefHeight="26.0" prefWidth="278.0" />
+            <CheckBox fx:id="Inscription_CB_Conditions" layoutX="39.0" layoutY="397.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="365.0" text="J'ai lu et j'accepte les conditions générales d'utilisateur">
+              <font>
                   <Font size="14.0" />
-               </font>
+              </font>
             </CheckBox>
-            <TextField id="Inscription_TF_ID" layoutX="67.0" layoutY="107.0" prefHeight="26.0" prefWidth="277.0" />
-            <PasswordField id="Inscription_TF_MDP" layoutX="67.0" layoutY="247.0" prefHeight="26.0" prefWidth="278.0" />
-            <PasswordField id="Inscription_TF_MDPV" layoutX="67.0" layoutY="318.0" prefHeight="26.0" prefWidth="278.0" />
-            <TextField id="Inscription_TF_Mail" layoutX="67.0" layoutY="177.0" prefHeight="26.0" prefWidth="278.0" />
-            <Button id="Inscription_BT_Conditions" layoutX="404.0" layoutY="391.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" text="Lire" />
+            <Button fx:id="Inscription_BT_Conditions" layoutX="404.0" layoutY="391.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" text="Lire" />
+            <Button fx:id="Inscription_BT_Inscription" layoutX="119.0" layoutY="455.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="102.0" text="Inscription">
+              <font>
+                  <Font size="15.0" />
+              </font>
+            </Button>
+            <Button fx:id="Inscription_BT_Retour" cache="true" layoutX="296.0" layoutY="455.0" prefHeight="32.0" prefWidth="67.0" text="Retour">
+              <font>
+                  <Font size="15.0" />
+              </font>
+            </Button>
+          <Label fx:id ="TextIncorrect" layoutX="125.0" layoutY="415.0" prefHeight="32.0" prefWidth="350.0" text="Champ incorrect ou conditions non acceptées" textAlignment="CENTER">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
       </children>
     </AnchorPane>
   </children>
