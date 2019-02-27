@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -8,6 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
 
 <VBox prefHeight="209.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <children>
@@ -24,7 +24,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <AutoCompleteTextField layoutX="26.0" layoutY="92.0" prefHeight="26.0" prefWidth="350.0" promptText="Rechercher un produit" style="-fx-background-color: #e6e8ed;" />
+            <TextField layoutX="26.0" layoutY="92.0" prefHeight="26.0" prefWidth="350.0" promptText="Rechercher un produit" style="-fx-background-color: #e6e8ed;" />
             <Spinner editable="true" layoutX="392.0" layoutY="92.0" prefHeight="26.0" prefWidth="63.0" />
             <Button layoutX="360.0" layoutY="164.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
             <Label layoutX="26.0" layoutY="64.0" prefHeight="18.0" prefWidth="63.0" text="Produit ">

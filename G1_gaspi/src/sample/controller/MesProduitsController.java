@@ -7,9 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import sample.model.View;
-
 import java.io.IOException;
-
 
 public class MesProduitsController {
     @FXML
@@ -23,7 +21,6 @@ public class MesProduitsController {
                 e.printStackTrace();
             }
         });
-
     }
 
     public void addProduit()throws Exception{

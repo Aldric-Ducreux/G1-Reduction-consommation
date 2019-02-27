@@ -10,7 +10,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import sample.model.View;
-
 import java.io.IOException;
 
 

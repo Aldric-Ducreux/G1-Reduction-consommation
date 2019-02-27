@@ -1,48 +1,77 @@
 package sample.controller;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.stage.Window;
 
-import java.awt.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import static java.lang.System.out;
 
 public class AjoutController {
     @FXML
-    private TextField TF_Produit;
+    private Spinner MesProduitAjoutQuantite;
     @FXML
-    private TextField TF_Nombre;
+    private DatePicker MesProduitAjoutDate;
     @FXML
-    private Button BT_Ajouter;
+    private Button MesProduitAjoutButton;
     @FXML
-    private Button BT_Annuler;
+    private TextField MesProduitAjoutNom;
+    @FXML
+    private Label ErrorChamp;
 
     public void initAjout() throws Exception {
-        RestrictNumbersOnly(TF_Nombre);
-        BT_Ajouter.setOnMouseClicked( event -> {
+        ErrorChamp.setVisible(false);
+        MesProduitAjoutQuantite.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100,
+                Integer.parseInt("1")));
+        EventHandler<KeyEvent> enterKeyEventHandler;
+        enterKeyEventHandler = new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                String OldValue = MesProduitAjoutQuantite.getEditor().textProperty().get();
+                if (event.getCode() == KeyCode.ENTER) {
+                    try {
+                        Integer.parseInt(MesProduitAjoutQuantite.getEditor().textProperty().get());
+                    } catch (NumberFormatException e) {
+                        MesProduitAjoutQuantite.getEditor().textProperty().set(OldValue);
+                    }
+                }
+            }
+        };
+        MesProduitAjoutQuantite.getEditor().addEventHandler(KeyEvent.KEY_PRESSED, enterKeyEventHandler);
+        MesProduitAjoutButton.setOnMouseClicked( event -> {
             try{
-                addProduit(TF_Produit.getText(), TF_Nombre.getText());
+                addProduit(MesProduitAjoutNom.getText(), MesProduitAjoutQuantite.getEditor().textProperty().get(), MesProduitAjoutDate.getEditor().getText());
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-        BT_Annuler.setOnMouseClicked( event -> {
-            try{
-                cancel(BT_Annuler);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+
     }
 
-    public void addProduit(String produit,String nombre){
+
+    public void addProduit(String produit,String nombre, String date ){
         //Ajout au JSON
-        cancel(BT_Ajouter);
+
+        Date dt = new Date();
+        if (produit.isEmpty() || nombre.isEmpty() || date.isEmpty() || nombre.matches(".*[a-z].*") || nombre.matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*") ||
+                !(isValidDate(date))){
+            ErrorChamp.setVisible(true);
+            ErrorChamp.setTextFill(Color.RED);
+        } else {
+            ///
+            //Code permettant l'ajout dans la liste
+            ///
+            cancel(MesProduitAjoutButton);
+        }
     }
 
     public void cancel(Button BT){
@@ -50,15 +79,14 @@ public class AjoutController {
         stage.close();
     }
 
-    public void RestrictNumbersOnly(TextField tf){
-        tf.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue,
-                                String newValue) {
-                if (!newValue.matches("|[-\\+]?|[-\\+]?\\d+\\.?|[-\\+]?\\d+\\.?\\d+")){
-                    tf.setText(oldValue);
-                }
-            }
-        });
+    public static boolean isValidDate(String inDate) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        dateFormat.setLenient(false);
+        try {
+            dateFormat.parse(inDate.trim());
+        } catch (ParseException pe) {
+            return false;
+        }
+        return true;
     }
 }

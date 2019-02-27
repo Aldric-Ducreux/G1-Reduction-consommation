@@ -108,7 +108,8 @@ public class MenuController {
         ListeCourseController controller_course = new ListeCourseController();
         loader.setController(controller_course);
         try {
-            VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Course));
+            VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Course));
+            controller_course.initMesCourses();
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Course);
         } catch (IOException e) {
