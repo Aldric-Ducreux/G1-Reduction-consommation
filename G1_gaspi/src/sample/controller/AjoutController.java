@@ -9,9 +9,13 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import sample.model.Item;
+import sample.model.ItemList;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 import static java.lang.System.out;
@@ -28,7 +32,7 @@ public class AjoutController {
     @FXML
     private Label ErrorChamp;
 
-    public void initAjout() throws Exception {
+    public void initAjout(ItemList produits) throws Exception {
         ErrorChamp.setVisible(false);
         MesProduitAjoutQuantite.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100,
                 Integer.parseInt("1")));
@@ -49,7 +53,7 @@ public class AjoutController {
         MesProduitAjoutQuantite.getEditor().addEventHandler(KeyEvent.KEY_PRESSED, enterKeyEventHandler);
         MesProduitAjoutButton.setOnMouseClicked( event -> {
             try{
-                addProduit(MesProduitAjoutNom.getText(), MesProduitAjoutQuantite.getEditor().textProperty().get(), MesProduitAjoutDate.getEditor().getText());
+                addProduit(produits, MesProduitAjoutNom.getText(), MesProduitAjoutQuantite.getEditor().textProperty().get(), MesProduitAjoutDate.getEditor().getText());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -58,7 +62,7 @@ public class AjoutController {
     }
 
 
-    public void addProduit(String produit,String nombre, String date ){
+    public void addProduit(ItemList produits, String produit,String nombre, String date ){
         //Ajout au JSON
 
         Date dt = new Date();
@@ -67,9 +71,8 @@ public class AjoutController {
             ErrorChamp.setVisible(true);
             ErrorChamp.setTextFill(Color.RED);
         } else {
-            ///
-            //Code permettant l'ajout dans la liste
-            ///
+            produits.addItem(new Item(produit, "tag", Integer.parseInt(nombre), LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"))));
+            produits.saveToFile();
             cancel(MesProduitAjoutButton);
         }
     }

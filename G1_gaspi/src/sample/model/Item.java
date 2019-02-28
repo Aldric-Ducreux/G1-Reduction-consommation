@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Iterator;
 
 public class Item {
@@ -13,14 +14,21 @@ public class Item {
     private int quantity;
     private LocalDate expiryDate;
 
+    public static final Comparator<Item> NameAscComparator = (o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName());
+    public static final Comparator<Item> NameDescComparator = (o1, o2) -> -o1.getName().compareToIgnoreCase(o2.getName());
+    public static final Comparator<Item> TagAscComparator = (o1, o2) -> o1.getTag().compareToIgnoreCase(o2.getTag());
+    public static final Comparator<Item> TagDescComparator = (o1, o2) -> -o1.getTag().compareToIgnoreCase(o2.getTag());
+    public static final Comparator<Item> QuantityAscComparator = Comparator.comparingInt(Item::getQuantity);
+    public static final Comparator<Item> QuantityDescComparator = (o1, o2) -> o2.getQuantity() - o1.getQuantity();
+    public static final Comparator<Item> DateAscComparator = Comparator.comparing(Item::getExpiryDate);
+    public static final Comparator<Item> DateDescComparator = (o1, o2) -> -o1.getExpiryDate().compareTo(o2.getExpiryDate());
+
     public Item(String name, String tag, int quantity, LocalDate expiryDate) {
         this.name = name;
         this.tag = tag;
         this.quantity = quantity;
         this.expiryDate = expiryDate;
     }
-
-
 
     public String getName() {
         return name;
@@ -84,24 +92,4 @@ public class Item {
         return new Item(name, tag, quantity, expiryDate);
     }
 
-    public static String SerializeCollection(Collection<Item> items) {
-        String json = "{[";
-        Iterator<Item> iterator = items.iterator();
-        while(iterator.hasNext()) {
-            json += iterator.next().Serialize();
-            if (iterator.hasNext())
-                json += ";";
-        }
-        json += "]}";
-        return json;
-    }
-
-    public static Collection<Item> DeserializeCollection(String json) {
-        Collection<Item> items = new ArrayList<>();
-        json = json.substring(2, json.length()-2); // remove the brackets
-        for(String item: json.split(";")) {
-            items.add(Item.Deserialize(item));
-        }
-        return items;
-    }
 }
