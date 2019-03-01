@@ -12,7 +12,7 @@
    <children>
       <AnchorPane prefHeight="404.0" prefWidth="640.0">
          <children>
-            <TextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher" style="-fx-background-color: #e6e8ed;" />
+            <TextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher"  />
             <Button fx:id="MesCoursesAjout" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
             <TableView layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
               <columns>
