@@ -14,7 +14,7 @@
          <children>
             <TextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher" />
             <Button fx:id="MesProduitsAjout" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
-            <TableView layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
+            <TableView fx:id="mytableTableView" layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
               <columns>
                 <TableColumn fx:id="MesProduitsProduit" prefWidth="148.79998779296875" text="Produits" />
                 <TableColumn fx:id="MesProduitsType" prefWidth="97.60003662109375" text="Type" />
