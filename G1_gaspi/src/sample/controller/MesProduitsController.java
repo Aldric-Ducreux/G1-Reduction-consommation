@@ -7,12 +7,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.Callback;
+import sample.model.Item;
 import sample.model.ItemList;
 import sample.model.Produit;
 import sample.model.View;
@@ -20,26 +20,25 @@ import sample.model.View;
 import java.io.IOException;
 
 public class MesProduitsController {
-
     String pathMesProduits = "Produits.json";
     ItemList produits;
     ObservableList<Produit> list = FXCollections.observableArrayList();
     @FXML
-    private TableView<Produit> mytableTableView;
+    private TableView<Item> mytableTableView;
     @FXML
-    private TableColumn<Produit, String> MesProduitsProduit;
+    private TableColumn<Item, String> MesProduitsProduit;
     @FXML
-    private TableColumn<Produit, String> MesProduitsType;
+    private TableColumn<Item, String> MesProduitsType;
     @FXML
-    private TableColumn<Produit, String> MesProduitsQuantite;
+    private TableColumn<Item, String> MesProduitsQuantite;
     @FXML
-    private TableColumn<Produit, String> MesProduitsDate;
+    private TableColumn<Item, String> MesProduitsDate;
     @FXML
     private Button MesProduitsAjout;
 
 
     public void initMesProduits() {
-        produits = ItemList.loadFromFile(pathMesProduits);
+        //produits = ItemList.loadFromFile(pathMesProduits);
         MesProduitsAjout.setOnMouseClicked(event -> {
             try {
                 addProduit();
@@ -47,26 +46,11 @@ public class MesProduitsController {
                 e.printStackTrace();
             }
         });
-
-
-        MesProduitsProduit.setCellValueFactory(new PropertyValueFactory<>("MesProduitsProduit"));
-        MesProduitsType.setCellValueFactory(new PropertyValueFactory<>("MesProduitsDate"));
-        MesProduitsQuantite.setCellValueFactory(new PropertyValueFactory<>("MesProduitsQuantite"));
-        MesProduitsDate.setCellValueFactory(new PropertyValueFactory<>("MesProduitsDate"));
-        MesProduitsDate.setCellFactory(new Callback<TableColumn<Produit, String>, TableCell<Produit, String>>() {
-            @Override
-            public TableCell<Produit, String> call(
-                    TableColumn<Produit, String> param) {
-                TableCell<Produit, String> cell = new TableCell<>();
-                Text text = new Text();
-                text.setFill(Color.WHITE);
-                cell.setGraphic(text);
-                cell.setPrefHeight(Control.USE_COMPUTED_SIZE);
-                text.wrappingWidthProperty().bind(cell.widthProperty());
-                text.textProperty().bind(cell.itemProperty());
-                return cell;
-            }
-        });
+        MesProduitsProduit.setCellValueFactory(new PropertyValueFactory<>("name"));
+        MesProduitsType.setCellValueFactory(new PropertyValueFactory<>("tag"));
+        MesProduitsQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        MesProduitsDate.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
+        loadData();
     }
 
     public void addProduit() throws Exception {
@@ -90,19 +74,11 @@ public class MesProduitsController {
     }
 
     private void loadData() {
-        /*try {
-            for(String m : "sample/json/Produits.json") {
-                JSONObject json = readJsonFromUrl(link);
-                String prod = json.get("MesProduitsProduit").toString();
-                String type = json.get("MesProduitsType").toString();
-                int qtt = json.get("MesProduitsQuantite").toString();
-                String date = json.get("MesProduitsDate").toString();
-                list.add(new Produit(prod,type,qtt,date));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        mytableTableView.getItems().setAll(list);
-    */}
+        //ItemList maListe = ItemList.loadFromFile("C:\\Users\\tosh\\Desktop\\Work\\SI3\\S2\\IHM\\Gaspillage\\G1-Reduction-consommation\\G1_gaspi\\src\\sample\\json\\MesProduits.json");
+        //ItemList maListe = ItemList.loadFromFile(View.XML_JSON_Produits);
+        //System.out.println(maListe.getItems());
+        //mytableTableView.getItems().setAll(maListe.getItems());
+
+    }
 
 }

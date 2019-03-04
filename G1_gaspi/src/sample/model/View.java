@@ -14,6 +14,8 @@ public class View {
     public static final String XML_FILE_Produit_Ajout = "/sample/view/Mes_produits_ajout.fxml";
     public static final String XML_FILE_Course_Ajout = "/sample/view/Liste_course_ajout.fxml";
 
+    public static final String XML_JSON_Produits = "/sample/json/Produits.json";
+
     public static final String LABEL_Connex = "Connexion";
     public static final String LABEL_Insc = "Inscription";
     public static final String LABEL_Condition = "Condition d'utilisateur";
