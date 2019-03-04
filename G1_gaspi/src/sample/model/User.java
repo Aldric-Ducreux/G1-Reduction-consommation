@@ -1,26 +1,17 @@
 package sample.model;
 
 public class User {
-    private int id;
     private String name;
     private String pseudo;
     private String mail;
     private String sha1Password;
 
-    public User(int id, String name, String pseudo, String mail, String sha1Password)
+    public User(String name, String pseudo, String mail, String sha1Password)
     {
-        this.id = id;
         this.name = name;
         this.pseudo = pseudo;
         this.mail = mail;
         this.sha1Password = sha1Password;
-    }
-
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
