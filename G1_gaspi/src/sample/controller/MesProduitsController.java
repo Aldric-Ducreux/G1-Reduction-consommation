@@ -8,26 +8,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 import sample.model.Item;
-import sample.model.ItemList;
 import sample.model.View;
+
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.Month;
 
 public class MesProduitsController {
-    String pathMesProduits = "Produits.json";
-    ItemList produits;
-    ObservableList<Item> list = FXCollections.observableArrayList(
-            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
-            new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2000, Month.MAY, 22)),
-            new Item("Soya Juice","Lait",10,LocalDate.of(2000, Month.MAY, 25))
+    static ObservableList<Item> produits = FXCollections.observableArrayList(
+            new Item("Jambon Laoste","Jambon",5,"20/20/2000"),
+            new Item("Chocapic Chocolat","Cereales",2,"22/20/2000"),
+            new Item("Soya Juice","Lait",10,"25/20/2000")
     );
     @FXML
     private TableView<Item> mytableTableView;
@@ -40,13 +34,10 @@ public class MesProduitsController {
     @FXML
     private TableColumn<Item, String> MesProduitsDate;
     @FXML
-    private TableColumn MesProduitsModification;
-    @FXML
     private Button MesProduitsAjout;
 
 
     public void initMesProduits() {
-        //produits = ItemList.loadFromFile(pathMesProduits);
         MesProduitsAjout.setOnMouseClicked(event -> {
             try {
                 addProduit();
@@ -58,35 +49,7 @@ public class MesProduitsController {
         MesProduitsType.setCellValueFactory(new PropertyValueFactory<>("tag"));
         MesProduitsQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         MesProduitsDate.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
-
-        mytableTableView.setItems(list);
-
-        Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
-                new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
-                    @Override
-                    public TableCell call(final TableColumn<Item, String> param) {
-                        final TableCell<Item, String> cell = new TableCell<Item, String>() {
-
-                            final Button btn = new Button("Just Do It");
-
-                            @Override
-                            public void updateItem(String item, boolean empty) {
-                                super.updateItem(item, empty);
-                                if (empty) {
-                                    setGraphic(null);
-                                    setText(null);
-                                } else {
-                                    btn.setOnAction(event -> {
-                                        Item person = getTableView().getItems().get(getIndex());
-                                    });
-                                    setGraphic(btn);
-                                    setText(null);
-                                }
-                            }
-                        };
-                        return cell;
-                    }
-                };
+        loadData();
     }
 
     public void addProduit() throws Exception {
@@ -107,6 +70,11 @@ public class MesProduitsController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void loadData() {
+        mytableTableView.setItems(produits);
+        System.out.println(produits.get(0).getName());
     }
 
 }

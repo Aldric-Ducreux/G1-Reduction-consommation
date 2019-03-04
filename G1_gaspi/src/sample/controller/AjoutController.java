@@ -1,5 +1,6 @@
 package sample.controller;
 
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -8,13 +9,9 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import sample.model.Item;
-import sample.model.ItemList;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class AjoutController {
     @FXML
@@ -28,7 +25,7 @@ public class AjoutController {
     @FXML
     private Label ErrorChamp;
 
-    public void initAjout(ItemList produits) throws Exception {
+    public void initAjout(ObservableList<Item> produits) throws Exception {
         ErrorChamp.setVisible(false);
         MesProduitAjoutQuantite.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100,
                 Integer.parseInt("1")));
@@ -54,21 +51,16 @@ public class AjoutController {
                 e.printStackTrace();
             }
         });
-
     }
-    
 
-    public void addProduit(ItemList produits, String produit,String nombre, String date ){
-        //Ajout au JSON
 
-        Date dt = new Date();
+    public void addProduit(ObservableList<Item> produits, String produit, String nombre, String date ){
         if (produit.isEmpty() || nombre.isEmpty() || date.isEmpty() || nombre.matches(".*[a-z].*") || nombre.matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*") ||
                 !(isValidDate(date))){
             ErrorChamp.setVisible(true);
             ErrorChamp.setTextFill(Color.RED);
         } else {
-            produits.addItem(new Item(produit, "tag", Integer.parseInt(nombre), LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"))));
-            produits.saveToFile();
+            produits.add(new Item(produit, produit, Integer.parseInt(nombre), date));
             cancel(MesProduitAjoutButton);
         }
     }
