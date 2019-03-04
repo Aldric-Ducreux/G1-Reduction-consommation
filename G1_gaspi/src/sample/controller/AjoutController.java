@@ -56,7 +56,7 @@ public class AjoutController {
         });
 
     }
-
+    
 
     public void addProduit(ItemList produits, String produit,String nombre, String date ){
         //Ajout au JSON
