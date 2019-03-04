@@ -24,7 +24,6 @@
                   <!--<TableColumn fx:id="MesProduitsDelete" prefWidth="45.60000000000002" />-->
               </columns>
             </TableView>
-            <TextField layoutX="14.0" layoutY="15.0" prefHeight="26.0" prefWidth="507.0" promptText="Rechercher un produit"/>
          </children>
       </AnchorPane>
    </children>

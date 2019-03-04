@@ -43,8 +43,6 @@ public class MesProduitsController {
     private Button MesProduitsAjout;
     @FXML
     private TextField filterField;
-    private static int rangeSelectedItem = -1;
-
 
     public void initMesProduits() throws Exception {
         MesProduitsAjout.setOnMouseClicked(event -> {
@@ -59,14 +57,13 @@ public class MesProduitsController {
         MesProduitsQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         MesProduitsDate.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
         mytableTableView.setItems(produitsList);
-        listenTo(mytableTableView);
-/*
+
         mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 Item itemz = mytableTableView.getSelectionModel().getSelectedItem();
                 modifProduit(itemz);
             }
-        });*/
+        });
         Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
                 new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
                     @Override
@@ -130,17 +127,6 @@ public class MesProduitsController {
         }
     }
 
-    public static int getRangeSelectedItem() {
-        return rangeSelectedItem;
-    }
-
-    private void listenTo(TableView listView) {
-        listView.getSelectionModel().selectedItemProperty().addListener(
-                (ChangeListener<Item>) (observable, oldValue, newValue) -> {
-                    rangeSelectedItem = mytableTableView.getItems().indexOf(newValue);
-                    //mytableTableView.
-                });
-    }
     public void SearchBar(){
         // 1. Wrap the ObservableList in a FilteredList (initially display all data).
         FilteredList<Item> filteredData = new FilteredList<>(produitsList, p -> true);
