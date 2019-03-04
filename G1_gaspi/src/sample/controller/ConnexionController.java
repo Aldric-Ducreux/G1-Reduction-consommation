@@ -65,6 +65,7 @@ public class ConnexionController {
             //Si correct, on affiche la page du Menu
             try {
                 MenuStage();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }

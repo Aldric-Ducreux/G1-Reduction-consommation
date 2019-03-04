@@ -3,6 +3,8 @@ package sample.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Item;
@@ -37,7 +40,8 @@ public class ListeCourseController {
     private TableColumn<Item, String> ListeCourseSuppr;
     @FXML
     private Button MesCoursesAjout;
-
+    @FXML
+    private TextField filterField;
 
     public void initMesCourses() {
         MesCoursesAjout.setOnMouseClicked( event -> {
@@ -50,6 +54,7 @@ public class ListeCourseController {
         ListeCourseProduits.setCellValueFactory(new PropertyValueFactory<>("name"));
         ListeCourseQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         loadData();
+        SearchBar();
     }
 
     public void addCourse() {
@@ -74,5 +79,39 @@ public class ListeCourseController {
 
     private void loadData() {
         mytableTableView.setItems(list);
+    }
+    public void SearchBar(){
+        // 1. Wrap the ObservableList in a FilteredList (initially display all data).
+        FilteredList<Item> filteredData = new FilteredList<>(list, p -> true);
+
+        // 2. Set the filter Predicate whenever the filter changes.
+        filterField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(person -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                // Compare first name and last name of every person with filter text.
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (person.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true; // Filter matches first name.
+                } else if (person.getTag().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true; // Filter matches last name.
+                }
+                return false; // Does not match.
+            });
+        });
+
+        // 3. Wrap the FilteredList in a SortedList.
+        SortedList<Item> sortedData = new SortedList<>(filteredData);
+
+        // 4. Bind the SortedList comparator to the TableView comparator.
+        // 	  Otherwise, sorting the TableView would have no effect.
+        sortedData.comparatorProperty().bind(mytableTableView.comparatorProperty());
+
+        // 5. Add sorted (and filtered) data to the table.
+        mytableTableView.setItems(sortedData);
     }
 }
