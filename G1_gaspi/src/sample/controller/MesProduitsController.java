@@ -1,6 +1,7 @@
 package sample.controller;
 
 
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -37,9 +38,10 @@ public class MesProduitsController {
     private TableColumn<Item, String> MesProduitsDate;
     @FXML
     private Button MesProduitsAjout;
+    private static int rangeSelectedItem = -1;
 
 
-    public void initMesProduits() {
+    public void initMesProduits() throws Exception {
         MesProduitsAjout.setOnMouseClicked(event -> {
             try {
                 addProduit();
@@ -51,7 +53,35 @@ public class MesProduitsController {
         MesProduitsType.setCellValueFactory(new PropertyValueFactory<>("tag"));
         MesProduitsQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         MesProduitsDate.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
-        loadData();
+        mytableTableView.setItems(list);
+        listenTo(mytableTableView);
+
+        mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                Item itemz = mytableTableView.getSelectionModel().getSelectedItem();
+                modifProduit(itemz);
+            }
+        });
+        Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
+                new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
+                    @Override
+                    public TableCell call(final TableColumn<Item, String> param) {
+                        final TableCell<Item, String> cell = new TableCell<Item, String>() {
+                            @Override
+                            public void updateItem(String item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (empty) {
+                                    setText(null);
+
+                                } else {
+                                    setText("Modification");;
+                                }
+                            }
+                        };
+                        return cell;
+                    }
+                };
+        MesProduitsModification.setCellFactory(cellFactory);
     }
 
     public void addProduit() throws Exception {
@@ -74,8 +104,36 @@ public class MesProduitsController {
         }
     }
 
-    private void loadData() {
-        mytableTableView.setItems(produits);
+    public void modifProduit(Item item) {
+        //En cas de clic sur le bouton "Modif"
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Produit_Modif));
+        MesProduitsModificationController controller_modif = new MesProduitsModificationController();
+        loader.setController(controller_modif);
+        try {
+            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Produit_Modif));
+            controller_modif.initModif(item);
+            Scene scene = new Scene(page);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setWidth(550);
+            stage.setHeight(250);
+            stage.setTitle(View.LABEL_Produit_Modif);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static int getRangeSelectedItem() {
+        return rangeSelectedItem;
+    }
+
+    private void listenTo(TableView listView) {
+        listView.getSelectionModel().selectedItemProperty().addListener(
+                (ChangeListener<Item>) (observable, oldValue, newValue) -> {
+                    rangeSelectedItem = mytableTableView.getItems().indexOf(newValue);
+                    //mytableTableView.
+                });
     }
 
 }

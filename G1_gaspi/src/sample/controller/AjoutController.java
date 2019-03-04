@@ -56,6 +56,9 @@ public class AjoutController {
     }
 
 
+    public void addProduit(ItemList produits, String produit,String nombre, String date ){
+        //Ajout au JSON
+
     public void addProduit(ObservableList<Item> produits, String produit, String nombre, String date ){
         LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         if (produit.isEmpty() || nombre.isEmpty() || date.isEmpty() || nombre.matches(".*[a-z].*") || nombre.matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*") ||

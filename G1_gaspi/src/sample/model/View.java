@@ -12,6 +12,7 @@ public class View {
     public static final String XML_FILE_Amis = "/sample/view/Mes_amis.fxml";
     public static final String XML_FILE_Compte = "/sample/view/Mon_compte.fxml";
     public static final String XML_FILE_Produit_Ajout = "/sample/view/Mes_produits_ajout.fxml";
+    public static final String XML_FILE_Produit_Modif = "/sample/view/Mes_produits_modification.fxml";
     public static final String XML_FILE_Course_Ajout = "/sample/view/Liste_course_ajout.fxml";
 
     public static final String XML_JSON_Produits = "/sample/json/Produits.json";
@@ -26,5 +27,7 @@ public class View {
     public static final String LABEL_Amis = "Mes Amis";
     public static final String LABEL_Compte = "Mon Compte";
     public static final String LABEL_Produit_Ajout = "Mes Produits - Ajout";
+    public static final String LABEL_Produit_Modif = "Mes Produits - Modification";
     public static final String LABEL_Course_Ajout = "Mes Courses - Ajout";
+
 }
