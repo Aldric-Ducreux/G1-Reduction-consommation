@@ -21,7 +21,7 @@
                   <TableColumn fx:id="MesProduitsQuantite" prefWidth="68.800048828125" text="Quantité" />
                   <TableColumn fx:id="MesProduitsDate" prefWidth="171.20001220703125" text="Date limite de consomation" />
                   <TableColumn fx:id="MesProduitsModification" prefWidth="84.800048828125" text="Modification" />
-                  <TableColumn fx:id="MesProduitsDelete" prefWidth="45.60000000000002" />
+                  <!--<TableColumn fx:id="MesProduitsDelete" prefWidth="45.60000000000002" />-->
               </columns>
             </TableView>
             <TextField layoutX="14.0" layoutY="15.0" prefHeight="26.0" prefWidth="507.0" promptText="Rechercher un produit"/>

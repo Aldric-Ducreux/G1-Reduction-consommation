@@ -12,6 +12,8 @@ import sample.model.ItemList;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class AjoutController {
@@ -65,7 +67,7 @@ public class AjoutController {
             ErrorChamp.setVisible(true);
             ErrorChamp.setTextFill(Color.RED);
         } else {
-            produits.addItem(new Item(produit, "tag", Integer.parseInt(nombre), date));
+            produits.addItem(new Item(produit, "tag", Integer.parseInt(nombre), LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"))));
             produits.saveToFile();
             cancel(MesProduitAjoutButton);
         }

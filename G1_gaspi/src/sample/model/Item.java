@@ -1,5 +1,7 @@
 package sample.model;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 
 public class Item {
@@ -7,7 +9,7 @@ public class Item {
     private String name;
     private String tag;
     private int quantity;
-    private String expiryDate;
+    private LocalDate expiryDate;
 
     public static final Comparator<Item> NameAscComparator = (o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName());
     public static final Comparator<Item> NameDescComparator = (o1, o2) -> -o1.getName().compareToIgnoreCase(o2.getName());
@@ -18,7 +20,7 @@ public class Item {
     public static final Comparator<Item> DateAscComparator = Comparator.comparing(Item::getExpiryDate);
     public static final Comparator<Item> DateDescComparator = (o1, o2) -> -o1.getExpiryDate().compareTo(o2.getExpiryDate());
 
-    public Item(String name, String tag, int quantity, String expiryDate) {
+    public Item(String name, String tag, int quantity, LocalDate expiryDate) {
         this.name = name;
         this.tag = tag;
         this.quantity = quantity;
@@ -49,11 +51,11 @@ public class Item {
         this.quantity = quantity;
     }
 
-    public String getExpiryDate() {
+    public LocalDate getExpiryDate() {
         return expiryDate;
     }
 
-    public void setExpiryDate(String expiryDate) {
+    public void setExpiryDate(LocalDate expiryDate) {
         this.expiryDate = expiryDate;
     }
 
@@ -62,7 +64,7 @@ public class Item {
         json += "\"name\":\"" + name + "\",";
         json += "\"tag\":\"" + tag + "\",";
         json += "\"quantity\":" + quantity + ",";
-        json += "\"expiryDate\":" + expiryDate;
+        json += "\"expiryDate\":" + expiryDate.format(DateTimeFormatter.BASIC_ISO_DATE);
         json += "}";
         return json;
     }
@@ -71,7 +73,7 @@ public class Item {
         String name = null;
         String tag = null;
         int quantity = 0;
-        String expiryDate = null;
+        LocalDate expiryDate = null;
 
         json = json.substring(1, json.length()-1);
         String[] attributes = json.split(",");
@@ -81,7 +83,7 @@ public class Item {
                 case "\"name\"": name = keyValuePair[1].substring(1, keyValuePair[1].length()-1); break;
                 case "\"tag\"": tag = keyValuePair[1].substring(1, keyValuePair[1].length()-1); break;
                 case "\"quantity\"": quantity = Integer.parseInt(keyValuePair[1]); break;
-                case "\"expiryDate\"": expiryDate = keyValuePair[1].substring(1, keyValuePair[1].length()-1); break;
+                case "\"expiryDate\"": expiryDate = LocalDate.parse(keyValuePair[1], DateTimeFormatter.BASIC_ISO_DATE); break;
             }
         }
         return new Item(name, tag, quantity, expiryDate);
