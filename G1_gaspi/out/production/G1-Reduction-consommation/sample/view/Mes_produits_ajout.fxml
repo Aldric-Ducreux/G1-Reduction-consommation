@@ -17,14 +17,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
          <children>
-            <Button blendMode="HARD_LIGHT" layoutX="486.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="36.0" style="-fx-background-color: #dbf0fa;" text="X" textAlignment="CENTER">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Button>
             <Spinner fx:id="MesProduitAjoutQuantite" editable="true" layoutX="248.0" layoutY="92.0" prefHeight="26.0" prefWidth="63.0" />
             <DatePicker fx:id="MesProduitAjoutDate" layoutX="333.0" layoutY="92.0" promptText="Date limite" />
             <Button fx:id="MesProduitAjoutButton" layoutX="360.0" layoutY="164.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />

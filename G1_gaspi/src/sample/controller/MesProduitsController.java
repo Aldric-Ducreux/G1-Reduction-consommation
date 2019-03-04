@@ -4,14 +4,13 @@ package sample.controller;
 import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
@@ -23,7 +22,7 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class MesProduitsController {
-    static ObservableList<Item> list = FXCollections.observableArrayList(
+    static ObservableList<Item> produitsList = FXCollections.observableArrayList(
             new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
             new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2000, Month.MAY, 20)),
             new Item("Soya Juice","Lait",10,LocalDate.of(2000, Month.MAY, 20))
@@ -39,9 +38,11 @@ public class MesProduitsController {
     @FXML
     private TableColumn<Item, String> MesProduitsDate;
     @FXML
-    private TableColumn MesProduitsModification;
+    private TableColumn<Item, String> MesProduitsModification;
     @FXML
     private Button MesProduitsAjout;
+    @FXML
+    private TextField filterField;
     private static int rangeSelectedItem = -1;
 
 
@@ -57,15 +58,15 @@ public class MesProduitsController {
         MesProduitsType.setCellValueFactory(new PropertyValueFactory<>("tag"));
         MesProduitsQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         MesProduitsDate.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
-        mytableTableView.setItems(list);
+        mytableTableView.setItems(produitsList);
         listenTo(mytableTableView);
-
+/*
         mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 Item itemz = mytableTableView.getSelectionModel().getSelectedItem();
                 modifProduit(itemz);
             }
-        });
+        });*/
         Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
                 new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
                     @Override
@@ -86,6 +87,7 @@ public class MesProduitsController {
                     }
                 };
         MesProduitsModification.setCellFactory(cellFactory);
+        SearchBar();
     }
 
     public void addProduit() throws Exception {
@@ -95,7 +97,7 @@ public class MesProduitsController {
         loader.setController(controller_ajout);
         try {
             Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Produit_Ajout));
-            controller_ajout.initAjout(list);
+            controller_ajout.initAjout(produitsList);
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -139,5 +141,38 @@ public class MesProduitsController {
                     //mytableTableView.
                 });
     }
+    public void SearchBar(){
+        // 1. Wrap the ObservableList in a FilteredList (initially display all data).
+        FilteredList<Item> filteredData = new FilteredList<>(produitsList, p -> true);
 
+        // 2. Set the filter Predicate whenever the filter changes.
+        filterField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(produit -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                // Compare first name and last name of every person with filter text.
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (produit.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true; // Filter matches first name.
+                } else if (produit.getTag().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true; // Filter matches last name.
+                }
+                return false; // Does not match.
+            });
+        });
+
+        // 3. Wrap the FilteredList in a SortedList.
+        SortedList<Item> sortedData = new SortedList<>(filteredData);
+
+        // 4. Bind the SortedList comparator to the TableView comparator.
+        // 	  Otherwise, sorting the TableView would have no effect.
+        sortedData.comparatorProperty().bind(mytableTableView.comparatorProperty());
+
+        // 5. Add sorted (and filtered) data to the table.
+        mytableTableView.setItems(sortedData);
+    }
 }

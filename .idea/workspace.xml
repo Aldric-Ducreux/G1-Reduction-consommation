@@ -2,186 +2,156 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58082cf1-6e96-457a-b637-6a85ae6e838e" name="Default Changelist" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/AjoutController$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/AjoutController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/AjoutCourseController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/ConnexionController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/HistoriqueController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/ListeCourseController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/MenuController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/MesProduitsController$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/MesProduitsController$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/MesProduitsController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/MesProduitsModificationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/model/View.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Connexion.fxml" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Connexion.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Historique.fxml" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Historique.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Liste_course.fxml" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Liste_course.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits.fxml" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mon_compte.fxml" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mon_compte.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutController.java" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" />
-    </list>
-    <list id="5071cd11-48a5-4c18-9133-92d18ba28fc0" name="Revert: bare de recherche dans les tableviews" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/.idea/workspace.xml" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/G1-Reduction-consommation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/G1-Reduction-consommation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/description.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/G1_gaspi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/G1_gaspi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/HistoriqueController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/HistoriqueController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/ListeCourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/ListeCourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesAmisController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesAmisController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/model/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/model/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Annonces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Annonces.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Attention.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Attention.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Conditions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Conditions.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Connexion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Connexion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Historique.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Historique.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Inscription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Inscription.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Liste_course.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Liste_course.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Liste_course_ajout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Liste_course_ajout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Liste_course_supprimer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Liste_course_supprimer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_amis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_amis.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits_ajout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits_ajout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits_modification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits_modification.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mon_compte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mon_compte.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Produit_annonces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Produit_annonces.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Annonces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Annonces.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Attention.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Attention.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Conditions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Conditions.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Connexion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Connexion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Historique.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Historique.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Inscription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Inscription.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Liste_course.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Liste_course.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Liste_course_ajout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Liste_course_ajout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Liste_course_supprimer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Liste_course_supprimer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_amis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_amis.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_produits.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_produits.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_produits_ajout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_produits_ajout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_produits_modification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_produits_modification.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mon_compte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mon_compte.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Produit_annonces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Produit_annonces.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConditionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConditionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConnexionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConnexionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/InscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/InscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesAmisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesAmisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsModificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsModificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MonCompteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MonCompteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/model/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/model/Connexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Annonces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Annonces.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Attention.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Attention.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Conditions.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Conditions.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Connexion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Connexion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Historique.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Historique.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Inscription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Inscription.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Liste_course.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Liste_course.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mon_compte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mon_compte.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Produit_annonces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Produit_annonces.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/G1_gaspi/.idea/workspace.xml" ignored="false" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="313659365">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="505" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="505" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1526096706">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="fxml" value="5" />
-          <entry key="java" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="6" />
-          <entry key="XML" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="fxml" value="43" />
-          <entry key="java" value="83" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="83" />
-          <entry key="XML" value="43" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5787598">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MesProduitsController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#2836#3339#0" expanded="true" />
-                    <element signature="e#3338#3339#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AjoutCourseController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutCourseController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="258">
-                  <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ListeCourseController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="714">
-                  <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AjoutController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="HistoriqueController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/Item.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1037">
+              <caret line="81" column="45" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1598">
+              <caret line="115" column="5" selection-start-line="82" selection-start-column="4" selection-end-line="115" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesAmisController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="114" selection-start-line="114" selection-end-line="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="41" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -190,13 +160,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>MesProduitsModification</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -204,92 +174,34 @@
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/Item.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/User.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/view/Liste_course_ajout.fxml" />
-        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/ItemHistorique.java" />
-        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutCourseController.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/User.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_amis_ajout.fxml" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesAmisController.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="522" />
-    <option name="y" value="300" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+    <option name="x" value="790" />
+    <option name="y" value="121" />
+    <option name="width" value="985" />
+    <option name="height" value="1035" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -313,34 +225,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
+      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <module name="G1-Reduction-consommation" />
+      <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="G1-Reduction-consommation" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <list>
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -348,7 +251,6 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="58082cf1-6e96-457a-b637-6a85ae6e838e" name="Default Changelist" comment="" />
-      <changelist id="5071cd11-48a5-4c18-9133-92d18ba28fc0" name="Revert: bare de recherche dans les tableviews" comment="" />
       <created>1549894036076</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -357,160 +259,75 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13221477" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32719547" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
     </layout>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutCourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/Item.java" />
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/User.java" />
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/ItemHistorique.java" />
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding />
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Liste_course.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="55" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Liste_course_ajout.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/ItemHistorique.java" />
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-          <folding />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutCourseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
-          <caret line="26" column="96" lean-forward="false" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
+          <caret line="26" column="96" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -519,20 +336,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../Save bugG1-Reduction-consommation - Copie/G1_gaspi/src/sample/controller/MesAmisController.java" />
+    <entry file="file://$USER_HOME$/Save G1-Reduction-consommation/G1_gaspi/src/sample/controller/MesAmisController.java" />
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="152" column="42" selection-start-line="152" selection-start-column="42" selection-end-line="152" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AjoutAmisController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_amis_ajout.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_amis.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="81" column="45" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="115" column="5" selection-start-line="82" selection-start-column="4" selection-end-line="115" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesAmisController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-          <folding>
-            <element signature="e#2836#3339#0" expanded="true" />
-            <element signature="e#3338#3339#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>

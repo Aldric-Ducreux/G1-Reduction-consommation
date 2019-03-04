@@ -149,7 +149,8 @@ public class MenuController {
         MesAmisController controller_amis = new MesAmisController();
         loader.setController(controller_amis);
         try {
-            VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Amis));
+            VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Amis));
+            controller_amis.initMesAmis();
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Amis);
         } catch (IOException e) {

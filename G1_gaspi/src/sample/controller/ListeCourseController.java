@@ -86,7 +86,7 @@ public class ListeCourseController {
 
         // 2. Set the filter Predicate whenever the filter changes.
         filterField.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(person -> {
+            filteredData.setPredicate(produit -> {
                 // If filter text is empty, display all persons.
                 if (newValue == null || newValue.isEmpty()) {
                     return true;
@@ -95,9 +95,9 @@ public class ListeCourseController {
                 // Compare first name and last name of every person with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
 
-                if (person.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                if (produit.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                     return true; // Filter matches first name.
-                } else if (person.getTag().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                } else if (produit.getTag().toLowerCase().indexOf(lowerCaseFilter) != -1) {
                     return true; // Filter matches last name.
                 }
                 return false; // Does not match.
