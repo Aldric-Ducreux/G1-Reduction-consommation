@@ -11,7 +11,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Item;
-import sample.model.ItemHistorique;
 import sample.model.View;
 
 import java.io.IOException;
@@ -19,13 +18,13 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class HistoriqueController {
-    ObservableList<ItemHistorique> list = FXCollections.observableArrayList(
-            new ItemHistorique("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
-            new ItemHistorique("Chocapic Chocolat","Cereales",2, LocalDate.of(2000, Month.MAY, 20)),
-            new ItemHistorique("Soya Juice","Lait",10, LocalDate.of(2000, Month.MAY, 20))
+    ObservableList<Item> list = FXCollections.observableArrayList(
+            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
+            new Item("Chocapic Chocolat","Cereales",2, LocalDate.of(2000, Month.MAY, 20)),
+            new Item("Soya Juice","Lait",10, LocalDate.of(2000, Month.MAY, 20))
     );
     @FXML
-    private TableView<ItemHistorique> mytableTableView;
+    private TableView<Item> mytableTableView;
     @FXML
     private TableColumn<Item, String> HistoriqueProduits;
     @FXML
@@ -37,10 +36,10 @@ public class HistoriqueController {
 
     public void initHistorique() {
 
-        HistoriqueProduits.setCellValueFactory(new PropertyValueFactory<>("produitName"));
-        HistoriqueType.setCellValueFactory(new PropertyValueFactory<>("type"));
-        HistoriqueQuantiteGaspi.setCellValueFactory(new PropertyValueFactory<>("quantiteGasp"));
-        HistoriqueDernierAchat.setCellValueFactory(new PropertyValueFactory<>("dateAchat"));
+        HistoriqueProduits.setCellValueFactory(new PropertyValueFactory<>("name"));
+        HistoriqueType.setCellValueFactory(new PropertyValueFactory<>("tag"));
+        HistoriqueQuantiteGaspi.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        HistoriqueDernierAchat.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
         loadData();
     }
 
@@ -51,7 +50,7 @@ public class HistoriqueController {
         loader.setController(controller_ajoutCourse);
         try {
             Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Course_Ajout));
-            controller_ajoutCourse.initAjoutCourse();
+            controller_ajoutCourse.initAjoutCourse(list);
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);

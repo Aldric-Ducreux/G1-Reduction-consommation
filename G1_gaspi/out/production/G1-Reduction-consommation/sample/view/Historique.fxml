@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<!--<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>-->
+
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -10,14 +12,14 @@
    <children>
       <AnchorPane prefHeight="404.0" prefWidth="640.0">
          <children>
-            <AutoCompleteTextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="618.0" promptText="Rechercher" style="-fx-background-color: #e6e8ed;" />
-            <TableView layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
+             <TextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="618.0" promptText="Rechercher" />
+             <TableView fx:id="mytableTableView" layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
               <columns>
-                <TableColumn prefWidth="148.79998779296875" text="Produits" />
-                <TableColumn prefWidth="97.60003662109375" text="Type" />
-                  <TableColumn prefWidth="99.20001220703125" text="Quantité acheté" />
-                  <TableColumn prefWidth="181.5999755859375" text="Dernier achat" />
-                  <TableColumn prefWidth="88.00006103515625" text="Ajout" />
+                <TableColumn fx:id="HistoriqueProduits" prefWidth="148.79998779296875" text="Produits" />
+                <TableColumn fx:id="HistoriqueType" prefWidth="97.60003662109375" text="Type" />
+                  <TableColumn fx:id="HistoriqueQuantiteGaspi" prefWidth="99.20001220703125" text="Quantité Gaspillé" />
+                  <TableColumn fx:id="HistoriqueDernierAchat" prefWidth="181.5999755859375" text="Dernier achat" />
+                  <TableColumn fx:id="HistoriqueAjouter" prefWidth="88.00006103515625" text="Ajout" />
               </columns>
             </TableView>
          </children>

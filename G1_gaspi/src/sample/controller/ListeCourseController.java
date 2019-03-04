@@ -52,14 +52,14 @@ public class ListeCourseController {
         loadData();
     }
 
-    public void addCourse()throws Exception{
+    public void addCourse() {
         //En cas de clic sur le bouton "Ajout"
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Course_Ajout));
         AjoutCourseController controller_ajoutCourse = new AjoutCourseController();
         loader.setController(controller_ajoutCourse);
         try {
             Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Course_Ajout));
-            controller_ajoutCourse.initAjoutCourse();
+            controller_ajoutCourse.initAjoutCourse(list);
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
