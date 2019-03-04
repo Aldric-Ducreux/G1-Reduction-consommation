@@ -34,19 +34,9 @@ public class HistoriqueController {
     private TableColumn<Item, String> HistoriqueQuantiteGaspi;
     @FXML
     private TableColumn<Item, String> HistoriqueDernierAchat;
-    @FXML
-    private TableColumn<Item, String> HistoriqueAjouter;
-
 
     public void initHistorique() {
 
-        /*HistoriqueAjouter.setOnMouseClicked( event -> {
-            try{
-                addProduitHistorique();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });*/
         HistoriqueProduits.setCellValueFactory(new PropertyValueFactory<>("produitName"));
         HistoriqueType.setCellValueFactory(new PropertyValueFactory<>("type"));
         HistoriqueQuantiteGaspi.setCellValueFactory(new PropertyValueFactory<>("quantiteGasp"));
