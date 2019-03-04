@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sample.controller.ConnexionController;
+import sample.model.View;
 
 public class Main extends Application {
 
@@ -22,7 +24,7 @@ public class Main extends Application {
         //init controller
         controller_connexion.initConnexion(primaryStage);
         //display view
-        primaryStage.setTitle(View.LABEL_Insc);
+        primaryStage.setTitle(View.LABEL_Connex);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
