@@ -16,12 +16,14 @@ import sample.model.Item;
 import sample.model.View;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.Month;
 
 public class MesProduitsController {
     static ObservableList<Item> produits = FXCollections.observableArrayList(
-            new Item("Jambon Laoste","Jambon",5,"20/20/2000"),
-            new Item("Chocapic Chocolat","Cereales",2,"22/20/2000"),
-            new Item("Soya Juice","Lait",10,"25/20/2000")
+            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
+            new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2000, Month.MAY, 20)),
+            new Item("Soya Juice","Lait",10,LocalDate.of(2000, Month.MAY, 20))
     );
     @FXML
     private TableView<Item> mytableTableView;
@@ -74,7 +76,6 @@ public class MesProduitsController {
 
     private void loadData() {
         mytableTableView.setItems(produits);
-        System.out.println(produits.get(0).getName());
     }
 
 }
