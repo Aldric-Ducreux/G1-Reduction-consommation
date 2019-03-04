@@ -1,17 +1,43 @@
 package sample.controller;
 
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sample.model.Item;
 import sample.model.View;
+
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.Month;
 
 public class ListeCourseController {
+    ObservableList<Item> list = FXCollections.observableArrayList(
+            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
+            new Item("Chocapic Chocolat","Cereales",2, LocalDate.of(2000, Month.MAY, 20)),
+            new Item("Soya Juice","Lait",10, LocalDate.of(2000, Month.MAY, 20))
+    );
+    @FXML
+    private TableView<Item> mytableTableView;
+    @FXML
+    private TableColumn<Item, String> ListeCourseProduits;
+    @FXML
+    private TableColumn<Item, String> ListeCourseQuantite;
+    @FXML
+    private TableColumn<Item, String> ListeCourseModification;
+    @FXML
+    private TableColumn<Item, String> ListeCourseSuppr;
     @FXML
     private Button MesCoursesAjout;
+
 
     public void initMesCourses() {
         MesCoursesAjout.setOnMouseClicked( event -> {
@@ -21,6 +47,9 @@ public class ListeCourseController {
                 e.printStackTrace();
             }
         });
+        ListeCourseProduits.setCellValueFactory(new PropertyValueFactory<>("name"));
+        ListeCourseQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        loadData();
     }
 
     public void addCourse()throws Exception{
@@ -43,4 +72,7 @@ public class ListeCourseController {
         }
     }
 
+    private void loadData() {
+        mytableTableView.setItems(list);
+    }
 }

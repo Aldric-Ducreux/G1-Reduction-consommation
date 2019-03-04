@@ -12,6 +12,8 @@ import sample.model.Item;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class AjoutController {
     @FXML
@@ -55,12 +57,13 @@ public class AjoutController {
 
 
     public void addProduit(ObservableList<Item> produits, String produit, String nombre, String date ){
+        LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         if (produit.isEmpty() || nombre.isEmpty() || date.isEmpty() || nombre.matches(".*[a-z].*") || nombre.matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*") ||
                 !(isValidDate(date))){
             ErrorChamp.setVisible(true);
             ErrorChamp.setTextFill(Color.RED);
         } else {
-            produits.add(new Item(produit, produit, Integer.parseInt(nombre), date));
+            produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
             cancel(MesProduitAjoutButton);
         }
     }
