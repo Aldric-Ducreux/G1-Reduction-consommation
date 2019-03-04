@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="358.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="359.0" prefWidth="590.0" VBox.vgrow="ALWAYS">
+            <Label layoutX="219.0" layoutY="42.0" prefHeight="32.0" prefWidth="111.0" text="Conditions" textAlignment="CENTER">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </Label>
+         <Text layoutX="41.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En vous inscrivant vous acceptez de nous partager vos informations. Ces informations ne seront utiliser que dans notre application. Nous vous invitons a nous contacter en cas de problème rencontrer lors de l'usage de notre application pour la gestion de vos produits et du gaspillage." wrappingWidth="494.1367301940918" />
+    </AnchorPane>
+  </children>
+</VBox>
