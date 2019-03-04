@@ -3,8 +3,6 @@ package sample.controller;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
@@ -14,11 +12,7 @@ import sample.model.ItemList;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
-
-import static java.lang.System.out;
 
 public class AjoutController {
     @FXML
@@ -71,7 +65,7 @@ public class AjoutController {
             ErrorChamp.setVisible(true);
             ErrorChamp.setTextFill(Color.RED);
         } else {
-            produits.addItem(new Item(produit, "tag", Integer.parseInt(nombre), LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"))));
+            produits.addItem(new Item(produit, "tag", Integer.parseInt(nombre), date));
             produits.saveToFile();
             cancel(MesProduitAjoutButton);
         }

@@ -14,7 +14,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Item;
 import sample.model.ItemList;
-import sample.model.Produit;
 import sample.model.View;
 
 import java.io.IOException;
@@ -22,7 +21,11 @@ import java.io.IOException;
 public class MesProduitsController {
     String pathMesProduits = "Produits.json";
     ItemList produits;
-    ObservableList<Produit> list = FXCollections.observableArrayList();
+    ObservableList<Item> list = FXCollections.observableArrayList(
+            new Item("Jambon Laoste","Jambon",5,"20/20/2000"),
+            new Item("Chocapic Chocolat","Cereales",2,"22/20/2000"),
+            new Item("Soya Juice","Lait",10,"25/20/2000")
+    );
     @FXML
     private TableView<Item> mytableTableView;
     @FXML
@@ -74,11 +77,12 @@ public class MesProduitsController {
     }
 
     private void loadData() {
+        mytableTableView.setItems(list);
+        System.out.println(list.get(0).getName());
         //ItemList maListe = ItemList.loadFromFile("C:\\Users\\tosh\\Desktop\\Work\\SI3\\S2\\IHM\\Gaspillage\\G1-Reduction-consommation\\G1_gaspi\\src\\sample\\json\\MesProduits.json");
         //ItemList maListe = ItemList.loadFromFile(View.XML_JSON_Produits);
         //System.out.println(maListe.getItems());
         //mytableTableView.getItems().setAll(maListe.getItems());
-
     }
 
 }
