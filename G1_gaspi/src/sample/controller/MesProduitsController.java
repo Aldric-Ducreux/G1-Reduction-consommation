@@ -60,8 +60,10 @@ public class MesProduitsController {
 
         mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
-                Item itemz = mytableTableView.getSelectionModel().getSelectedItem();
-                modifProduit(itemz);
+                mytableTableView.setOnMouseClicked(event -> {
+                    Item itemz = mytableTableView.getSelectionModel().getSelectedItem();
+                    modifProduit(itemz);
+                });
             }
         });
         Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
