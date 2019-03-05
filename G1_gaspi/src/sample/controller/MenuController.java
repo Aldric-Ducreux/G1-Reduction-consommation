@@ -125,6 +125,7 @@ public class MenuController {
             VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Historique));
             controller_historique.initHistorique();
             Content.getChildren().setAll(newPane);
+
             primaryStage.setTitle(View.LABEL_Historique);
         } catch (IOException e) {
             e.printStackTrace();

@@ -12,7 +12,7 @@
    <children>
       <AnchorPane prefHeight="440.0" prefWidth="900.0">
          <children>
-            <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="900.0">
+            <SplitPane dividerPositions="0.23051224944320714" pickOnBounds="false" prefHeight="400.0" prefWidth="900.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="174.0" style="-fx-background-color: #dbf0fa;">
                      <children>
@@ -74,7 +74,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                <AnchorPane fx:id="Content" minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="800.0" />
+                <AnchorPane fx:id="Content" minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="678.0" />
               </items>
             </SplitPane>
          </children>

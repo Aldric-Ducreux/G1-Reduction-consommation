@@ -103,6 +103,7 @@ public class ConnexionController {
             Parent page = loader.load(getClass().getResourceAsStream(fxmlFile));
             controller_menu.initMenu(primaryStage);
             Scene scene = primaryStage.getScene();
+            scene.getStylesheets().add(View.CSS_File);
             primaryStage.getScene().setRoot(page);
             primaryStage.setTitle(View.LABEL_Produits);
         } catch (IOException e) {

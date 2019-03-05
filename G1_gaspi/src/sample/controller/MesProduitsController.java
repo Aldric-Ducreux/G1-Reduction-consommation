@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,10 +24,14 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class MesProduitsController {
+    PseudoClass currentday = PseudoClass.getPseudoClass("currentday");
+    PseudoClass past = PseudoClass.getPseudoClass("past");
+    PseudoClass close = PseudoClass.getPseudoClass("close");
+
     static ObservableList<Item> produitsList = FXCollections.observableArrayList(
             new Item("Jambon Laoste","Jambon",5, LocalDate.of(2019, Month.MARCH, 05)),
             new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2020, Month.MAY, 20)),
-            new Item("Soya Juice","Lait",10,LocalDate.of(2020, Month.MAY, 20))
+            new Item("Soya Juice","Lait",10,LocalDate.of(2019, Month.MARCH, 03))
     );
     @FXML
     private TableView<Item> mytableTableView;
@@ -69,19 +74,19 @@ public class MesProduitsController {
                 });
             }
         });
-
-        System.out.println("Current:"+Date);
-        System.out.println(produitsList.size());
-        for (int i = 0; i < produitsList.size(); i++) {
-            System.out.println("ième :" + produitsList.get(i).getExpiryDate());
-            if (Date.equals(produitsList.get(i).getExpiryDate()) || Date.isAfter(produitsList.get(i).getExpiryDate())){
-                String touppName = produitsList.get(i).getName().toUpperCase();
-                String touppTag = produitsList.get(i).getTag().toUpperCase();
-                produitsList.get(i).setName(touppName);
-                produitsList.get(i).setTag(touppTag);
-                //mytableTableView.getColumns().get(i).setStyle("-fx-background-color: red");
-            }
-        }
+//------------------------------------------------------------- COLOR
+        mytableTableView.setRowFactory(tableView -> {
+            TableRow<Item> row = new TableRow<>();
+            row.itemProperty().addListener((obs, previousProduit, currentProduit) -> {
+                if (currentProduit != null) {
+                    row.pseudoClassStateChanged(currentday, currentProduit.getExpiryDate().equals(Date));
+                    row.pseudoClassStateChanged(past, currentProduit.getExpiryDate().isBefore(Date));
+                    row.pseudoClassStateChanged(close, currentProduit.getExpiryDate().isAfter(Date));
+                }
+            });
+            return row;
+        });
+//------------------------------------------------------------- Modification
 
         Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
                 new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
@@ -117,7 +122,7 @@ public class MesProduitsController {
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setWidth(550);
+            stage.setWidth(600);
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Produit_Ajout);
             stage.show();
@@ -137,7 +142,7 @@ public class MesProduitsController {
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setWidth(550);
+            stage.setWidth(600);
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Produit_Modif);
             stage.show();

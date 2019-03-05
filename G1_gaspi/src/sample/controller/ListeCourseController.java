@@ -115,7 +115,7 @@ public class ListeCourseController {
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setWidth(550);
+            stage.setWidth(600);
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Produit_Modif);
             stage.show();

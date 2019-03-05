@@ -4,11 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -21,10 +23,12 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class HistoriqueController {
+    PseudoClass tooMany = PseudoClass.getPseudoClass("tooMany");
+
     ObservableList<Item> list = FXCollections.observableArrayList(
             new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
             new Item("Chocapic Chocolat","Cereales",2, LocalDate.of(2000, Month.MAY, 20)),
-            new Item("Soya Juice","Lait",10, LocalDate.of(2000, Month.MAY, 20))
+            new Item("Soya Juice","Lait",21, LocalDate.of(2000, Month.MAY, 20))
     );
     @FXML
     private TableView<Item> mytableTableView;
@@ -45,8 +49,20 @@ public class HistoriqueController {
         HistoriqueType.setCellValueFactory(new PropertyValueFactory<>("tag"));
         HistoriqueQuantiteGaspi.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         HistoriqueDernierAchat.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
+
+        mytableTableView.setRowFactory(tableView -> {
+            TableRow<Item> row = new TableRow<>();
+            row.itemProperty().addListener((obs, previousProduit, currentProduit) -> {
+                if (currentProduit != null) {
+                    row.pseudoClassStateChanged(tooMany, currentProduit.getQuantity() > 20);
+                }
+            });
+            return row;
+        });
+
         loadData();
         SearchBar();
+
     }
 
     public void addProduitHistorique()throws Exception{

@@ -33,6 +33,8 @@ public class View {
     public static final String LABEL_Amis_Ajout = "Mes Amis - Ajout";
     public static final String LABEL_Compte = "Mon Compte";
 
+    public static final String CSS_File = "/sample/CSS/color.css";
+
 
 
 }
