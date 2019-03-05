@@ -69,8 +69,8 @@ public class MesProduitsController {
         mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 mytableTableView.setOnMouseClicked(event -> {
-                    Item itemz = mytableTableView.getSelectionModel().getSelectedItem();
-                    modifProduit(itemz);
+                    Item items = mytableTableView.getSelectionModel().getSelectedItem();
+                    modifProduit(items);
                 });
             }
         });
@@ -143,7 +143,7 @@ public class MesProduitsController {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setWidth(600);
-            stage.setHeight(250);
+            stage.setHeight(350);
             stage.setTitle(View.LABEL_Produit_Modif);
             stage.show();
         } catch (IOException e) {

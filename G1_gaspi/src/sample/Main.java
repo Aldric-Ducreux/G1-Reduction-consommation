@@ -26,6 +26,8 @@ public class Main extends Application {
         //display view
         primaryStage.setTitle(View.LABEL_Connex);
         primaryStage.setScene(new Scene(root));
+        Scene scene = primaryStage.getScene();
+        scene.getStylesheets().add(View.CSS_File);
         primaryStage.show();
     }
 
