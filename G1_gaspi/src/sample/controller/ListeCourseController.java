@@ -9,12 +9,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import sample.model.Item;
 import sample.model.View;
 
@@ -55,6 +53,35 @@ public class ListeCourseController {
         ListeCourseQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         loadData();
         SearchBar();
+        mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                mytableTableView.setOnMouseClicked(event -> {
+                    Item itemz = mytableTableView.getSelectionModel().getSelectedItem();
+                    modifProduit(itemz);
+                });
+            }
+        });
+        Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
+                new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
+                    @Override
+                    public TableCell call(final TableColumn<Item, String> param) {
+                        final TableCell<Item, String> cell = new TableCell<Item, String>() {
+                            @Override
+                            public void updateItem(String item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (empty) {
+                                    setText(null);
+
+                                } else {
+                                    setText("Modification");;
+                                }
+                            }
+                        };
+                        return cell;
+                    }
+                };
+        ListeCourseModification.setCellFactory(cellFactory);
+        SearchBar();
     }
 
     public void addCourse() {
@@ -71,6 +98,26 @@ public class ListeCourseController {
             stage.setWidth(550);
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Course_Ajout);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void modifProduit(Item item) {
+        //En cas de clic sur le bouton "Modif"
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Produit_Modif));
+        MesProduitsModificationController controller_modif = new MesProduitsModificationController();
+        loader.setController(controller_modif);
+        try {
+            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Produit_Modif));
+            controller_modif.initModif(item);
+            Scene scene = new Scene(page);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setWidth(550);
+            stage.setHeight(250);
+            stage.setTitle(View.LABEL_Produit_Modif);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58082cf1-6e96-457a-b637-6a85ae6e838e" name="Default Changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController$1$1.class" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController$1.class" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController.class" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,18 +16,18 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="0">
               <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MesProduitsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MesProduitsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="79" column="55" lean-forward="true" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+            <state relative-caret-position="102">
+              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="146" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3722#4225#0" expanded="true" />
@@ -40,10 +37,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ListeCourseController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="106" column="41" lean-forward="true" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+              <folding>
+                <element signature="e#2587#3090#0" expanded="true" />
+                <element signature="e#3089#3090#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Mes_produits.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="260">
               <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding />
             </state>
@@ -87,12 +97,12 @@
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/User.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_amis_ajout.fxml" />
-        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesAmisController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits.fxml" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" />
       </list>
     </option>
   </component>
@@ -594,14 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="61" column="45" lean-forward="false" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/ItemHistorique.java" />
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -631,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="0">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
@@ -647,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="260">
           <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding />
         </state>
@@ -658,12 +660,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="79" column="55" lean-forward="true" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+        <state relative-caret-position="102">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="146" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3722#4225#0" expanded="true" />
             <element signature="e#4224#4225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Liste_course_modification.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="106" column="41" lean-forward="true" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+          <folding>
+            <element signature="e#2587#3090#0" expanded="true" />
+            <element signature="e#3089#3090#0" expanded="true" />
           </folding>
         </state>
       </provider>
