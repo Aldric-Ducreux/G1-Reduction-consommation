@@ -25,8 +25,8 @@ import java.time.Month;
 public class MesProduitsController {
     static ObservableList<Item> produitsList = FXCollections.observableArrayList(
             new Item("Jambon Laoste","Jambon",5, LocalDate.of(2019, Month.MARCH, 05)),
-            new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2000, Month.MAY, 20)),
-            new Item("Soya Juice","Lait",10,LocalDate.of(2000, Month.MAY, 20))
+            new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2020, Month.MAY, 20)),
+            new Item("Soya Juice","Lait",10,LocalDate.of(2020, Month.MAY, 20))
     );
     @FXML
     private TableView<Item> mytableTableView;
@@ -74,7 +74,7 @@ public class MesProduitsController {
         System.out.println(produitsList.size());
         for (int i = 0; i < produitsList.size(); i++) {
             System.out.println("ième :" + produitsList.get(i).getExpiryDate());
-            if (Date.equals(produitsList.get(i).getExpiryDate())){
+            if (Date.equals(produitsList.get(i).getExpiryDate()) || Date.isAfter(produitsList.get(i).getExpiryDate())){
                 String touppName = produitsList.get(i).getName().toUpperCase();
                 String touppTag = produitsList.get(i).getTag().toUpperCase();
                 produitsList.get(i).setName(touppName);
