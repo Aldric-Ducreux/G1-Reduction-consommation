@@ -11,19 +11,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import sample.model.Item;
 import sample.model.View;
-
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
 
 public class MesProduitsController {
     static ObservableList<Item> produitsList = FXCollections.observableArrayList(
-            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
+            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2019, Month.MARCH, 05)),
             new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2000, Month.MAY, 20)),
             new Item("Soya Juice","Lait",10,LocalDate.of(2000, Month.MAY, 20))
     );
@@ -43,8 +44,10 @@ public class MesProduitsController {
     private Button MesProduitsAjout;
     @FXML
     private TextField filterField;
+    private LocalDate Date;
 
     public void initMesProduits() throws Exception {
+        Date = LocalDate.now();
         MesProduitsAjout.setOnMouseClicked(event -> {
             try {
                 addProduit();
@@ -66,6 +69,20 @@ public class MesProduitsController {
                 });
             }
         });
+
+        System.out.println("Current:"+Date);
+        System.out.println(produitsList.size());
+        for (int i = 0; i < produitsList.size(); i++) {
+            System.out.println("ième :" + produitsList.get(i).getExpiryDate());
+            if (Date.equals(produitsList.get(i).getExpiryDate())){
+                String touppName = produitsList.get(i).getName().toUpperCase();
+                String touppTag = produitsList.get(i).getTag().toUpperCase();
+                produitsList.get(i).setName(touppName);
+                produitsList.get(i).setTag(touppTag);
+                //mytableTableView.getColumns().get(i).setStyle("-fx-background-color: red");
+            }
+        }
+
         Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
                 new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
                     @Override
