@@ -126,7 +126,6 @@ public class MenuController {
             VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Historique));
             controller_historique.initHistorique();
             Content.getChildren().setAll(newPane);
-
             primaryStage.setTitle(View.LABEL_Historique);
         } catch (IOException e) {
             e.printStackTrace();
@@ -139,6 +138,7 @@ public class MenuController {
         loader.setController(controller_annonces);
         try {
             VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Annonces));
+            controller_annonces.initAnnonce();
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Annonces);
         } catch (IOException e) {
