@@ -54,6 +54,9 @@ public class AjoutCourseController {
     public void addProduit(ObservableList<Item> produits, String produit, String nombre){
         LocalDate localDate = LocalDate.now();
         produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
+        int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
+        if (n >= 2)
+            AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
         cancel(AjoutCourseBoutton);
     }
 

@@ -25,7 +25,7 @@ import java.time.Month;
 public class HistoriqueController {
     PseudoClass tooMany = PseudoClass.getPseudoClass("tooMany");
 
-    ObservableList<Item> list = FXCollections.observableArrayList(
+    public static ObservableList<Item> list = FXCollections.observableArrayList(
             new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
             new Item("Chocapic Chocolat","Cereales",2, LocalDate.of(2000, Month.MAY, 20)),
             new Item("Soya Juice","Lait",21, LocalDate.of(2000, Month.MAY, 20))

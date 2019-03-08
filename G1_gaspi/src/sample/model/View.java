@@ -17,6 +17,7 @@ public class View {
     public static final String XML_FILE_Amis = "/sample/view/Mes_amis.fxml";
     public static final String XML_FILE_Amis_Ajout = "/sample/view/Mes_amis_ajout.fxml";
     public static final String XML_FILE_Compte = "/sample/view/Mon_compte.fxml";
+    public static final String XML_FILE_Alerte = "/sample/view/Alerte.fxml";
 
 
     public static final String LABEL_Connex = "Connexion";
@@ -33,6 +34,7 @@ public class View {
     public static final String LABEL_Amis = "Mes Amis";
     public static final String LABEL_Amis_Ajout = "Mes Amis - Ajout";
     public static final String LABEL_Compte = "Mon Compte";
+    public static final String LABEL_Alerte = "Alerte !";
 
     public static final String CSS_File = "/sample/CSS/color.css";
 

@@ -28,11 +28,14 @@ public class MesProduitsController {
     PseudoClass past = PseudoClass.getPseudoClass("past");
     PseudoClass close = PseudoClass.getPseudoClass("close");
 
-    static ObservableList<Item> produitsList = FXCollections.observableArrayList(
+    public static ObservableList<Item> produitsList = FXCollections.observableArrayList(
             new Item("Jambon Laoste","Jambon",5, LocalDate.of(2019, Month.MARCH, 05)),
             new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2020, Month.MAY, 20)),
             new Item("Soya Juice","Lait",10,LocalDate.of(2019, Month.MARCH, 03))
     );
+
+    public static TableView<Item> tableTableView;
+
     @FXML
     private TableView<Item> mytableTableView;
     @FXML
@@ -52,6 +55,7 @@ public class MesProduitsController {
     private LocalDate Date;
 
     public void initMesProduits() throws Exception {
+        tableTableView = mytableTableView;
         Date = LocalDate.now();
         MesProduitsAjout.setOnMouseClicked(event -> {
             try {
