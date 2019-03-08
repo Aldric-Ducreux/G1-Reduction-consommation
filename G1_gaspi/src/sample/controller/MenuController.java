@@ -133,17 +133,17 @@ public class MenuController {
         }
     }
     private void AnnoncesStage() throws Exception{
-        /*MenuNameBlue(Annonces);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Historique));
-        HistoriqueController controller_historique = new HistoriqueController();
-        loader.setController(controller_historique);
+        MenuNameBlue(Annonces);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Annonces));
+        AnnoncesController controller_annonces = new AnnoncesController();
+        loader.setController(controller_annonces);
         try {
-            VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Historique));
+            VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Annonces));
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Annonces);
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
     private void MesAmisStage() throws Exception{
         MenuNameBlue(MesAmis);

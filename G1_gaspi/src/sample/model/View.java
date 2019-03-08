@@ -13,6 +13,7 @@ public class View {
     public static final String XML_FILE_Historique = "/sample/view/Historique.fxml";
     public static final String XML_FILE_Historique_Ajout = "/sample/view/Liste_course_ajout.fxml";
     public static final String XML_FILE_Annonces = "/sample/view/Annonces.fxml";
+    public static final String XML_FILE_Produit_annonces = "/sample/view/Produit_annonces.fxml";
     public static final String XML_FILE_Amis = "/sample/view/Mes_amis.fxml";
     public static final String XML_FILE_Amis_Ajout = "/sample/view/Mes_amis_ajout.fxml";
     public static final String XML_FILE_Compte = "/sample/view/Mon_compte.fxml";

@@ -2,22 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58082cf1-6e96-457a-b637-6a85ae6e838e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AnnoncesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/model/Annonce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/CSS/color.css" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/CSS/color.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/ConnexionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/ConnexionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/HistoriqueController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/HistoriqueController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsModificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MesProduitsModificationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits_modification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Mes_produits_modification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/CSS/color.css" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/CSS/color.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConnexionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConnexionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/model/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/model/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Annonces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Annonces.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1-Reduction-consommation/sample/view/Attention.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/META-INF/G1_gaspi.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/AjoutController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/AjoutController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/ConditionsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/InscriptionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/MesAmisController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/MesProduitsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/controller/MonCompteController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/model/Connexion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/model/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/model/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Annonces.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Attention.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Inscription.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Liste_course_supprimer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Menu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_produits_ajout.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Mes_produits_modification.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/out/production/G1_gaspi/sample/view/Produit_annonces.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsModificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsModificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MonCompteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MonCompteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits_modification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits_modification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mon_compte.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mon_compte.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Annonces.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/G1_gaspi/src/sample/view/Annonces.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,76 +41,108 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Menu.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="34" column="187" selection-start-line="34" selection-start-column="157" selection-end-line="34" selection-end-column="187" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MonCompteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="44" column="46" lean-forward="true" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConnexionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="110" column="54" lean-forward="true" selection-start-line="110" selection-start-column="54" selection-end-line="110" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Mon_compte.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="86" column="36" lean-forward="true" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/UserList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AnnoncesController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="289">
+                  <caret line="41" selection-start-line="41" selection-end-line="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-952">
+                  <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/Annonce.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="173">
+                  <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#2092#2093#0" expanded="true" />
+                    <element signature="e#2156#2157#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Annonces.fxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="91">
+                  <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+                </state>
+              </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Menu.fxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="119">
+                  <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+                </state>
+              </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/Item.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-156">
+                  <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Produit_annonces.fxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="31" column="58" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="58" />
+                </state>
+              </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="139">
+                  <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -132,7 +179,6 @@
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mes_produits.fxml" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/view/CSS/color.css" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/color.css" />
-        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsModificationController.java" />
@@ -142,8 +188,12 @@
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/view/Mon_compte.fxml" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MonCompteController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConnexionController.java" />
-        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java" />
         <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/UserList.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/view/Annonces.fxml" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/controller/AnnoncesController.java" />
+        <option value="$PROJECT_DIR$/G1_gaspi/src/sample/model/Annonce.java" />
       </list>
     </option>
   </component>
@@ -163,58 +213,34 @@
         <subPane>
           <expand>
             <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
+              <item name="Gaspillage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gaspillage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
+              <item name="Gaspillage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gaspillage" type="462c0819:PsiDirectoryNode" />
               <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
+              <item name="Gaspillage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gaspillage" type="462c0819:PsiDirectoryNode" />
               <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
+              <item name="Gaspillage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gaspillage" type="462c0819:PsiDirectoryNode" />
               <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
+              <item name="Gaspillage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gaspillage" type="462c0819:PsiDirectoryNode" />
               <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="CSS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="G1-Reduction-consommation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="G1-Reduction-consommation" type="462c0819:PsiDirectoryNode" />
-              <item name="G1_gaspi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,10 +248,11 @@
       </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551820581577" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552067263615" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -282,11 +309,14 @@
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="14570000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25704697" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24899329" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -295,13 +325,13 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32719547" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.34776536" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32948717" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067115" side_tool="true" weight="0.34776536" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49932885" weight="0.3282123" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32948717" />
       <window_info anchor="right" id="Maven" order="0" />
@@ -404,13 +434,6 @@
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Liste_course_modification.fxml" />
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/CSS/color.css" />
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/test.xsl" />
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ListeCourseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1700">
@@ -433,16 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="145" column="31" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsModificationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -450,13 +463,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -468,20 +474,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../IUT/SMS-Project-master/SMS-Project-Client/src/fr/rt/sms/view/AccueilController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/IUT/SMS-Project-master/SMS-Project-Client/src/fr/rt/sms/view/AccueilController.java" />
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/CSS/color.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -493,14 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Menu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" column="187" selection-start-line="34" selection-start-column="157" selection-end-line="34" selection-end-column="187" />
         </state>
       </provider>
     </entry>
@@ -533,20 +518,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/UserList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesProduitsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="349" column="32" selection-start-line="349" selection-start-column="32" selection-end-line="349" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MesAmisController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Annonces.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/ConditionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/AnnoncesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Produit_annonces.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="58" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="58" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="6994" column="22" selection-start-line="6994" selection-start-column="22" selection-end-line="6994" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/HistoriqueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-952">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/Annonce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2092#2093#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/controller/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="86" column="36" lean-forward="true" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
+        <state relative-caret-position="139">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/model/UserList.java">
+    <entry file="file://$PROJECT_DIR$/G1_gaspi/src/sample/view/Menu.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state relative-caret-position="119">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
         </state>
       </provider>
     </entry>
