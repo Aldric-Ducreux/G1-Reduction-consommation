@@ -15,7 +15,7 @@
       <children>
             <Label layoutX="219.0" layoutY="42.0" prefHeight="32.0" prefWidth="111.0" text="Connexion" textAlignment="CENTER">
                <font>
-                  <Font size="22.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Label>
             <Label layoutX="89.0" layoutY="113.0" text="Identifiant">
@@ -50,7 +50,7 @@
                   <Font size="15.0" />
                </font>
             </Button>
-          <Label fx:id ="TextIncorrect" layoutX="165.0" layoutY="205.0" prefHeight="32.0" prefWidth="250.0" text="Identifiant ou mot de passe incorrect" textAlignment="CENTER">
+          <Label fx:id="TextIncorrect" layoutX="165.0" layoutY="205.0" prefHeight="32.0" prefWidth="250.0" text="Identifiant ou mot de passe incorrect" textAlignment="CENTER">
               <font>
                   <Font size="14.0" />
               </font>

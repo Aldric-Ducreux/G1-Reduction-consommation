@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import sample.model.User;
 import sample.model.View;
 
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class MenuController {
     private AnchorPane Content;
 
 
-    public void initMenu(Stage primaryStage) throws Exception {
+    public void initMenu(Stage primaryStage, User user) throws Exception {
         //Initialisation du Menu
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
@@ -81,7 +82,7 @@ public class MenuController {
         });
         MonCompte.setOnMouseClicked( event -> {
             try{
-                MonCompteStage(primaryStage);
+                MonCompteStage(primaryStage, user);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -122,9 +123,10 @@ public class MenuController {
         HistoriqueController controller_historique = new HistoriqueController();
         loader.setController(controller_historique);
         try {
-            VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Historique));
+            VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Historique));
             controller_historique.initHistorique();
             Content.getChildren().setAll(newPane);
+
             primaryStage.setTitle(View.LABEL_Historique);
         } catch (IOException e) {
             e.printStackTrace();
@@ -149,21 +151,22 @@ public class MenuController {
         MesAmisController controller_amis = new MesAmisController();
         loader.setController(controller_amis);
         try {
-            VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Amis));
+            VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Amis));
+            controller_amis.initMesAmis();
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Amis);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private void MonCompteStage(Stage primaryStage) throws Exception{
+    private void MonCompteStage(Stage primaryStage, User user) throws Exception{
         MenuNameBlue(MonCompte);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Compte));
         MonCompteController controller_compte = new MonCompteController();
         loader.setController(controller_compte);
         try {
             VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Compte));
-            controller_compte.initMonCompte(primaryStage);
+            controller_compte.initMonCompte(primaryStage, user);
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Compte);
         } catch (IOException e) {

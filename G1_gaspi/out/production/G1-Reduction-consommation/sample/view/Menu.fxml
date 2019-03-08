@@ -8,15 +8,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="Fenetre" prefHeight="440.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="700.0">
+      <AnchorPane prefHeight="440.0" prefWidth="900.0">
          <children>
-            <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="700.0">
+            <SplitPane dividerPositions="0.23051224944320714" pickOnBounds="false" prefHeight="400.0" prefWidth="900.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="174.0" style="-fx-background-color: #dbf0fa;">
                      <children>
-                        <Button blendMode="HARD_LIGHT" layoutY="85.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Mes Produits" textAlignment="CENTER">
+                        <Button fx:id="MesProduits" blendMode="HARD_LIGHT" layoutY="85.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Mes Produits" textAlignment="CENTER">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -24,7 +24,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button blendMode="HARD_LIGHT" layoutY="123.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Liste de course" textAlignment="CENTER">
+                        <Button fx:id="ListeDeCourse" blendMode="HARD_LIGHT" layoutY="123.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Liste de course" textAlignment="CENTER">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -32,7 +32,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button blendMode="HARD_LIGHT" layoutX="-1.0" layoutY="161.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Historique" textAlignment="CENTER">
+                        <Button fx:id="Historique" blendMode="HARD_LIGHT" layoutY="161.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Historique" textAlignment="CENTER">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -40,7 +40,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button blendMode="HARD_LIGHT" layoutY="199.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Annonces" textAlignment="CENTER">
+                        <Button fx:id="Annonces" blendMode="HARD_LIGHT" layoutY="199.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Annonces" textAlignment="CENTER">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -48,7 +48,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button blendMode="HARD_LIGHT" layoutY="237.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Mes Amis" textAlignment="CENTER">
+                        <Button fx:id="MesAmis" blendMode="HARD_LIGHT" layoutY="237.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Mes Amis" textAlignment="CENTER">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -56,7 +56,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button blendMode="HARD_LIGHT" layoutX="-1.0" layoutY="275.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Mon Compte" textAlignment="CENTER">
+                        <Button fx:id="MonCompte" blendMode="HARD_LIGHT" layoutY="275.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="206.0" style="-fx-background-color: #dbf0fa;" text="Mon Compte" textAlignment="CENTER">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -74,7 +74,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="594.0" />
+                <AnchorPane fx:id="Content" minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="678.0" />
               </items>
             </SplitPane>
          </children>

@@ -12,12 +12,14 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import sample.model.User;
 import sample.model.View;
 
 import java.io.IOException;
 
 public class ConnexionController {
     private Stage primaryStage;
+    public User user;
     @FXML
     private Button Connexion_BT_Connexion;
     @FXML
@@ -64,7 +66,10 @@ public class ConnexionController {
         if (id.equals("admin") && mdp.equals("admin")) {
             //Si correct, on affiche la page du Menu
             try {
-                MenuStage();
+                user = new User(id,"",mdp);
+                MenuStage(user);
+
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -85,6 +90,7 @@ public class ConnexionController {
             Parent page = loader.load(getClass().getResourceAsStream(fxmlFile));
             controller_inscription.initInscription(primaryStage);
             Scene scene = primaryStage.getScene();
+            scene.getStylesheets().add(View.CSS_File);
             primaryStage.getScene().setRoot(page);
             primaryStage.setTitle(View.LABEL_Insc);
         } catch (IOException e) {
@@ -92,7 +98,7 @@ public class ConnexionController {
         }
     }
 
-    public void MenuStage() throws Exception{
+    public void MenuStage(User user) throws Exception{
         //Affichage du menu
         String fxmlFile = View.XML_FILE_Menu;
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -100,8 +106,9 @@ public class ConnexionController {
         loader.setController(controller_menu);
         try {
             Parent page = loader.load(getClass().getResourceAsStream(fxmlFile));
-            controller_menu.initMenu(primaryStage);
+            controller_menu.initMenu(primaryStage, user);
             Scene scene = primaryStage.getScene();
+            scene.getStylesheets().add(View.CSS_File);
             primaryStage.getScene().setRoot(page);
             primaryStage.setTitle(View.LABEL_Produits);
         } catch (IOException e) {

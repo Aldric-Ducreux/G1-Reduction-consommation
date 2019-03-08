@@ -12,7 +12,7 @@
    <children>
       <AnchorPane prefHeight="404.0" prefWidth="640.0">
          <children>
-            <TextField layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher" />
+            <TextField fx:id="filterField" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher" />
             <Button fx:id="MesProduitsAjout" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
             <TableView fx:id="mytableTableView" layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
               <columns>
@@ -20,11 +20,10 @@
                 <TableColumn fx:id="MesProduitsType" prefWidth="97.60003662109375" text="Type" />
                   <TableColumn fx:id="MesProduitsQuantite" prefWidth="68.800048828125" text="Quantité" />
                   <TableColumn fx:id="MesProduitsDate" prefWidth="171.20001220703125" text="Date limite de consomation" />
-                  <TableColumn fx:id="MesProduitsModification" prefWidth="84.800048828125" text="Modification" />
+                  <TableColumn fx:id="MesProduitsModification" prefWidth="90.0" text="Modification" />
                   <!--<TableColumn fx:id="MesProduitsDelete" prefWidth="45.60000000000002" />-->
               </columns>
             </TableView>
-            <TextField layoutX="14.0" layoutY="15.0" prefHeight="26.0" prefWidth="507.0" promptText="Rechercher un produit"/>
          </children>
       </AnchorPane>
    </children>

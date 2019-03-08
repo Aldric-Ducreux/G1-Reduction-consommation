@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import sample.model.User;
 import sample.model.View;
 
 import java.io.IOException;
@@ -18,6 +19,8 @@ public class MonCompteController {
     private Label Error;
     @FXML
     private Label Success;
+    @FXML
+    private Label identifiant;
     @FXML
     private PasswordField OldMDP;
     @FXML
@@ -33,12 +36,13 @@ public class MonCompteController {
     @FXML
     private Button LogOut;
 
-    public void initMonCompte(Stage primaryStage)throws  Exception{
+    public void initMonCompte(Stage primaryStage, User user)throws  Exception{
         this.primaryStage = primaryStage;
         Error.setVisible(false);
         Error.setTextFill(Color.RED);
         Success.setVisible(false);
         Success.setTextFill(Color.GREEN);
+        identifiant.setText(user.getPseudo());
         BT_ModifierMDP.setOnMouseClicked( event -> {
             try{
                 modifyMDP(OldMDP.getText(),NewMDP.getText(), NewMDPV.getText());
