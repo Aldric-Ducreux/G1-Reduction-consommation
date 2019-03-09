@@ -35,13 +35,13 @@ public class MesProduitsModificationController {
             cancel(MesProduitSupprimerButton);
         });
         MesProduitModifierButton.setOnMouseClicked(event ->  {
-            int newQuantity = Integer.parseInt(MesProduitModifierQuantite.getEditor().textProperty().get());
-            LocalDate localDate = LocalDate.parse(MesProduitModifierDate.getEditor().getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-            if (MesProduitModifierNom.getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().isEmpty() || MesProduitModifierDate.getEditor().getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[a-z][!@#$%&*()_+=|<>?{}\\[\\]~-].*") || !(isValidDate(MesProduitModifierDate.getEditor().getText()))){
+            if (MesProduitModifierNom.getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().isEmpty() || MesProduitModifierDate.getEditor().getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[a-z].*")|| MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*") || !(isValidDate(MesProduitModifierDate.getEditor().getText()))){
                 ErrorChamp.setVisible(true);
                 ErrorChamp.setTextFill(Color.RED);
             } else {
+                int newQuantity = Integer.parseInt(MesProduitModifierQuantite.getEditor().textProperty().get());
                 if (newQuantity > 0) {
+                    LocalDate localDate = LocalDate.parse(MesProduitModifierDate.getEditor().getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                     Item history = new Item(item.getName(), item.getTag(), item.getQuantity() - newQuantity, item.getExpiryDate());
                     item.setQuantity(newQuantity);
                     item.setName(MesProduitModifierNom.getText());

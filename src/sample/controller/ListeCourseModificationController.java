@@ -2,8 +2,11 @@ package sample.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import sample.model.Item;
+
+import static sample.controller.AjoutController.isValidDate;
 
 public class ListeCourseModificationController {
     @FXML
@@ -27,10 +30,14 @@ public class ListeCourseModificationController {
         });
         MesProduitModifierButton.setOnMouseClicked(event ->  {
             int newQuantity = Integer.parseInt(MesProduitModifierQuantite.getEditor().textProperty().get());
-
-            item.setQuantity(newQuantity);
-            item.setName(MesProduitModifierNom.getText());
-            cancel(MesProduitModifierButton);
+            if (MesProduitModifierNom.getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().isEmpty()|| MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[a-z].*")|| MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*")){
+                ErrorChamp.setVisible(true);
+                ErrorChamp.setTextFill(Color.RED);
+            } else {
+                item.setQuantity(newQuantity);
+                item.setName(MesProduitModifierNom.getText());
+                cancel(MesProduitModifierButton);
+            }
         });
     }
 

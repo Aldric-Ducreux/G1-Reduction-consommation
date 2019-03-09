@@ -9,6 +9,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import sample.model.User;
+import sample.model.UserList;
 import sample.model.View;
 import java.io.IOException;
 
@@ -81,6 +83,8 @@ public class InscriptionController {
             TextIncorrect.setTextFill(Color.RED);
             TextIncorrect.setVisible(true);
         } else {
+            User user = new User(id,mail,mdp);
+            //UserList.addCompte(user);
             ConnexionStage();
         }
     }
