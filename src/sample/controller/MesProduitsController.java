@@ -21,6 +21,9 @@ import sample.model.View;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class MesProduitsController {
     PseudoClass currentday = PseudoClass.getPseudoClass("currentday");
@@ -68,6 +71,17 @@ public class MesProduitsController {
         MesProduitsQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         MesProduitsDate.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
         mytableTableView.setItems(produitsList);
+
+        String expiredProducts = String.join(", ", produitsList.stream().filter(item -> item.getExpiryDate().isBefore(LocalDate.now())).map(Item::getName).collect(Collectors.toList()));
+        String nearExpiredProducts = String.join(", ", produitsList.stream().filter(item -> item.getExpiryDate().isEqual(LocalDate.now().plusDays(1))).map(Item::getName).collect(Collectors.toList()));
+
+        String alerte = "";
+        if (!expiredProducts.equals(""))
+            alerte += "Ces produits ont expiré :\n" + expiredProducts + "\n";
+        if (!nearExpiredProducts.equals(""))
+            alerte += "Ces produits vont bientot expirer :\n" + nearExpiredProducts + "\n";
+        if (!alerte.equals(""))
+            AlerteController.alert(alerte);
 
         mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
