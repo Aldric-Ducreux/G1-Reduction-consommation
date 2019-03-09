@@ -106,18 +106,18 @@ public class ListeCourseController {
 
     public void modifProduit(Item item) {
         //En cas de clic sur le bouton "Modif"
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Produit_Modif));
-        MesProduitsModificationController controller_modif = new MesProduitsModificationController();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Course_Modif));
+        ListeCourseModificationController controller_modif = new ListeCourseModificationController();
         loader.setController(controller_modif);
         try {
-            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Produit_Modif));
-            controller_modif.initModif(item);
+            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Course_Modif));
+            controller_modif.initModifCourse(item);
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setWidth(600);
             stage.setHeight(250);
-            stage.setTitle(View.LABEL_Produit_Modif);
+            stage.setTitle(View.LABEL_Course_Modif);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

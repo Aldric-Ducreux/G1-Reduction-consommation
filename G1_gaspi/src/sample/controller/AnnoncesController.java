@@ -38,14 +38,14 @@ public class AnnoncesController {
 
     public void initAnnonce() {
 
-        ListV_Annonces.setOrientation(Orientation.VERTICAL);
+        /*ListV_Annonces.setOrientation(Orientation.VERTICAL);
 
         loadData();
-        SearchBar();
+        SearchBar();*/
 
     }
 
-    private void loadData() {ListV_Annonces.setItems(list);
+    /*private void loadData() {ListV_Annonces.setItems(list);
     }
 
     public void SearchBar(){
@@ -83,7 +83,7 @@ public class AnnoncesController {
 
         // 5. Add sorted (and filtered) data to the table.
         ListV_Annonces.setItems(sortedData);
-    }
+    }*/
 }
 
 
