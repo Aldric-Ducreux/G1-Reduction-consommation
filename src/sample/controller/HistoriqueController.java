@@ -97,18 +97,18 @@ public class HistoriqueController {
     public void addProduitHistorique(Item items){
         //En cas de clic sur le bouton "Ajout"
         ObservableList<Item> liste = ListeCourseController.list;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Course_Ajout));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Historique_AjoutCourse));
         AjoutHistoriqueController controller_ajoutHistorique = new AjoutHistoriqueController();
         loader.setController(controller_ajoutHistorique);
         try {
-            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Course_Ajout));
+            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Historique_AjoutCourse));
             controller_ajoutHistorique.initAjoutHistorique(liste, items);
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setWidth(550);
             stage.setHeight(250);
-            stage.setTitle(View.LABEL_Course_Ajout);
+            stage.setTitle(View.LABEL_Historique_AjoutCourse);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
