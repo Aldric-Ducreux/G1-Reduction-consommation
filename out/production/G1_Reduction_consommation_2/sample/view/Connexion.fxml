@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="Fenetre" prefHeight="358.0" prefWidth="549.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="359.0" prefWidth="590.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Label layoutX="219.0" layoutY="42.0" prefHeight="32.0" prefWidth="111.0" text="Connexion" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="113.0" text="Identifiant">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="171.0" prefHeight="26.0" prefWidth="111.0" text="Mot de passe">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Connexion_TF_ID" layoutX="186.0" layoutY="112.0" prefHeight="26.0" prefWidth="293.0" promptText="Identifiant">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+          <PasswordField fx:id="Connexion_TF_MDP" layoutX="185.0" layoutY="171.0" prefHeight="26.0" prefWidth="294.0" promptText="Mot de passe" />
+            <Button fx:id="Connexion_BT_Connexion" accessibleText="t*" contentDisplay="CENTER" layoutX="126.0" layoutY="247.0" mnemonicParsing="false" text="Connexion">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="Connexion_BT_Inscription" contentDisplay="CENTER" layoutX="334.0" layoutY="247.0" mnemonicParsing="false" text="Inscription">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+          <Label fx:id="TextIncorrect" layoutX="165.0" layoutY="205.0" prefHeight="32.0" prefWidth="250.0" text="Identifiant ou mot de passe incorrect" textAlignment="CENTER">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Label>
+      </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+    </AnchorPane>
+  </children>
+</VBox>

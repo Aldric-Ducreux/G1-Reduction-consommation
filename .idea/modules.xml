@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/G1-Reduction-consommation.iml" filepath="$PROJECT_DIR$/.idea/G1-Reduction-consommation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/G1_Reduction_consommation_2.iml" filepath="$PROJECT_DIR$/G1_Reduction_consommation_2.iml" />
     </modules>
   </component>
 </project>
