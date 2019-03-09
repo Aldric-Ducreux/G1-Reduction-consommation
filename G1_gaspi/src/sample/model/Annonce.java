@@ -2,12 +2,9 @@ package sample.model;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 import sample.controller.AnnoncesController;
-import sample.controller.ProduitsAnnoncesController;
 
 import java.awt.*;
 import java.io.IOException;
@@ -15,8 +12,6 @@ import java.io.IOException;
 public class Annonce {
     private Item item;
     private String magasin;
-    @FXML
-    private AnchorPane liste_annonce;
     @FXML
     private Label nom_produit_ProduitAnnonces;
     @FXML
@@ -44,7 +39,7 @@ public class Annonce {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /*nom_magasin_ProduitAnnonces.setText(magasin);
+        nom_magasin_ProduitAnnonces.setText(magasin);
         nom_produit_ProduitAnnonces.setText(item.getName());
         date_limite_ProduitAnnonces.setText(String.valueOf(item.getExpiryDate()));
         bouton_ajouter_ProduitAnnonces.setOnMouseClicked (event -> {
@@ -67,11 +62,12 @@ public class Annonce {
             } catch (Exception e){
                 e.printStackTrace();
             }
-        });*/
+        });
     }
 
+    public void ajouter(){
 
-    public void ajouter(){ }
+    }
 
     public Item getItem() {
         return item;

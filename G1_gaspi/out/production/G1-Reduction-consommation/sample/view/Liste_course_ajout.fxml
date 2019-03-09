@@ -34,11 +34,6 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-             <Label fx:id="ErrorChamp" layoutX="70.0" layoutY="140.0" prefHeight="18.0" prefWidth="280.0" text="Un ou des champs sont incorrects">
-                 <font>
-                     <Font name="System Bold" size="13.0" />
-                 </font>
-             </Label>
          </children>
     </AnchorPane>
   </children>

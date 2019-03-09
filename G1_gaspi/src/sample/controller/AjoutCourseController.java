@@ -22,11 +22,8 @@ public class AjoutCourseController {
     private Spinner AjoutCourseQuantite;
     @FXML
     private Button AjoutCourseBoutton;
-    @FXML
-    private Label ErrorChamp;
 
     public void initAjoutCourse(ObservableList<Item> produits) {
-        ErrorChamp.setVisible(false);
         AjoutCourseQuantite.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100,
                 Integer.parseInt("1")));
         EventHandler<KeyEvent> enterKeyEventHandler;
@@ -55,17 +52,12 @@ public class AjoutCourseController {
 
 
     public void addProduit(ObservableList<Item> produits, String produit, String nombre){
-        if (!(AjoutCourseNom.getText().isEmpty())) {
-            LocalDate localDate = LocalDate.now();
-            produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
-            int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
-            if (n >= 2)
-                AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
-            cancel(AjoutCourseBoutton);
-        } else {
-            ErrorChamp.setVisible(true);
-            ErrorChamp.setTextFill(Color.RED);
-        }
+        LocalDate localDate = LocalDate.now();
+        produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
+        int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
+        if (n >= 2)
+            AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
+        cancel(AjoutCourseBoutton);
     }
 
     public void cancel(Button BT){
