@@ -116,6 +116,7 @@ public class MonCompteController {
             controller_connexion.initConnexion(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);
+            scene.getStylesheets().add(View.CSS_File);
             primaryStage.setTitle(View.LABEL_Connex);
         } catch (IOException e) {
             e.printStackTrace();

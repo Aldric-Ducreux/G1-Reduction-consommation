@@ -57,7 +57,7 @@ public class AjoutController {
 
     public void addProduit(ObservableList<Item> produits, String produit, String nombre, String date ){
         if (produit.isEmpty() || nombre.isEmpty() || date.isEmpty() || nombre.matches(".*[a-z].*") || nombre.matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*") ||
-                !(isValidDate(date))){
+                !(isValidDate(date))|| nombre.equals(0)){
             ErrorChamp.setVisible(true);
             ErrorChamp.setTextFill(Color.RED);
         } else {

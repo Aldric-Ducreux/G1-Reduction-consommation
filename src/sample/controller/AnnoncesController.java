@@ -1,77 +1,150 @@
 package sample.controller;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.css.PseudoClass;
+
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import sample.model.Annonce;
 import sample.model.Item;
+import sample.model.View;
 
+import java.io.IOException;
 import java.time.LocalDate;
-import java.time.Month;
+import java.time.format.DateTimeFormatter;
 
 public class AnnoncesController {
-    PseudoClass tooMany = PseudoClass.getPseudoClass("tooMany");
-
-    ObservableList<Annonce> list = FXCollections.observableArrayList(
-            new Annonce(new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),"Carrefour Antibes"),
-            new Annonce(new Item("Chocapic Chocolat","Cereales",2, LocalDate.of(2000, Month.MAY, 20)), "Carrefour Monaco"),
-            new Annonce(new Item("Soya Juice","Lait",21, LocalDate.of(2000, Month.MAY, 20)),"Spar Nice")
-    );
     @FXML
-    private ListView<Annonce> ListV_Annonces;
+    private TableView<Annonce> myTableAnnonces;
+    @FXML
+    private TableColumn<Annonce, Annonce> MesAnnonces;
     @FXML
     private TextField rechercher_Annonces;
 
-    public void initAnnonce() {
+    @FXML
+    private AnchorPane liste_annonce;
+    @FXML
+    private java.awt.Label nom_produit_ProduitAnnonces;
+    @FXML
+    private java.awt.Label date_limite_ProduitAnnonces;
+    @FXML
+    private java.awt.Label nom_magasin_ProduitAnnonces;
+    @FXML
+    private javafx.scene.control.Button bouton_ajouter_ProduitAnnonces;
+    @FXML
+    private javafx.scene.control.Button bouton_commenter_ProduitAnnonces;
+    @FXML
+    private javafx.scene.control.Button bouton_partager_ProduitAnnonces;
+    @FXML
+    private javafx.scene.control.Label ErrorChamp;
 
-        /*ListV_Annonces.setOrientation(Orientation.VERTICAL);
+    @FXML
+    private AnchorPane liste_annonce1;
+    @FXML
+    private java.awt.Label nom_produit_ProduitAnnonces1;
+    @FXML
+    private java.awt.Label date_limite_ProduitAnnonces1;
+    @FXML
+    private java.awt.Label nom_magasin_ProduitAnnonces1;
+    @FXML
+    private javafx.scene.control.Button bouton_ajouter_ProduitAnnonces1;
+    @FXML
+    private javafx.scene.control.Button bouton_commenter_ProduitAnnonces1;
+    @FXML
+    private javafx.scene.control.Button bouton_partager_ProduitAnnonces1;
+    @FXML
+    private javafx.scene.control.Label ErrorChamp1;
 
-        loadData();
-        SearchBar();*/
+    public void initAnnonces() {
 
-    }
-
-    /*private void loadData() {ListV_Annonces.setItems(list);
-    }
-
-    public void SearchBar(){
-        // 1. Wrap the ObservableList in a FilteredList (initially display all data).
-        FilteredList<Annonce> filteredData = new FilteredList<>(list, p -> true);
-
-        // 2. Set the filter Predicate whenever the filter changes.
-        rechercher_Annonces.textProperty().addListener((observable, oldValue, newValue) -> {
-            filteredData.setPredicate(produit -> {
-                // If filter text is empty, display all persons.
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
-
-                // Compare first name and last name of every person with filter text.
-                String lowerCaseFilter = newValue.toLowerCase();
-
-                if (produit.getItem().getName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                    return true; // Filter matches first name.
-                } else if (produit.getItem().getTag().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                    return true; // Filter matches last name.
-                } else if (produit.getMagasin().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                    return true; // Filter matches last name.
-                }
-                return false; // Does not match.
-            });
+        bouton_ajouter_ProduitAnnonces.setOnMouseClicked (event -> {
+            try{
+                addProduit(nom_magasin_ProduitAnnonces.getText(), nom_produit_ProduitAnnonces.getName(), date_limite_ProduitAnnonces.getText());
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });bouton_ajouter_ProduitAnnonces1.setOnMouseClicked (event -> {
+            try{
+                addProduit(nom_magasin_ProduitAnnonces1.getText(), nom_produit_ProduitAnnonces1.getName(), date_limite_ProduitAnnonces1.getText());
+            } catch (Exception e){
+                e.printStackTrace();
+            }
         });
+        bouton_partager_ProduitAnnonces.setOnMouseClicked (event -> {
+            try{
+                partageAnnonce(nom_produit_ProduitAnnonces.getName());
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+        bouton_partager_ProduitAnnonces1.setOnMouseClicked (event -> {
+            try{
+                partageAnnonce(nom_produit_ProduitAnnonces1.getName());
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+        bouton_commenter_ProduitAnnonces.setOnMouseClicked (event -> {
+            try{
+                commentaire();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+        bouton_commenter_ProduitAnnonces1.setOnMouseClicked (event -> {
+            try{
+                commentaire();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+    }
 
-        // 3. Wrap the FilteredList in a SortedList.
-        SortedList<Annonce> sortedData = new SortedList<>(filteredData);
+    public void addProduit(String magasin, String produit, String date){
+        if (produit.isEmpty()) {
+            ErrorChamp.setVisible(true);
+            ErrorChamp.setTextFill(Color.RED);
+        } else {
+            String nom = magasin +" "+ produit;
+            LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            ListeCourseController.list.add(new Item(nom, produit, 1, localDate));
+            ListeCourseController.tableTableView.refresh();
+            cancel(bouton_ajouter_ProduitAnnonces);
+        }
+    }
+    public void partageAnnonce(String produit) {
+        //En cas de clic sur le bouton "Ajout"
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Annonces_Partage));
+        AnnoncesPartageController controller_partageAnnonce = new AnnoncesPartageController();
+        loader.setController(controller_partageAnnonce);
+        try {
+            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Annonces_Partage));
+            controller_partageAnnonce.initAnnoncesPartage(produit);
+            Scene scene = new Scene(page);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setWidth(550);
+            stage.setHeight(250);
+            stage.setTitle(View.LABEL_Annonces_Partage);
+            scene.getStylesheets().add(View.CSS_File);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-        // 4. Bind the SortedList comparator to the TableView comparator.
-        // 	  Otherwise, sorting the TableView would have no effect.
-        //sortedData.comparatorProperty().bind(ListV_Annonces.comparatorProperty());
+    public void commentaire() {
+        System.out.println("commentaire");
+    }
 
-        // 5. Add sorted (and filtered) data to the table.
-        ListV_Annonces.setItems(sortedData);
-    }*/
+    public void cancel(javafx.scene.control.Button BT){
+        Stage stage = (Stage) BT.getScene().getWindow();
+        stage.close();
+    }
 }
 
 

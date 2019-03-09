@@ -32,6 +32,7 @@ public class AlerteController {
             stage.setWidth(550);
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Alerte);
+            scene.getStylesheets().add(View.CSS_File);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

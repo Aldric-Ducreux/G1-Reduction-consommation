@@ -142,6 +142,7 @@ public class MesProduitsController {
             stage.setWidth(600);
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Produit_Ajout);
+            scene.getStylesheets().add(View.CSS_File);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -162,6 +163,7 @@ public class MesProduitsController {
             stage.setWidth(600);
             stage.setHeight(350);
             stage.setTitle(View.LABEL_Produit_Modif);
+            scene.getStylesheets().add(View.CSS_File);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -183,12 +185,10 @@ public class MesProduitsController {
                 // Compare first name and last name of every person with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
 
-                if (produit.getName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                // Filter matches last name.
+                if (produit.getName().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches first name.
-                } else if (produit.getTag().toLowerCase().indexOf(lowerCaseFilter) != -1) {
-                    return true; // Filter matches last name.
-                }
-                return false; // Does not match.
+                } else return produit.getTag().toLowerCase().contains(lowerCaseFilter);
             });
         });
 

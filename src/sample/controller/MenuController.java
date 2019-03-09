@@ -34,7 +34,7 @@ public class MenuController {
     private AnchorPane Content;
 
 
-    public void initMenu(Stage primaryStage, User user) throws Exception {
+    public void initMenu(Stage primaryStage, User user){
         //Initialisation du Menu
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
@@ -89,7 +89,7 @@ public class MenuController {
         });
     }
 
-    private void MesProduitsStage() throws Exception{
+    private void MesProduitsStage(){
         MenuNameBlue(MesProduits);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Produits));
         MesProduitsController controller_produits = new MesProduitsController();
@@ -99,11 +99,11 @@ public class MenuController {
             controller_produits.initMesProduits();
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Produits);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    private void ListeDeCourseStage() throws Exception{
+    private void ListeDeCourseStage(){
         MenuNameBlue(ListeDeCourse);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Course));
         ListeCourseController controller_course = new ListeCourseController();
@@ -117,7 +117,7 @@ public class MenuController {
             e.printStackTrace();
         }
     }
-    private void HistoriqueStage() throws Exception{
+    private void HistoriqueStage(){
         MenuNameBlue(Historique);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Historique));
         HistoriqueController controller_historique = new HistoriqueController();
@@ -131,21 +131,21 @@ public class MenuController {
             e.printStackTrace();
         }
     }
-    private void AnnoncesStage() throws Exception{
+    private void AnnoncesStage(){
         MenuNameBlue(Annonces);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Annonces));
         AnnoncesController controller_annonces = new AnnoncesController();
         loader.setController(controller_annonces);
         try {
-            VBox newPane = loader.load(getClass().getResource(View.XML_FILE_Annonces));
-            controller_annonces.initAnnonce();
+            VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Annonces));
+            controller_annonces.initAnnonces();
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Annonces);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private void MesAmisStage() throws Exception{
+    private void MesAmisStage(){
         MenuNameBlue(MesAmis);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Amis));
         MesAmisController controller_amis = new MesAmisController();

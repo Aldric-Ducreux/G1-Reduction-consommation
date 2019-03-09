@@ -104,6 +104,7 @@ public class InscriptionController {
             stage.setWidth(550);
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Condition);
+            scene.getStylesheets().add(View.CSS_File);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -121,6 +122,7 @@ public class InscriptionController {
             controller_connexion.initConnexion(primaryStage);
             Scene scene = primaryStage.getScene();
             primaryStage.getScene().setRoot(page);
+            scene.getStylesheets().add(View.CSS_File);
             primaryStage.setTitle(View.LABEL_Connex);
         } catch (IOException e) {
             e.printStackTrace();

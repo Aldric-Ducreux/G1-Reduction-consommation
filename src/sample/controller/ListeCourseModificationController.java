@@ -20,6 +20,7 @@ public class ListeCourseModificationController {
     @FXML
     private Label ErrorChamp;
 
+
     public void initModifCourse(Item item){
         ErrorChamp.setVisible(false);
         MesProduitModifierNom.setText(item.getName());
@@ -30,7 +31,7 @@ public class ListeCourseModificationController {
         });
         MesProduitModifierButton.setOnMouseClicked(event ->  {
             int newQuantity = Integer.parseInt(MesProduitModifierQuantite.getEditor().textProperty().get());
-            if (MesProduitModifierNom.getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().isEmpty()|| MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[a-z].*")|| MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*")){
+            if (MesProduitModifierNom.getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().isEmpty()|| MesProduitModifierQuantite.getEditor().textProperty().get().equals("0") || MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[a-z].*")|| MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*")){
                 ErrorChamp.setVisible(true);
                 ErrorChamp.setTextFill(Color.RED);
             } else {

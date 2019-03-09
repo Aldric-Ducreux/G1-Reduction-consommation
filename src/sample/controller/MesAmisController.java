@@ -33,7 +33,7 @@ public class MesAmisController {
     //private TableView<Commentaire> myTableAmisCommentaires;
 
     @FXML
-    private TableColumn<Item, String> MesAmis;
+    private TableColumn<User, String> MesAmis;
 
     //private TableColumn<Item, String> Mescommentaire;
 
@@ -70,6 +70,7 @@ public class MesAmisController {
             stage.setWidth(550);
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Amis_Ajout);
+            scene.getStylesheets().add(View.CSS_File);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -78,7 +79,6 @@ public class MesAmisController {
 
     private void loadData() {
         myTableAmis.setItems(ListUser);
-        //myTableAmisCommentaires.setItems(ListCommentaire);
     }
     public void SearchBar(){
         // 1. Wrap the ObservableList in a FilteredList (initially display all data).
@@ -95,9 +95,8 @@ public class MesAmisController {
                 // Compare first name and last name of every person with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
 
-                if (ami.getPseudo().toLowerCase().indexOf(lowerCaseFilter) != -1)
-                    return true; // Filter matches first name.
-                return false; // Does not match.
+                // Filter matches first name.
+                return ami.getPseudo().toLowerCase().contains(lowerCaseFilter);
             });
         });
 

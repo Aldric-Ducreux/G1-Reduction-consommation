@@ -1,20 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="54.0" prefWidth="640.0">
+      <AnchorPane prefHeight="54.0" prefWidth="640.0" style="-fx-background-color: #ffffff;">
          <children>
             <TextField fx:id="rechercher_Annonces" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="617.0" promptText="Rechercher" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="liste_annonce" prefHeight="349.0" prefWidth="640.0">
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="174.0" prefWidth="640.0" style="-fx-background-color: DDDDDD;">
          <children>
-            <ListView fx:id="listV_Annonces" layoutX="111.0" prefHeight="333.0" prefWidth="409.0" />
+            <Label fx:id="nom_produit_ProduitAnnonces" layoutX="98.0" layoutY="22.0" prefHeight="26.0" prefWidth="424.0" style="-fx-alignment: center;" text="Cristaline 6 Bouteille x3" textAlignment="RIGHT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="57.0" prefHeight="25.0" prefWidth="97.0" text="Date limite :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="87.0" prefHeight="25.0" prefWidth="97.0" text="Magasin :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="date_limite_ProduitAnnonces" layoutX="142.0" layoutY="61.0" prefHeight="17.0" prefWidth="209.0" text="09/03/2020" />
+            <Label fx:id="nom_magasin_ProduitAnnonces" layoutX="142.0" layoutY="91.0" prefHeight="17.0" prefWidth="209.0" text="Carrefour" />
+            <Button fx:id="bouton_ajouter_ProduitAnnonces" layoutX="93.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Ajouter" />
+            <Button fx:id="bouton_commenter_ProduitAnnonces" layoutX="266.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Commenter" />
+            <Button fx:id="bouton_partager_ProduitAnnonces" layoutX="448.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Partager" />
+            <Label fx:id="ErrorChamp" layoutX="104.0" layoutY="113.0" prefHeight="19.0" prefWidth="431.0" style="-fx-alignment: center;" text="Impossible d'ajouter dans votre liste de course">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="174.0" prefWidth="640.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label fx:id="nom_produit_ProduitAnnonces1" layoutX="98.0" layoutY="22.0" prefHeight="26.0" prefWidth="424.0" style="-fx-alignment: center;" text="Crocdile Haribot 250gr" textAlignment="RIGHT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="57.0" prefHeight="25.0" prefWidth="97.0" text="Date limite :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="87.0" prefHeight="25.0" prefWidth="97.0" text="Magasin :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="date_limite_ProduitAnnonces1" layoutX="142.0" layoutY="61.0" prefHeight="17.0" prefWidth="209.0" text="13/03/2019" />
+            <Label fx:id="nom_magasin_ProduitAnnonces1" layoutX="142.0" layoutY="91.0" prefHeight="17.0" prefWidth="209.0" text="LeClerc" />
+            <Button fx:id="bouton_ajouter_ProduitAnnonces1" layoutX="93.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Ajouter" />
+            <Button fx:id="bouton_commenter_ProduitAnnonces1" layoutX="266.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Commenter" />
+            <Button fx:id="bouton_partager_ProduitAnnonces1" layoutX="448.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Partager" />
+            <Label fx:id="ErrorChamp1" layoutX="104.0" layoutY="113.0" prefHeight="19.0" prefWidth="431.0" style="-fx-alignment: center;" text="Impossible d'ajouter dans votre liste de course">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

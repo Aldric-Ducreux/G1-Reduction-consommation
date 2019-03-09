@@ -6,30 +6,35 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="Fenetre" prefHeight="359.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="Fenetre" prefHeight="244.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="359.0" prefWidth="486.0" VBox.vgrow="ALWAYS">
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="359.0" prefWidth="439.0" VBox.vgrow="ALWAYS">
          <children>
-            <Label fx:id="nom_produit_ProduitAnnonces" layoutX="141.0" layoutY="69.0" prefHeight="25.0" prefWidth="209.0" text="Nom produit">
+            <Label fx:id="nom_produit_ProduitAnnonces" layoutX="2.0" layoutY="33.0" prefHeight="26.0" prefWidth="424.0" style="-fx-alignment: center;" text="Nom produit" textAlignment="RIGHT">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="126.0" prefHeight="25.0" prefWidth="97.0" text="Date limite :">
+            <Label layoutX="35.0" layoutY="91.0" prefHeight="25.0" prefWidth="97.0" text="Date limite :">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="199.0" prefHeight="25.0" prefWidth="97.0" text="Magasin :">
+            <Label layoutX="35.0" layoutY="132.0" prefHeight="25.0" prefWidth="97.0" text="Magasin :">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="date_limite_ProduitAnnonces" layoutX="141.0" layoutY="130.0" prefHeight="17.0" prefWidth="209.0" text="Label" />
-            <Label fx:id="nom_magasin_ProduitAnnonces" layoutX="141.0" layoutY="203.0" prefHeight="17.0" prefWidth="209.0" text="Label" />
-            <Button fx:id="bouton_ajouter_ProduitAnnonces" layoutX="97.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Ajouter" />
-            <Button fx:id="bouton_commenter_ProduitAnnonces" layoutX="202.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Commenter" />
-            <Button fx:id="bouton_partager_ProduitAnnonces" layoutX="306.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Partager" />
+            <Label fx:id="date_limite_ProduitAnnonces" layoutX="141.0" layoutY="95.0" prefHeight="17.0" prefWidth="209.0" text="Label" />
+            <Label fx:id="nom_magasin_ProduitAnnonces" layoutX="141.0" layoutY="136.0" prefHeight="17.0" prefWidth="209.0" text="Label" />
+            <Button fx:id="bouton_ajouter_ProduitAnnonces" layoutX="48.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Ajouter" />
+            <Button fx:id="bouton_commenter_ProduitAnnonces" layoutX="172.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Commenter" />
+            <Button fx:id="bouton_partager_ProduitAnnonces" layoutX="299.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Partager" />
+            <Label fx:id="ErrorChamp" layoutY="166.0" prefHeight="19.0" prefWidth="431.0" style="-fx-alignment: center;" text="Impossible d'ajouter dans votre liste de course">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

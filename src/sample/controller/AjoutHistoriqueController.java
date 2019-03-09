@@ -52,25 +52,26 @@ public class AjoutHistoriqueController {
 
 
     public void addProduit(ObservableList<Item> produits, String produit, String nombre){
-        if (!(AjoutCourseNom.getText().isEmpty())) {
-            LocalDate localDate = LocalDate.now();
-            if (produits.stream().anyMatch(item -> item.getName().equals(produit))) {
-                Item i = produits.stream().filter(item -> item.getName().equals(produit)).findFirst().get();
-                i.setQuantity(i.getQuantity() + Integer.parseInt(nombre));
-            }
-            else {
-
-                produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
-                int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
-                if (n >= 2) {
-                    AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
-                }
-            }
-            cancel(AjoutCourseBoutton);
-        } else {
+        if ((AjoutCourseNom.getText().isEmpty()) || nombre.equals("0") || nombre.matches(".*[a-z].*") || nombre.matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*")) {
             ErrorChamp.setVisible(true);
             ErrorChamp.setTextFill(Color.RED);
+        } else {
+        LocalDate localDate = LocalDate.now();
+        if (produits.stream().anyMatch(item -> item.getName().equals(produit))) {
+            Item i = produits.stream().filter(item -> item.getName().equals(produit)).findFirst().get();
+            i.setQuantity(i.getQuantity() + Integer.parseInt(nombre));
         }
+        else {
+
+            produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
+            int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
+            if (n >= 2) {
+                AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
+            }
+        }
+        cancel(AjoutCourseBoutton);
+        }
+
     }
 
     public void cancel(Button BT){

@@ -27,6 +27,11 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
+            <Label fx:id="ErrorChamp" layoutX="26.0" layoutY="139.0" prefHeight="19.0" prefWidth="315.0" text="Cet Ami n'existe pas ou est déjà dans vos contacts">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>
