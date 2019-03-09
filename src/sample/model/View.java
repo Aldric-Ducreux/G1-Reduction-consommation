@@ -19,7 +19,7 @@ public class View {
     public static final String XML_FILE_Compte = "/sample/view/Mon_compte.fxml";
     public static final String XML_FILE_Alerte = "/sample/view/Alerte.fxml";
     public static final String XML_FILE_Course_Modif = "/sample/view/Liste_course_modification.fxml";
-
+    public static final String XML_FILE_Historique_AjoutCourse = "/sample/view/Historique_ajout.fxml";
 
 
     public static final String LABEL_Connex = "Connexion";
@@ -38,6 +38,7 @@ public class View {
     public static final String LABEL_Compte = "Mon Compte";
     public static final String LABEL_Alerte = "Alerte !";
     public static final String LABEL_Course_Modif = "Liste de course - Modification";
+    public static final String LABEL_Historique_AjoutCourse = "Historique - Ajout à la liste de course";
 
     public static final String CSS_File = "/sample/CSS/color.css";
 
