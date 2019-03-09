@@ -9,12 +9,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import sample.model.Item;
 import sample.model.View;
 
@@ -41,6 +39,8 @@ public class HistoriqueController {
     @FXML
     private TableColumn<Item, String> HistoriqueDernierAchat;
     @FXML
+    private TableColumn<Item, String> HistoriqueAjouter;
+    @FXML
     private TextField filterField;
 
     public void initHistorique() {
@@ -61,18 +61,48 @@ public class HistoriqueController {
         });
 
         loadData();
+
+        mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                mytableTableView.setOnMouseClicked(event -> {
+                    Item items = mytableTableView.getSelectionModel().getSelectedItem();
+                    addProduitHistorique(items);
+                });
+            }
+        });
+
+        Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
+                new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
+                    @Override
+                    public TableCell call(final TableColumn<Item, String> param) {
+                        final TableCell<Item, String> cell = new TableCell<Item, String>() {
+                            @Override
+                            public void updateItem(String item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (empty) {
+                                    setText(null);
+                                } else {
+                                    setText("Ajout");;
+                                }
+                            }
+                        };
+                        return cell;
+                    }
+                };
+        HistoriqueAjouter.setCellFactory(cellFactory);
         SearchBar();
 
     }
 
-    public void addProduitHistorique()throws Exception{
+    public void addProduitHistorique(Item items){
         //En cas de clic sur le bouton "Ajout"
+        ObservableList<Item> liste = ListeCourseController.list;
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Course_Ajout));
-        AjoutCourseController controller_ajoutCourse = new AjoutCourseController();
-        loader.setController(controller_ajoutCourse);
+        AjoutHistoriqueController controller_ajoutHistorique = new AjoutHistoriqueController();
+        loader.setController(controller_ajoutHistorique);
         try {
             Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Course_Ajout));
-            controller_ajoutCourse.initAjoutCourse(list);
+            controller_ajoutHistorique.initAjoutHistorique(liste, items);
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -88,6 +118,7 @@ public class HistoriqueController {
     private void loadData() {
         mytableTableView.setItems(list);
     }
+
 
     public void SearchBar(){
         // 1. Wrap the ObservableList in a FilteredList (initially display all data).
