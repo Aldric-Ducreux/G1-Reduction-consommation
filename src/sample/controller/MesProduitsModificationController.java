@@ -48,13 +48,11 @@ public class MesProduitsModificationController {
                     item.setQuantity(newQuantity);
                     item.setName(MesProduitModifierNom.getText());
                     item.setExpiryDate(localDate);
-                    System.out.println(item.getQuantity()-newQuantity);
                     if(changement >0 ) {
                         Gaspillage(history);
                     }
                 } else {
                     Gaspillage(item);
-                    //HistoriqueController.list.add(item);
                     MesProduitsController.produitsList.remove(item);
                 }
                 cancel(MesProduitModifierButton);
