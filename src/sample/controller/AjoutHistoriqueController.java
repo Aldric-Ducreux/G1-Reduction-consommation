@@ -60,12 +60,13 @@ public class AjoutHistoriqueController {
         if (produits.stream().anyMatch(item -> item.getName().equals(produit))) {
             Item i = produits.stream().filter(item -> item.getName().equals(produit)).findFirst().get();
             i.setQuantity(i.getQuantity() + Integer.parseInt(nombre));
+
+            int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
+            if (n >= 5) {
+                AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
         }
         else {
             produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
-            int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
-            if (n >= 2) {
-                AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
             }
         }
         cancel(AjoutCourseBoutton);
