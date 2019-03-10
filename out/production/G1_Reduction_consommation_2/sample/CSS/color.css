@@ -1,8 +1,8 @@
 AnchorPane {-fx-background-color: white;}
 Button {-fx-background-color: #dbf0fa;}
-Button:hover {-fx-background-color: #98d4f1;}
-Button:active {-fx-background-color: #f75959;}
+Button:hover {-fx-background-color: #82cbee;}
+Button:current {-fx-background-color: #98d4f1;}
 
-.table-row-cell:past {-fx-background-color: #595959; -fx-font-weight: bold;}
+.table-row-cell:past {-fx-background-color: #696969; -fx-font-weight: bold;}
 .table-row-cell:currentday {-fx-background-color: #f75959;}
 .table-row-cell:tooMany {-fx-background-color: #f75959;}

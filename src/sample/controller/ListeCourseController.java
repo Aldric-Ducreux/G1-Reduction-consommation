@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import sample.model.Item;
@@ -91,6 +92,7 @@ public class ListeCourseController {
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Course_Ajout);
             scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -112,6 +114,7 @@ public class ListeCourseController {
             stage.setHeight(225);
             stage.setTitle(View.LABEL_Course_Modif);
             scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

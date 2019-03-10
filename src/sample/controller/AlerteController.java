@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.model.View;
 
@@ -33,6 +34,7 @@ public class AlerteController {
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Alerte);
             scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

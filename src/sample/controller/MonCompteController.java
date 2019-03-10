@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import sample.model.User;
@@ -118,6 +119,7 @@ public class MonCompteController {
             primaryStage.getScene().setRoot(page);
             scene.getStylesheets().add(View.CSS_File);
             primaryStage.setTitle(View.LABEL_Connex);
+            primaryStage.getIcons().add(new Image("/sample/CSS/logo.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

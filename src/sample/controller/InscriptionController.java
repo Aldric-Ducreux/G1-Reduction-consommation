@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Screen;
@@ -42,8 +43,8 @@ public class InscriptionController {
         //Initialisation de la fenètre d'Inscription
         this.primaryStage = primaryStage;
         //On change la taille de la fenétre pour qu'elle corresponde à la taille attendue
-        primaryStage.setWidth(Fenetre.getPrefWidth());
-        primaryStage.setHeight(Fenetre.getPrefHeight());
+        primaryStage.setWidth(Fenetre.getPrefWidth()+50);
+        primaryStage.setHeight(Fenetre.getPrefHeight()+10);
         //Replace la fenétre au centre de l'écran de l'utilisateur
         javafx.geometry.Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
@@ -101,10 +102,11 @@ public class InscriptionController {
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setWidth(550);
-            stage.setHeight(250);
+            stage.setWidth(600);
+            stage.setHeight(275);
             stage.setTitle(View.LABEL_Condition);
             scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

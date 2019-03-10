@@ -40,13 +40,13 @@ public class AnnoncesCommentaires {
 
     private static ObservableList<String> ListCommentaire = FXCollections.observableArrayList();
 
-    public void initAnnoncesCommentaires(String produit, String date, String magasin){
+    public void initAnnoncesCommentaires(ObservableList<Item> produits, String produit, String date, String magasin){
         nom_produit_ProduitAnnonces.setText(produit);
         date_limite_ProduitAnnonces.setText(date);
         nom_magasin_ProduitAnnonces.setText(magasin);
         bouton_ajouter_ProduitAnnonces.setOnMouseClicked (event -> {
             try{
-                addProduit(nom_magasin_ProduitAnnonces.getText(), nom_produit_ProduitAnnonces.getText(), date_limite_ProduitAnnonces.getText());
+                addProduit(produits, nom_magasin_ProduitAnnonces.getText(), nom_produit_ProduitAnnonces.getText(), date_limite_ProduitAnnonces.getText());
             } catch (Exception e){
                 e.printStackTrace();
             }
@@ -69,10 +69,15 @@ public class AnnoncesCommentaires {
         ListViewCommentaire.setItems(ListCommentaire);
 
     }
-    public void addProduit(String magasin, String produit, String date){
-        String nom = magasin +" "+ produit;
-        LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-        ListeCourseController.list.add(new Item(nom, produit, 1, localDate));
+    public void addProduit(ObservableList<Item> produits, String magasin, String produit, String date){
+        String nom = magasin + " - " + produit;
+        if (produits.stream().anyMatch(item -> item.getName().equals(nom))) {
+            Item i = produits.stream().filter(item -> item.getName().equals(nom)).findFirst().get();
+            i.setQuantity(i.getQuantity() + 1);
+        }else {
+            LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            ListeCourseController.list.add(new Item(nom, produit, 1, localDate));
+        }
     }
 
     public void partageAnnonce(String produit) {

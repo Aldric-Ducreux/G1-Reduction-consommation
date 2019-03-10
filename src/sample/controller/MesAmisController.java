@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.model.Item;
 import sample.model.User;
@@ -65,6 +66,7 @@ public class MesAmisController {
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Amis_Ajout);
             scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

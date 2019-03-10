@@ -1,5 +1,6 @@
 package sample.controller;
 
+import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 
 public class MenuController {
+    PseudoClass current = PseudoClass.getPseudoClass("current");
     private Stage primaryStage;
     @FXML
     private Button MesProduits;
@@ -177,13 +179,20 @@ public class MenuController {
     public void MenuNameBlue(Button boutton){
         //Change le nom de tout les menus en noir
         MesProduits.setTextFill(Color.BLACK);
+        MesProduits.pseudoClassStateChanged(current,false);
         Historique.setTextFill(Color.BLACK);
+        Historique.pseudoClassStateChanged(current,false);
         MesAmis.setTextFill(Color.BLACK);
+        MesAmis.pseudoClassStateChanged(current,false);
         MonCompte.setTextFill(Color.BLACK);
+        MonCompte.pseudoClassStateChanged(current,false);
         Annonces.setTextFill(Color.BLACK);
+        Annonces.pseudoClassStateChanged(current,false);
         ListeDeCourse.setTextFill(Color.BLACK);
+        ListeDeCourse.pseudoClassStateChanged(current,false);
         //Change le nom du menu actuellement en cours d'utilisation uniquement en bleu
-        boutton.setTextFill(Color.BLUE);
+        boutton.setTextFill(Color.WHITE);
+        boutton.pseudoClassStateChanged(current,true);
     }
 
 }

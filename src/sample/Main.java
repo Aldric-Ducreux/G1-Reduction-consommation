@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import sample.controller.ConnexionController;
 import sample.model.View;
@@ -25,6 +26,7 @@ public class Main extends Application {
         controller_connexion.initConnexion(primaryStage);
         //display view
         primaryStage.setTitle(View.LABEL_Connex);
+        primaryStage.getIcons().add(new Image("/sample/CSS/logo.png"));
         primaryStage.setScene(new Scene(root));
         Scene scene = primaryStage.getScene();
         scene.getStylesheets().add(View.CSS_File);

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="Fenetre" prefHeight="535.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="Fenetre" prefHeight="535.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="500.0" prefWidth="575.0" VBox.vgrow="ALWAYS">
       <children>
@@ -48,7 +48,7 @@
                   <Font size="14.0" />
               </font>
             </CheckBox>
-            <Button fx:id="Inscription_BT_Conditions" layoutX="404.0" layoutY="391.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="40.0" text="Lire" />
+            <Button fx:id="Inscription_BT_Conditions" layoutX="404.0" layoutY="391.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" text="Lire" />
             <Button fx:id="Inscription_BT_Inscription" layoutX="119.0" layoutY="455.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="102.0" text="Inscription">
               <font>
                   <Font size="15.0" />
@@ -59,7 +59,7 @@
                   <Font size="15.0" />
               </font>
             </Button>
-          <Label fx:id ="TextIncorrect" layoutX="125.0" layoutY="415.0" prefHeight="32.0" prefWidth="350.0" text="Champ incorrect ou conditions non acceptées" textAlignment="CENTER">
+          <Label fx:id="TextIncorrect" layoutX="125.0" layoutY="415.0" prefHeight="32.0" prefWidth="350.0" text="Champ incorrect ou conditions non acceptées" textAlignment="CENTER">
               <font>
                   <Font size="14.0" />
               </font>

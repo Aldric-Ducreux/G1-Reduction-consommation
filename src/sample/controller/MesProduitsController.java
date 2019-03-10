@@ -15,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import sample.model.Item;
@@ -31,7 +32,7 @@ import javafx.event.ActionEvent;
 public class MesProduitsController {
     PseudoClass currentday = PseudoClass.getPseudoClass("currentday");
     PseudoClass past = PseudoClass.getPseudoClass("past");
-    PseudoClass close = PseudoClass.getPseudoClass("close");
+
 
     public static ObservableList<Item> produitsList = FXCollections.observableArrayList(
             new Item("Jambon Laoste","Jambon",5, LocalDate.of(2019, Month.MARCH, 05)),
@@ -129,7 +130,6 @@ public class MesProduitsController {
                 if (currentProduit != null) {
                     row.pseudoClassStateChanged(currentday, currentProduit.getExpiryDate().equals(Date));
                     row.pseudoClassStateChanged(past, currentProduit.getExpiryDate().isBefore(Date));
-                    row.pseudoClassStateChanged(close, currentProduit.getExpiryDate().isAfter(Date));
                 }
             });
             return row;
@@ -152,6 +152,7 @@ public class MesProduitsController {
             stage.setHeight(250);
             stage.setTitle(View.LABEL_Produit_Ajout);
             scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -173,6 +174,7 @@ public class MesProduitsController {
             stage.setHeight(225);
             stage.setTitle(View.LABEL_Produit_Modif);
             scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
