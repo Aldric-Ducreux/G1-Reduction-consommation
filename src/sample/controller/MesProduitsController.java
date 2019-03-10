@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import sample.model.Item;
@@ -24,6 +25,8 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import javafx.scene.control.TableColumn.CellEditEvent;
+import javafx.event.ActionEvent;
 
 public class MesProduitsController {
     PseudoClass currentday = PseudoClass.getPseudoClass("currentday");
@@ -49,7 +52,9 @@ public class MesProduitsController {
     @FXML
     private TableColumn<Item, String> MesProduitsDate;
     @FXML
-    private TableColumn<Item, String> MesProduitsModification;
+    private TableColumn<Item, Void> MesProduitsModification;
+    @FXML
+    private TableColumn<Item, Void> MesProduitsSuppression;
     @FXML
     private Button MesProduitsAjout;
     @FXML
@@ -58,6 +63,7 @@ public class MesProduitsController {
 
     public void initMesProduits() throws Exception {
         tableTableView = mytableTableView;
+        tableTableView.setEditable(true);
         Date = LocalDate.now();
         MesProduitsAjout.setOnMouseClicked(event -> {
             try {
@@ -72,6 +78,10 @@ public class MesProduitsController {
         MesProduitsDate.setCellValueFactory(new PropertyValueFactory<>("expiryDate"));
         mytableTableView.setItems(produitsList);
 
+        addButtonToTable();
+        addButtonToTableSuppr();
+
+
         String expiredProducts = String.join(", ", produitsList.stream().filter(item -> item.getExpiryDate().isBefore(LocalDate.now())).map(Item::getName).collect(Collectors.toList()));
         String nearExpiredProducts = String.join(", ", produitsList.stream().filter(item -> item.getExpiryDate().isEqual(LocalDate.now().plusDays(1))).map(Item::getName).collect(Collectors.toList()));
 
@@ -83,14 +93,35 @@ public class MesProduitsController {
         if (!alerte.equals(""))
             AlerteController.alert(alerte);
 
-        mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-            if (newSelection != null) {
-                mytableTableView.setOnMouseClicked(event -> {
-                    Item items = mytableTableView.getSelectionModel().getSelectedItem();
-                    modifProduit(items);
-                });
-            }
+//------------------------------Modification
+        //name
+        MesProduitsProduit.setCellFactory(TextFieldTableCell.<Item> forTableColumn());
+        MesProduitsProduit.setOnEditCommit((CellEditEvent<Item, String> event) -> {
+            TablePosition<Item, String> pos = event.getTablePosition();
+
+            String newFullName = event.getNewValue();
+
+            int row = pos.getRow();
+            Item produit = event.getTableView().getItems().get(row);
+
+            produit.setName(newFullName);
         });
+
+        //type
+
+        MesProduitsType.setCellFactory(TextFieldTableCell.<Item> forTableColumn());
+        MesProduitsType.setOnEditCommit((CellEditEvent<Item, String> event) -> {
+            TablePosition<Item, String> pos = event.getTablePosition();
+
+            String newFulltag = event.getNewValue();
+
+            int row = pos.getRow();
+            Item type = event.getTableView().getItems().get(row);
+
+            type.setTag(newFulltag);
+        });
+
+
 //------------------------------------------------------------- COLOR
         mytableTableView.setRowFactory(tableView -> {
             TableRow<Item> row = new TableRow<>();
@@ -103,28 +134,6 @@ public class MesProduitsController {
             });
             return row;
         });
-//------------------------------------------------------------- Modification
-
-        Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
-                new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
-                    @Override
-                    public TableCell call(final TableColumn<Item, String> param) {
-                        final TableCell<Item, String> cell = new TableCell<Item, String>() {
-                            @Override
-                            public void updateItem(String item, boolean empty) {
-                                super.updateItem(item, empty);
-                                if (empty) {
-                                    setText(null);
-
-                                } else {
-                                    setText("Modification");;
-                                }
-                            }
-                        };
-                        return cell;
-                    }
-                };
-        MesProduitsModification.setCellFactory(cellFactory);
         SearchBar();
     }
 
@@ -160,14 +169,19 @@ public class MesProduitsController {
             Scene scene = new Scene(page);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setWidth(600);
-            stage.setHeight(350);
+            stage.setWidth(550);
+            stage.setHeight(225);
             stage.setTitle(View.LABEL_Produit_Modif);
             scene.getStylesheets().add(View.CSS_File);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void supprProduit(Item item){
+        HistoriqueController.list.add(item);
+        MesProduitsController.produitsList.remove(item);
+        MesProduitsController.tableTableView.refresh();
     }
 
     public void SearchBar(){
@@ -202,4 +216,68 @@ public class MesProduitsController {
         // 5. Add sorted (and filtered) data to the table.
         mytableTableView.setItems(sortedData);
     }
+
+    private void addButtonToTable() {
+        Callback<TableColumn<Item, Void>, TableCell<Item, Void>> cellFactory = new Callback<TableColumn<Item, Void>, TableCell<Item, Void>>() {
+            @Override
+            public TableCell<Item, Void> call(final TableColumn<Item, Void> param) {
+                final TableCell<Item, Void> cell = new TableCell<Item, Void>() {
+
+                    private final Button btn = new Button("Modifier");
+
+                    {
+                        btn.setOnAction((ActionEvent event) -> {
+                            modifProduit(getTableView().getItems().get(getIndex()));
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btn);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+
+        MesProduitsModification.setCellFactory(cellFactory);
+    }
+    private void addButtonToTableSuppr() {
+
+
+        Callback<TableColumn<Item, Void>, TableCell<Item, Void>> cellFactory = new Callback<TableColumn<Item, Void>, TableCell<Item, Void>>() {
+            @Override
+            public TableCell<Item, Void> call(final TableColumn<Item, Void> param) {
+                final TableCell<Item, Void> cell = new TableCell<Item, Void>() {
+
+                    private final Button btnsupp = new Button("Supprimer");
+
+                    {
+                        btnsupp.setOnAction((ActionEvent event) -> {
+                            supprProduit(getTableView().getItems().get(getIndex()));
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btnsupp);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+
+        MesProduitsSuppression.setCellFactory(cellFactory);
+    }
+
 }

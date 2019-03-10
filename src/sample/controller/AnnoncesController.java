@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import sample.model.Annonce;
@@ -28,76 +29,79 @@ public class AnnoncesController {
     @FXML
     private AnchorPane liste_annonce;
     @FXML
-    private java.awt.Label nom_produit_ProduitAnnonces;
+    private Label nom_produit_ProduitAnnonces;
     @FXML
-    private java.awt.Label date_limite_ProduitAnnonces;
+    private Label date_limite_ProduitAnnonces;
     @FXML
-    private java.awt.Label nom_magasin_ProduitAnnonces;
+    private Label nom_magasin_ProduitAnnonces;
     @FXML
-    private javafx.scene.control.Button bouton_ajouter_ProduitAnnonces;
+    private Button bouton_ajouter_ProduitAnnonces;
     @FXML
-    private javafx.scene.control.Button bouton_commenter_ProduitAnnonces;
+    private Button bouton_commenter_ProduitAnnonces;
     @FXML
-    private javafx.scene.control.Button bouton_partager_ProduitAnnonces;
+    private Button bouton_partager_ProduitAnnonces;
     @FXML
-    private javafx.scene.control.Label ErrorChamp;
+    private Label ErrorChamp;
 
     @FXML
     private AnchorPane liste_annonce1;
     @FXML
-    private java.awt.Label nom_produit_ProduitAnnonces1;
+    private Label nom_produit_ProduitAnnonces1;
     @FXML
-    private java.awt.Label date_limite_ProduitAnnonces1;
+    private Label date_limite_ProduitAnnonces1;
     @FXML
-    private java.awt.Label nom_magasin_ProduitAnnonces1;
+    private Label nom_magasin_ProduitAnnonces1;
     @FXML
-    private javafx.scene.control.Button bouton_ajouter_ProduitAnnonces1;
+    private Button bouton_ajouter_ProduitAnnonces1;
     @FXML
-    private javafx.scene.control.Button bouton_commenter_ProduitAnnonces1;
+    private Button bouton_commenter_ProduitAnnonces1;
     @FXML
-    private javafx.scene.control.Button bouton_partager_ProduitAnnonces1;
+    private Button bouton_partager_ProduitAnnonces1;
     @FXML
-    private javafx.scene.control.Label ErrorChamp1;
+    private Label ErrorChamp1;
 
-    public void initAnnonces() {
+    public void initAnnonces(Stage primaryStage, AnchorPane Content) {
+        ErrorChamp.setVisible(false);
+        ErrorChamp1.setVisible(false);
+
 
         bouton_ajouter_ProduitAnnonces.setOnMouseClicked (event -> {
             try{
-                addProduit(nom_magasin_ProduitAnnonces.getText(), nom_produit_ProduitAnnonces.getName(), date_limite_ProduitAnnonces.getText());
+                addProduit(nom_magasin_ProduitAnnonces.getText(), nom_produit_ProduitAnnonces.getText(), date_limite_ProduitAnnonces.getText());
             } catch (Exception e){
                 e.printStackTrace();
             }
         });bouton_ajouter_ProduitAnnonces1.setOnMouseClicked (event -> {
             try{
-                addProduit(nom_magasin_ProduitAnnonces1.getText(), nom_produit_ProduitAnnonces1.getName(), date_limite_ProduitAnnonces1.getText());
+                addProduit1(nom_magasin_ProduitAnnonces1.getText(), nom_produit_ProduitAnnonces1.getText(), date_limite_ProduitAnnonces1.getText());
             } catch (Exception e){
                 e.printStackTrace();
             }
         });
         bouton_partager_ProduitAnnonces.setOnMouseClicked (event -> {
             try{
-                partageAnnonce(nom_produit_ProduitAnnonces.getName());
+                partageAnnonce(nom_produit_ProduitAnnonces.getText());
             } catch (Exception e){
                 e.printStackTrace();
             }
         });
         bouton_partager_ProduitAnnonces1.setOnMouseClicked (event -> {
             try{
-                partageAnnonce(nom_produit_ProduitAnnonces1.getName());
+                partageAnnonce(nom_produit_ProduitAnnonces1.getText());
             } catch (Exception e){
                 e.printStackTrace();
             }
         });
         bouton_commenter_ProduitAnnonces.setOnMouseClicked (event -> {
             try{
-                commentaire();
+                commentaire(primaryStage, Content, nom_magasin_ProduitAnnonces.getText(), nom_produit_ProduitAnnonces.getText(), date_limite_ProduitAnnonces.getText());
             } catch (Exception e){
                 e.printStackTrace();
             }
         });
         bouton_commenter_ProduitAnnonces1.setOnMouseClicked (event -> {
             try{
-                commentaire();
+                commentaire(primaryStage, Content,  nom_produit_ProduitAnnonces.getText(), date_limite_ProduitAnnonces.getText(), nom_magasin_ProduitAnnonces.getText());
             } catch (Exception e){
                 e.printStackTrace();
             }
@@ -105,17 +109,21 @@ public class AnnoncesController {
     }
 
     public void addProduit(String magasin, String produit, String date){
-        if (produit.isEmpty()) {
-            ErrorChamp.setVisible(true);
-            ErrorChamp.setTextFill(Color.RED);
-        } else {
-            String nom = magasin +" "+ produit;
-            LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-            ListeCourseController.list.add(new Item(nom, produit, 1, localDate));
-            ListeCourseController.tableTableView.refresh();
-            cancel(bouton_ajouter_ProduitAnnonces);
-        }
+        String nom = magasin +" "+ produit;
+        LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        ListeCourseController.list.add(new Item(nom, produit, 1, localDate));
+        ErrorChamp.setVisible(true);
+        ErrorChamp.setTextFill(Color.GREEN);
     }
+    public void addProduit1(String magasin, String produit, String date){
+        String nom = magasin +" "+ produit;
+        LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        ListeCourseController.list.add(new Item(nom, produit, 1, localDate));
+        ErrorChamp1.setVisible(true);
+        ErrorChamp1.setTextFill(Color.GREEN);
+    }
+
+
     public void partageAnnonce(String produit) {
         //En cas de clic sur le bouton "Ajout"
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Annonces_Partage));
@@ -137,13 +145,19 @@ public class AnnoncesController {
         }
     }
 
-    public void commentaire() {
-        System.out.println("commentaire");
-    }
-
-    public void cancel(javafx.scene.control.Button BT){
-        Stage stage = (Stage) BT.getScene().getWindow();
-        stage.close();
+    public void commentaire(Stage primaryStage, AnchorPane Content, String produit, String date, String magasin) {
+        //En cas de clic sur le bouton "commentaire"
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Annonces_Commentaire));
+        AnnoncesCommentaires controller_CommentaireAnnonce = new AnnoncesCommentaires();
+        loader.setController(controller_CommentaireAnnonce);
+        try {
+            VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Annonces_Commentaire));
+            controller_CommentaireAnnonce.initAnnoncesCommentaires(produit, date, magasin);
+            Content.getChildren().setAll(newPane);
+            primaryStage.setTitle(View.LABEL_Annonces_Commentaire);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

@@ -11,7 +11,7 @@ public class AnnoncesPartageController {
     @FXML
     private Button PartageAnnonceButton;
     @FXML
-    private java.awt.Label partageproduit;
+    private Label partageproduit;
 
 
     public void initAnnoncesPartage(String produit){

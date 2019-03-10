@@ -37,6 +37,7 @@ public class AjoutAmisController {
             ErrorChamp.setTextFill(Color.RED);
         } else {
             amis.add(new User(ami, "", ""));
+            MesAmisController.ListCommentaire.add("Vous avez ajouté " + ami + " en ami" );
             cancel(AjoutAmisBoutton);
         }
     }

@@ -25,10 +25,6 @@ public class ListeCourseModificationController {
         ErrorChamp.setVisible(false);
         MesProduitModifierNom.setText(item.getName());
         MesProduitModifierQuantite.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, item.getQuantity()));
-        MesProduitSupprimerButton.setOnMouseClicked(event ->  {
-            ListeCourseController.list.remove(item);
-            cancel(MesProduitSupprimerButton);
-        });
         MesProduitModifierButton.setOnMouseClicked(event ->  {
             int newQuantity = Integer.parseInt(MesProduitModifierQuantite.getEditor().textProperty().get());
             if (MesProduitModifierNom.getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().isEmpty()|| MesProduitModifierQuantite.getEditor().textProperty().get().equals("0") || MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[a-z].*")|| MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*")){

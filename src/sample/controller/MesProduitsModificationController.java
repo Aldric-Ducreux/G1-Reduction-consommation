@@ -29,11 +29,6 @@ public class MesProduitsModificationController {
         MesProduitModifierNom.setText(item.getName());
         MesProduitModifierQuantite.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, item.getQuantity()));
         MesProduitModifierDate.setValue(item.getExpiryDate());
-        MesProduitSupprimerButton.setOnMouseClicked(event ->  {
-            HistoriqueController.list.add(item);
-            MesProduitsController.produitsList.remove(item);
-            cancel(MesProduitSupprimerButton);
-        });
         MesProduitModifierButton.setOnMouseClicked(event ->  {
             if (MesProduitModifierNom.getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().isEmpty() || MesProduitModifierDate.getEditor().getText().isEmpty() || MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[a-z].*")|| MesProduitModifierQuantite.getEditor().textProperty().get().matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*") || !(isValidDate(MesProduitModifierDate.getEditor().getText()))){
                 ErrorChamp.setVisible(true);

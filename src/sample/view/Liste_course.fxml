@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="404.0" prefWidth="640.0">
          <children>
@@ -18,8 +18,9 @@
             <TableView fx:id="mytableTableView" layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
               <columns>
                 <TableColumn fx:id="ListeCourseProduits" prefWidth="292.0" text="Produits" />
-                  <TableColumn fx:id="ListeCourseQuantite" minWidth="0.0" prefWidth="175.0" text="Quantité" />
-                  <TableColumn fx:id="ListeCourseModification" minWidth="0.0" prefWidth="149.0" text="Modification" />
+                  <TableColumn fx:id="ListeCourseQuantite" minWidth="0.0" prefWidth="88.79998779296875" text="Quantité" />
+                  <TableColumn fx:id="ListeCourseModification" minWidth="0.0" prefWidth="114.4000244140625" text="Modification" />
+                  <TableColumn fx:id="ListeCourseSuppr" minWidth="0.0" prefWidth="120.0" />
               </columns>
             </TableView>
          </children>

@@ -138,7 +138,7 @@ public class MenuController {
         loader.setController(controller_annonces);
         try {
             VBox newPane = loader.load(getClass().getResourceAsStream(View.XML_FILE_Annonces));
-            controller_annonces.initAnnonces();
+            controller_annonces.initAnnonces(primaryStage, Content);
             Content.getChildren().setAll(newPane);
             primaryStage.setTitle(View.LABEL_Annonces);
         } catch (IOException e) {
@@ -185,4 +185,5 @@ public class MenuController {
         //Change le nom du menu actuellement en cours d'utilisation uniquement en bleu
         boutton.setTextFill(Color.BLUE);
     }
+
 }

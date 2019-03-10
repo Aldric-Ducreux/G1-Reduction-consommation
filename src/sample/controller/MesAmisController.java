@@ -8,10 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Item;
@@ -27,16 +24,14 @@ public class MesAmisController {
             new User("Kunowa","",""),
             new User("Niman","","")
     );
+    public static ObservableList<String> ListCommentaire = FXCollections.observableArrayList();
+
     @FXML
     private TableView<User> myTableAmis;
-
-    //private TableView<Commentaire> myTableAmisCommentaires;
-
+    @FXML
+    private ListView AmisListCommentaire;
     @FXML
     private TableColumn<User, String> MesAmis;
-
-    //private TableColumn<Item, String> Mescommentaire;
-
     @FXML
     private Button MesAmisAjout;
     @FXML
@@ -51,7 +46,6 @@ public class MesAmisController {
             }
         });
         MesAmis.setCellValueFactory(new PropertyValueFactory<>("pseudo"));
-        //Mescommentaire.setCellValueFactory(new PropertyValueFactory<>("commentaire"));
         loadData();
         SearchBar();
     }
@@ -79,6 +73,7 @@ public class MesAmisController {
 
     private void loadData() {
         myTableAmis.setItems(ListUser);
+        AmisListCommentaire.setItems(ListCommentaire);
     }
     public void SearchBar(){
         // 1. Wrap the ObservableList in a FilteredList (initially display all data).

@@ -62,7 +62,6 @@ public class AjoutHistoriqueController {
             i.setQuantity(i.getQuantity() + Integer.parseInt(nombre));
         }
         else {
-
             produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
             int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
             if (n >= 2) {

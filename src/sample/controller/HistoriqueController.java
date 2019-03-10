@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.css.PseudoClass;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -39,7 +40,7 @@ public class HistoriqueController {
     @FXML
     private TableColumn<Item, String> HistoriqueDernierAchat;
     @FXML
-    private TableColumn<Item, String> HistoriqueAjouter;
+    private TableColumn<Item, Void> HistoriqueAjouter;
     @FXML
     private TextField filterField;
 
@@ -61,35 +62,7 @@ public class HistoriqueController {
         });
 
         loadData();
-
-        mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-            if (newSelection != null) {
-                mytableTableView.setOnMouseClicked(event -> {
-                    Item items = mytableTableView.getSelectionModel().getSelectedItem();
-                    addProduitHistorique(items);
-                });
-            }
-        });
-
-        Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
-                new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
-                    @Override
-                    public TableCell call(final TableColumn<Item, String> param) {
-                        final TableCell<Item, String> cell = new TableCell<Item, String>() {
-                            @Override
-                            public void updateItem(String item, boolean empty) {
-                                super.updateItem(item, empty);
-                                if (empty) {
-                                    setText(null);
-                                } else {
-                                    setText("Ajout");;
-                                }
-                            }
-                        };
-                        return cell;
-                    }
-                };
-        HistoriqueAjouter.setCellFactory(cellFactory);
+        addButtonToTable();
         SearchBar();
 
     }
@@ -154,6 +127,38 @@ public class HistoriqueController {
 
         // 5. Add sorted (and filtered) data to the table.
         mytableTableView.setItems(sortedData);
+    }
+    private void addButtonToTable() {
+
+
+        Callback<TableColumn<Item, Void>, TableCell<Item, Void>> cellFactory = new Callback<TableColumn<Item, Void>, TableCell<Item, Void>>() {
+            @Override
+            public TableCell<Item, Void> call(final TableColumn<Item, Void> param) {
+                final TableCell<Item, Void> cell = new TableCell<Item, Void>() {
+
+                    private final Button btn = new Button("Ajout");
+
+                    {
+                        btn.setOnAction((ActionEvent event) -> {
+                            addProduitHistorique(getTableView().getItems().get(getIndex()));
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btn);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+
+        HistoriqueAjouter.setCellFactory(cellFactory);
     }
 }
 

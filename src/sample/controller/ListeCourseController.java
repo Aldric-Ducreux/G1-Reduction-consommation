@@ -5,12 +5,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import sample.model.Item;
@@ -35,9 +37,9 @@ public class ListeCourseController {
     @FXML
     private TableColumn<Item, String> ListeCourseQuantite;
     @FXML
-    private TableColumn<Item, String> ListeCourseModification;
+    private TableColumn<Item, Void> ListeCourseModification;
     @FXML
-    private TableColumn<Item, String> ListeCourseSuppr;
+    private TableColumn<Item, Void> ListeCourseSuppr;
     @FXML
     private Button MesCoursesAjout;
     @FXML
@@ -45,6 +47,7 @@ public class ListeCourseController {
 
     public void initMesCourses() {
         tableTableView = mytableTableView;
+        tableTableView.setEditable(true);
         MesCoursesAjout.setOnMouseClicked( event -> {
             try{
                 addCourse();
@@ -54,36 +57,22 @@ public class ListeCourseController {
         });
         ListeCourseProduits.setCellValueFactory(new PropertyValueFactory<>("name"));
         ListeCourseQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
-        loadData();
-        SearchBar();
-        mytableTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-            if (newSelection != null) {
-                mytableTableView.setOnMouseClicked(event -> {
-                    Item itemz = mytableTableView.getSelectionModel().getSelectedItem();
-                    modifProduit(itemz);
-                });
-            }
-        });
-        Callback<TableColumn<Item, String>, TableCell<Item, String>> cellFactory =
-                new Callback<TableColumn<Item, String>, TableCell<Item, String>>() {
-                    @Override
-                    public TableCell call(final TableColumn<Item, String> param) {
-                        final TableCell<Item, String> cell = new TableCell<Item, String>() {
-                            @Override
-                            public void updateItem(String item, boolean empty) {
-                                super.updateItem(item, empty);
-                                if (empty) {
-                                    setText(null);
 
-                                } else {
-                                    setText("Modification");;
-                                }
-                            }
-                        };
-                        return cell;
-                    }
-                };
-        ListeCourseModification.setCellFactory(cellFactory);
+        //name
+        ListeCourseProduits.setCellFactory(TextFieldTableCell.<Item> forTableColumn());
+        ListeCourseProduits.setOnEditCommit((TableColumn.CellEditEvent<Item, String> event) -> {
+            TablePosition<Item, String> pos = event.getTablePosition();
+
+            String newFullName = event.getNewValue();
+
+            int row = pos.getRow();
+            Item produit = event.getTableView().getItems().get(row);
+
+            produit.setName(newFullName);
+        });
+        loadData();
+        addButtonToTable();
+        addButtonToTableSuppr();
         SearchBar();
     }
 
@@ -120,13 +109,17 @@ public class ListeCourseController {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setWidth(550);
-            stage.setHeight(350);
+            stage.setHeight(225);
             stage.setTitle(View.LABEL_Course_Modif);
             scene.getStylesheets().add(View.CSS_File);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void supprimerProduit(Item item) {
+        ListeCourseController.list.remove(item);
+        ListeCourseController.tableTableView.refresh();
     }
 
     private void loadData() {
@@ -163,5 +156,65 @@ public class ListeCourseController {
 
         // 5. Add sorted (and filtered) data to the table.
         mytableTableView.setItems(sortedData);
+    }
+    private void addButtonToTable() {
+        Callback<TableColumn<Item, Void>, TableCell<Item, Void>> cellFactory = new Callback<TableColumn<Item, Void>, TableCell<Item, Void>>() {
+            @Override
+            public TableCell<Item, Void> call(final TableColumn<Item, Void> param) {
+                final TableCell<Item, Void> cell = new TableCell<Item, Void>() {
+
+                    private final Button btn = new Button("Modifier");
+
+                    {
+                        btn.setOnAction((ActionEvent event) -> {
+                            modifProduit(getTableView().getItems().get(getIndex()));
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btn);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+
+        ListeCourseModification.setCellFactory(cellFactory);
+    }
+    private void addButtonToTableSuppr() {
+        Callback<TableColumn<Item, Void>, TableCell<Item, Void>> cellFactory = new Callback<TableColumn<Item, Void>, TableCell<Item, Void>>() {
+            @Override
+            public TableCell<Item, Void> call(final TableColumn<Item, Void> param) {
+                final TableCell<Item, Void> cell = new TableCell<Item, Void>() {
+
+                    private final Button btnSuppr = new Button("Supprimer");
+
+                    {
+                        btnSuppr.setOnAction((ActionEvent event) -> {
+                            supprimerProduit(getTableView().getItems().get(getIndex()));
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btnSuppr);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+
+        ListeCourseSuppr.setCellFactory(cellFactory);
     }
 }

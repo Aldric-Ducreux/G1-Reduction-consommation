@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="54.0" prefWidth="640.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -34,9 +34,9 @@
             <Label fx:id="date_limite_ProduitAnnonces" layoutX="142.0" layoutY="61.0" prefHeight="17.0" prefWidth="209.0" text="09/03/2020" />
             <Label fx:id="nom_magasin_ProduitAnnonces" layoutX="142.0" layoutY="91.0" prefHeight="17.0" prefWidth="209.0" text="Carrefour" />
             <Button fx:id="bouton_ajouter_ProduitAnnonces" layoutX="93.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Ajouter" />
-            <Button fx:id="bouton_commenter_ProduitAnnonces" layoutX="266.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Commenter" />
+            <Button fx:id="bouton_commenter_ProduitAnnonces" layoutX="266.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Commenter" />
             <Button fx:id="bouton_partager_ProduitAnnonces" layoutX="448.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Partager" />
-            <Label fx:id="ErrorChamp" layoutX="104.0" layoutY="113.0" prefHeight="19.0" prefWidth="431.0" style="-fx-alignment: center;" text="Impossible d'ajouter dans votre liste de course">
+            <Label fx:id="ErrorChamp" layoutX="104.0" layoutY="113.0" prefHeight="19.0" prefWidth="431.0" style="-fx-alignment: center;" text="Le produit a bien été ajouté à votre liste de course">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -63,9 +63,9 @@
             <Label fx:id="date_limite_ProduitAnnonces1" layoutX="142.0" layoutY="61.0" prefHeight="17.0" prefWidth="209.0" text="13/03/2019" />
             <Label fx:id="nom_magasin_ProduitAnnonces1" layoutX="142.0" layoutY="91.0" prefHeight="17.0" prefWidth="209.0" text="LeClerc" />
             <Button fx:id="bouton_ajouter_ProduitAnnonces1" layoutX="93.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Ajouter" />
-            <Button fx:id="bouton_commenter_ProduitAnnonces1" layoutX="266.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Commenter" />
+            <Button fx:id="bouton_commenter_ProduitAnnonces1" layoutX="266.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Commenter" />
             <Button fx:id="bouton_partager_ProduitAnnonces1" layoutX="448.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Partager" />
-            <Label fx:id="ErrorChamp1" layoutX="104.0" layoutY="113.0" prefHeight="19.0" prefWidth="431.0" style="-fx-alignment: center;" text="Impossible d'ajouter dans votre liste de course">
+            <Label fx:id="ErrorChamp1" layoutX="104.0" layoutY="113.0" prefHeight="19.0" prefWidth="431.0" style="-fx-alignment: center;" text="Le produit a bien été ajouté à votre liste de course">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

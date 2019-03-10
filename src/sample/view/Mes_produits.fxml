@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="404.0" prefWidth="640.0">
          <children>
@@ -21,7 +21,8 @@
                 <TableColumn fx:id="MesProduitsType" prefWidth="92.0" text="Type" />
                   <TableColumn fx:id="MesProduitsQuantite" prefWidth="75.0" text="Quantité" />
                   <TableColumn fx:id="MesProduitsDate" prefWidth="171.20001220703125" text="Date limite de consomation" />
-                  <TableColumn fx:id="MesProduitsModification" prefWidth="128.0" text="Modification" />
+                  <TableColumn fx:id="MesProduitsModification" prefWidth="68.00006103515625" text="Modification" />
+                  <TableColumn fx:id="MesProduitsSuppression" prefWidth="75.0" />
                   <!--<TableColumn fx:id="MesProduitsDelete" prefWidth="45.60000000000002" />-->
               </columns>
             </TableView>
