@@ -65,9 +65,10 @@ public class AjoutCourseController {
             }else {
                 produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
             }
+            cancel(AjoutCourseBoutton);
+            ListeCourseController.tableTableView.refresh();
         }
-        cancel(AjoutCourseBoutton);
-        ListeCourseController.tableTableView.refresh();
+
     }
 
     public void cancel(Button BT){

@@ -121,8 +121,25 @@ public class ListeCourseController {
         }
     }
     public void supprimerProduit(Item item) {
-        ListeCourseController.list.remove(item);
-        ListeCourseController.tableTableView.refresh();
+        //En cas de clic sur le bouton "Modif"
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Course_Suppr));
+        ListeCourseSupprimerController controller_suppr = new ListeCourseSupprimerController();
+        loader.setController(controller_suppr);
+        try {
+            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Course_Suppr));
+            controller_suppr.initAchatSuppr(item);
+            Scene scene = new Scene(page);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setWidth(550);
+            stage.setHeight(275);
+            stage.setTitle(View.LABEL_Course_Suppr);
+            scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void loadData() {

@@ -10,6 +10,8 @@ public class View {
     public static final String XML_FILE_Produit_Modif = "/sample/view/Mes_produits_modification.fxml";
     public static final String XML_FILE_Course= "/sample/view/Liste_course.fxml";
     public static final String XML_FILE_Course_Ajout = "/sample/view/Liste_course_ajout.fxml";
+    public static final String XML_FILE_Course_Modif = "/sample/view/Liste_course_modification.fxml";
+    public static final String XML_FILE_Course_Suppr = "/sample/view/Liste_course_supprimer.fxml";
     public static final String XML_FILE_Historique = "/sample/view/Historique.fxml";
     public static final String XML_FILE_Historique_Ajout = "/sample/view/Liste_course_ajout.fxml";
     public static final String XML_FILE_Annonces = "/sample/view/Annonces.fxml";
@@ -19,8 +21,6 @@ public class View {
     public static final String XML_FILE_Amis_Ajout = "/sample/view/Mes_amis_ajout.fxml";
     public static final String XML_FILE_Compte = "/sample/view/Mon_compte.fxml";
     public static final String XML_FILE_Alerte = "/sample/view/Alerte.fxml";
-    public static final String XML_FILE_Course_Modif = "/sample/view/Liste_course_modification.fxml";
-    public static final String XML_FILE_Historique_AjoutCourse = "/sample/view/Historique_ajout.fxml";
 
 
     public static final String LABEL_Connex = "Connexion";
@@ -31,6 +31,7 @@ public class View {
     public static final String LABEL_Produit_Modif = "Mes Produits - Modification";
     public static final String LABEL_Course = "Liste de Course";
     public static final String LABEL_Course_Ajout = "Mes Courses - Ajout";
+    public static final String LABEL_Course_Suppr = "Mes Courses - Acheter / Supprimer";
     public static final String LABEL_Historique = "Historique";
     public static final String LABEL_Historique_Ajout = "Historique - Ajout";
     public static final String LABEL_Annonces = "Les Annonces";
@@ -41,7 +42,6 @@ public class View {
     public static final String LABEL_Compte = "Mon Compte";
     public static final String LABEL_Alerte = "Alerte !";
     public static final String LABEL_Course_Modif = "Liste de course - Modification";
-    public static final String LABEL_Historique_AjoutCourse = "Historique - Ajout à la liste de course";
 
     public static final String CSS_File = "/sample/CSS/color.css";
 

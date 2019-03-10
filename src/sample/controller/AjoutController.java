@@ -62,9 +62,18 @@ public class AjoutController {
             ErrorChamp.setTextFill(Color.RED);
         } else {
             LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-            produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
+            if (produits.stream().anyMatch(item -> item.getName().equals(produit) && item.getExpiryDate().equals(localDate))) {
+                Item i = produits.stream().filter(item -> item.getName().equals(produit) && item.getExpiryDate().equals(localDate)).findFirst().get();
+                i.setQuantity(i.getQuantity() + Integer.parseInt(nombre));
+
+                int n = produits.stream().filter(item -> item.getName().equals(produit) && item.getExpiryDate().equals(localDate)).findAny().get().getQuantity();
+                if (n >= 5) AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
+            }else {
+                produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
+            }
             cancel(MesProduitAjoutButton);
         }
+
     }
 
     public void cancel(Button BT){
