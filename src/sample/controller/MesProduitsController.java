@@ -181,9 +181,30 @@ public class MesProduitsController {
         }
     }
     public void supprProduit(Item item){
-        HistoriqueController.list.add(item);
+        Gaspillage(item);
         MesProduitsController.produitsList.remove(item);
-        MesProduitsController.tableTableView.refresh();
+    }
+
+    public void Gaspillage(Item item) {
+        //En cas de clic sur le bouton "Modif"
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Gaspillage));
+        ModificationGaspillageController controller_gaspillage = new ModificationGaspillageController();
+        loader.setController(controller_gaspillage);
+        try {
+            Parent page = loader.load(getClass().getResourceAsStream(View.XML_FILE_Gaspillage));
+            controller_gaspillage.initModificationGaspillage(item);
+            Scene scene = new Scene(page);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setWidth(400);
+            stage.setHeight(225);
+            stage.setTitle(View.XML_Label_Gaspillage);
+            scene.getStylesheets().add(View.CSS_File);
+            stage.getIcons().add(new Image("/sample/CSS/logo.png"));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void SearchBar(){

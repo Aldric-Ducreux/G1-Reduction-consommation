@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="179.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="225.0" prefWidth="525.0" VBox.vgrow="ALWAYS">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <children>
+                <Spinner fx:id="GaspillageQuantite" editable="true" layoutX="125.0" layoutY="92.0" prefHeight="31.0" prefWidth="89.0" />
+
+                <Button fx:id="GaspillageButton" layoutX="125.0" layoutY="142.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="120.0" text="Modification" />
+                <Label layoutX="125.0" layoutY="65.0" text="Quantité">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="26.0" layoutY="25.0" prefHeight="18.0" prefWidth="206.0" text="Avez vous gaspillé ?">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Line endX="422.39996337890625" layoutX="100.0" layoutY="183.0" startX="-100.0" />
+
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
