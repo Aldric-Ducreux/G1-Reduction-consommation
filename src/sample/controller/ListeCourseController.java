@@ -40,6 +40,8 @@ public class ListeCourseController {
     @FXML
     private TableColumn<Item, Void> ListeCourseModification;
     @FXML
+    private TableColumn<Item, Void> ListeCourseAchat;
+    @FXML
     private TableColumn<Item, Void> ListeCourseSuppr;
     @FXML
     private Button MesCoursesAjout;
@@ -56,6 +58,7 @@ public class ListeCourseController {
                 e.printStackTrace();
             }
         });
+
         ListeCourseProduits.setCellValueFactory(new PropertyValueFactory<>("name"));
         ListeCourseQuantite.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
@@ -73,6 +76,7 @@ public class ListeCourseController {
         });
         loadData();
         addButtonToTable();
+        addButtonToTableAchat();
         addButtonToTableSuppr();
         SearchBar();
     }
@@ -120,7 +124,7 @@ public class ListeCourseController {
             e.printStackTrace();
         }
     }
-    public void supprimerProduit(Item item) {
+    public void achatProduit(Item item) {
         //En cas de clic sur le bouton "Modif"
         FXMLLoader loader = new FXMLLoader(getClass().getResource(View.XML_FILE_Course_Suppr));
         ListeCourseSupprimerController controller_suppr = new ListeCourseSupprimerController();
@@ -140,6 +144,10 @@ public class ListeCourseController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void supprimerProduit(Item item){
+        list.remove(item);
+        tableTableView.refresh();
     }
 
     private void loadData() {
@@ -206,6 +214,36 @@ public class ListeCourseController {
         };
 
         ListeCourseModification.setCellFactory(cellFactory);
+    }
+    private void addButtonToTableAchat() {
+        Callback<TableColumn<Item, Void>, TableCell<Item, Void>> cellFactory = new Callback<TableColumn<Item, Void>, TableCell<Item, Void>>() {
+            @Override
+            public TableCell<Item, Void> call(final TableColumn<Item, Void> param) {
+                final TableCell<Item, Void> cell = new TableCell<Item, Void>() {
+
+                    private final Button btnAchat = new Button("Acheter");
+
+                    {
+                        btnAchat.setOnAction((ActionEvent event) -> {
+                            achatProduit(getTableView().getItems().get(getIndex()));
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btnAchat);
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+
+        ListeCourseAchat.setCellFactory(cellFactory);
     }
     private void addButtonToTableSuppr() {
         Callback<TableColumn<Item, Void>, TableCell<Item, Void>> cellFactory = new Callback<TableColumn<Item, Void>, TableCell<Item, Void>>() {

@@ -20,8 +20,6 @@ public class ListeCourseSupprimerController {
     @FXML
     private Button SupprimerAchat;
     @FXML
-    private Button SupprimerSuppr;
-    @FXML
     private TextField SupprimerNom;
     @FXML
     private Label ErrorChamp;
@@ -35,14 +33,6 @@ public class ListeCourseSupprimerController {
         SupprimerAchat.setOnMouseClicked(event ->  {
             try{
                 addProduit(MesProduitsController.produitsList, item, SupprimerNom.getText(), SupprimerQuantité.getEditor().textProperty().get(), SupprimerDate.getEditor().getText());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-        SupprimerSuppr.setOnMouseClicked(event ->  {
-            try{
-                ListeCourseController.list.remove(item);
-                cancel(SupprimerSuppr);
             } catch (Exception e) {
                 e.printStackTrace();
             }

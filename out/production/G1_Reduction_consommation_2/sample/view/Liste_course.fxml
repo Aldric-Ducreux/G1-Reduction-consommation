@@ -17,10 +17,11 @@
             <Button fx:id="MesCoursesAjout" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
             <TableView fx:id="mytableTableView" layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
               <columns>
-                <TableColumn fx:id="ListeCourseProduits" prefWidth="292.0" text="Produits" />
-                  <TableColumn fx:id="ListeCourseQuantite" minWidth="0.0" prefWidth="88.79998779296875" text="Quantité" />
+                <TableColumn fx:id="ListeCourseProduits" prefWidth="208.79998779296875" text="Produits" />
+                  <TableColumn fx:id="ListeCourseQuantite" minWidth="0.0" prefWidth="87.20001220703125" text="Quantité" />
                   <TableColumn fx:id="ListeCourseModification" minWidth="0.0" prefWidth="114.4000244140625" text="Modification" />
-                  <TableColumn fx:id="ListeCourseSuppr" minWidth="0.0" prefWidth="120.0" />
+                  <TableColumn fx:id="ListeCourseAchat" minWidth="0.0" prefWidth="100.79998779296875" text="Acheter" />
+                  <TableColumn fx:id="ListeCourseSuppr" minWidth="0.0" prefWidth="108.0" text="Supprimer" />
               </columns>
             </TableView>
          </children>

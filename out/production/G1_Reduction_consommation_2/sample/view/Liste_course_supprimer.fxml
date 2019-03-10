@@ -48,12 +48,6 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="26.0" layoutY="190.0" prefHeight="18.0" prefWidth="206.0" text="Suppression du produit">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Label>
-            <Button fx:id="SupprimerSuppr" layoutX="312.0" layoutY="187.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="120.0" text="Supprimer" />
          </children>
     </AnchorPane>
   </children>
