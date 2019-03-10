@@ -16,7 +16,7 @@ public class AjoutHistoriqueController {
     @FXML
     private TextField AjoutCourseNom;
     @FXML
-    private Spinner AjoutCourseQuantite;
+    private Spinner<Integer> AjoutCourseQuantite;
     @FXML
     private Button AjoutCourseBoutton;
     @FXML
@@ -56,23 +56,21 @@ public class AjoutHistoriqueController {
             ErrorChamp.setVisible(true);
             ErrorChamp.setTextFill(Color.RED);
         } else {
-        LocalDate localDate = LocalDate.now();
-        if (produits.stream().anyMatch(item -> item.getName().equals(produit))) {
-            Item i = produits.stream().filter(item -> item.getName().equals(produit)).findFirst().get();
-            i.setQuantity(i.getQuantity() + Integer.parseInt(nombre));
+            LocalDate localDate = LocalDate.now();
+            if (produits.stream().anyMatch(item -> item.getName().equals(produit))) {
+                Item i = produits.stream().filter(item -> item.getName().equals(produit)).findFirst().get();
+                i.setQuantity(i.getQuantity() + Integer.parseInt(nombre));
 
-            int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
-            if (n >= 5) {
-                AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
-        }
-        else {
-            produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
+                int n = produits.stream().filter(item -> item.getName().equals(produit)).findAny().get().getQuantity();
+                if (n >= 5) AlerteController.alert("Vous avez déjà " + n + " " + produit + ", attention à ne pas gaspiller !");
             }
+            else {
+                produits.add(new Item(produit, produit, Integer.parseInt(nombre), localDate));
+                }
         }
         cancel(AjoutCourseBoutton);
-        }
-
     }
+
 
     public void cancel(Button BT){
         Stage stage = (Stage) BT.getScene().getWindow();

@@ -27,7 +27,9 @@ public class HistoriqueController {
     public static ObservableList<Item> list = FXCollections.observableArrayList(
             new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
             new Item("Chocapic Chocolat","Cereales",2, LocalDate.of(2000, Month.MAY, 20)),
-            new Item("Soya Juice","Lait",21, LocalDate.of(2000, Month.MAY, 20))
+            new Item("Soya Juice","Lait",21, LocalDate.of(2000, Month.MAY, 20)),
+            new Item("Gateau à la pomme","Gateau",6, LocalDate.of(2019, Month.FEBRUARY, 20))
+
     );
     @FXML
     private TableView<Item> mytableTableView;
