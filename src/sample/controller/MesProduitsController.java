@@ -35,9 +35,11 @@ public class MesProduitsController {
 
 
     public static ObservableList<Item> produitsList = FXCollections.observableArrayList(
-            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2019, Month.MARCH, 05)),
+            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2019, Month.MARCH, 29)),
             new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2020, Month.MAY, 20)),
-            new Item("Soya Juice","Lait",10,LocalDate.of(2019, Month.MARCH, 03))
+            new Item("Soya Juice","Lait",10,LocalDate.of(2019, Month.MARCH, 28)),
+            new Item("Cordon Bleu","Viande",2,LocalDate.of(2019, Month.MARCH, 05)),
+            new Item("Cordon Bleu","Viande",1,LocalDate.of(2019, Month.MARCH, 11))
     );
 
     public static TableView<Item> tableTableView;

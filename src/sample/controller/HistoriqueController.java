@@ -25,11 +25,12 @@ public class HistoriqueController {
     PseudoClass tooMany = PseudoClass.getPseudoClass("tooMany");
 
     public static ObservableList<Item> list = FXCollections.observableArrayList(
-            new Item("Jambon Laoste","Jambon",5, LocalDate.of(2000, Month.MAY, 20)),
-            new Item("Chocapic Chocolat","Cereales",2, LocalDate.of(2000, Month.MAY, 20)),
-            new Item("Soya Juice","Lait",21, LocalDate.of(2000, Month.MAY, 20)),
-            new Item("Gateau à la pomme","Gateau",6, LocalDate.of(2019, Month.FEBRUARY, 20))
-
+            new Item("Jambon Laoste","Jambon",3, LocalDate.of(2018, Month.DECEMBER, 6)),
+            new Item("Chocapic Chocolat","Cereales",2, LocalDate.of(2018, Month.DECEMBER, 15)),
+            new Item("Soya Juice","Lait",1, LocalDate.of(2018, Month.DECEMBER, 28)),
+            new Item("Maïs Geant Vert","Légume",1,LocalDate.of(2019, Month.JANUARY, 5)),
+            new Item("Maïs Geant Vert","Légume",2,LocalDate.of(2019, Month.FEBRUARY, 8)),
+            new Item("Maïs Geant Vert","Légume",1,LocalDate.of(2019, Month.FEBRUARY, 22))
     );
     @FXML
     private TableView<Item> mytableTableView;

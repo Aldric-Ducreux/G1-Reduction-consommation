@@ -21,11 +21,11 @@ import java.io.IOException;
 public class MesAmisController {
 
     ObservableList<User> ListUser = FXCollections.observableArrayList(
-            new User("neogeekmo","",""),
-            new User("Kunowa","",""),
-            new User("Niman","","")
+            new User("Bertrand","","")
     );
-    public static ObservableList<String> ListCommentaire = FXCollections.observableArrayList();
+    public static ObservableList<String> ListCommentaire = FXCollections.observableArrayList(
+            new String("Bertrand (Haricot Géant Vert) : Wow, c'est vraiment un bon produit, pas déçu")
+    );
 
     @FXML
     private TableView<User> myTableAmis;

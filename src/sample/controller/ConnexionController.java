@@ -63,7 +63,7 @@ public class ConnexionController {
 
     public void connect(String id, String mdp)  throws Exception {
         //Si clic sur le bouton de connection
-        if (id.equals("admin") && mdp.equals("admin")) {
+        if (id.equals("admin") || id.equals("Corinne") || id.equals("Bertrand") && mdp.equals("admin")) {
             //Si correct, on affiche la page du Menu
             try {
                 user = new User(id,"",mdp);

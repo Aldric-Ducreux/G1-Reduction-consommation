@@ -38,7 +38,9 @@ public class AnnoncesCommentaires {
     @FXML
     private Button CommentButton;
 
-    private static ObservableList<String> ListCommentaire = FXCollections.observableArrayList();
+    private static ObservableList<String> ListCommentaire = FXCollections.observableArrayList(
+            new String("Wow, c'est vraiment un bon produit, pas déçu")
+    );
 
     public void initAnnoncesCommentaires(ObservableList<Item> produits, String produit, String date, String magasin){
         nom_produit_ProduitAnnonces.setText(produit);
@@ -103,7 +105,7 @@ public class AnnoncesCommentaires {
     public void commentaire(String commentaire) {
         ListCommentaire.add(commentaire);
         ListViewCommentaire.refresh();
-        MesAmisController.ListCommentaire.add("Vous avez laisser un commentaire sur " + nom_produit_ProduitAnnonces.getText() + " : " + commentaire);
+        MesAmisController.ListCommentaire.add("Vous (" + nom_produit_ProduitAnnonces.getText() + ") : " + commentaire);
 
     }
 
