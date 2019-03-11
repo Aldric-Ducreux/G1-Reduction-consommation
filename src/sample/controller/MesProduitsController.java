@@ -39,7 +39,7 @@ public class MesProduitsController {
             new Item("Chocapic Chocolat","Cereales",2,LocalDate.of(2020, Month.MAY, 20)),
             new Item("Soya Juice","Lait",10,LocalDate.of(2019, Month.MARCH, 28)),
             new Item("Cordon Bleu","Viande",2,LocalDate.of(2019, Month.MARCH, 05)),
-            new Item("Cordon Bleu","Viande",1,LocalDate.of(2019, Month.MARCH, 11))
+            new Item("Cordon Bleu","Viande",2,LocalDate.of(2019, Month.MARCH, 11))
     );
 
     public static TableView<Item> tableTableView;
