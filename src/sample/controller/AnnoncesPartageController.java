@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class AnnoncesPartageController {
     @FXML
@@ -19,6 +20,8 @@ public class AnnoncesPartageController {
         PartageAnnonceButton.setOnMouseClicked( event -> {
             try{
                 System.out.println("Annonce envoyé à" + PartageAnnonceMail.getText() );
+                Stage stage = (Stage) PartageAnnonceButton.getScene().getWindow();
+                stage.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }

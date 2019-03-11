@@ -58,7 +58,7 @@ public class HistoriqueController {
             TableRow<Item> row = new TableRow<>();
             row.itemProperty().addListener((obs, previousProduit, currentProduit) -> {
                 if (currentProduit != null) {
-                    row.pseudoClassStateChanged(tooMany, currentProduit.getQuantity() > 20);
+                    row.pseudoClassStateChanged(tooMany, currentProduit.getQuantity() > 6);
                 }
             });
             return row;

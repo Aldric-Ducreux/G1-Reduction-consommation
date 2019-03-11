@@ -9,20 +9,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="404.0" prefWidth="640.0">
          <children>
-            <TextField fx:id="filterField" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="495.0" promptText="Rechercher" />
-            <Button fx:id="MesProduitsAjout" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
-            <TableView fx:id="mytableTableView" layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="617.0" style="-fx-background-color: #e6e8ed;">
+            <TextField fx:id="filterField" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="513.0" promptText="Rechercher" />
+            <Button fx:id="MesProduitsAjout" layoutX="547.0" layoutY="11.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Ajouter" />
+            <TableView fx:id="mytableTableView" layoutX="14.0" layoutY="54.0" prefHeight="334.0" prefWidth="659.0" style="-fx-background-color: #e6e8ed;">
               <columns>
                 <TableColumn fx:id="MesProduitsProduit" prefWidth="148.79998779296875" text="Produits" />
                 <TableColumn fx:id="MesProduitsType" prefWidth="92.0" text="Type" />
                   <TableColumn fx:id="MesProduitsQuantite" prefWidth="75.0" text="Quantité" />
                   <TableColumn fx:id="MesProduitsDate" prefWidth="171.20001220703125" text="Date limite de consomation" />
-                  <TableColumn fx:id="MesProduitsModification" prefWidth="68.00006103515625" text="Modification" />
-                  <TableColumn fx:id="MesProduitsSuppression" prefWidth="75.0" />
+                  <TableColumn fx:id="MesProduitsModification" prefWidth="83.20001220703125" text="Modification" />
+                  <TableColumn fx:id="MesProduitsSuppression" prefWidth="87.99993896484375" />
                   <!--<TableColumn fx:id="MesProduitsDelete" prefWidth="45.60000000000002" />-->
               </columns>
             </TableView>

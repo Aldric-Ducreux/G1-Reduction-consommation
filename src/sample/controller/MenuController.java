@@ -40,7 +40,7 @@ public class MenuController {
         //Initialisation du Menu
         this.primaryStage = primaryStage;
         primaryStage.setWidth(Fenetre.getPrefWidth());
-        primaryStage.setHeight(Fenetre.getPrefHeight());
+        primaryStage.setHeight(Fenetre.getPrefHeight()+20);
         //Replace la fenétre au centre de l'écran de l'utilisateur
         javafx.geometry.Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);

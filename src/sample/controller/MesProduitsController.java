@@ -86,7 +86,7 @@ public class MesProduitsController {
 
 
         String expiredProducts = String.join(", ", produitsList.stream().filter(item -> item.getExpiryDate().isBefore(LocalDate.now())).map(Item::getName).collect(Collectors.toList()));
-        String nearExpiredProducts = String.join(", ", produitsList.stream().filter(item -> item.getExpiryDate().isEqual(LocalDate.now().plusDays(1))).map(Item::getName).collect(Collectors.toList()));
+        String nearExpiredProducts = String.join(", ", produitsList.stream().filter(item -> item.getExpiryDate().isEqual(LocalDate.now()) ||item.getExpiryDate().isEqual(LocalDate.now().plusDays(1)) ).map(Item::getName).collect(Collectors.toList()));
 
         String alerte = "";
         if (!expiredProducts.equals(""))

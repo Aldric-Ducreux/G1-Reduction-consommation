@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="Fenetre" prefHeight="440.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="Fenetre" prefHeight="440.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="440.0" prefWidth="900.0">
          <children>
-            <SplitPane dividerPositions="0.23051224944320714" pickOnBounds="false" prefHeight="400.0" prefWidth="900.0">
+            <SplitPane dividerPositions="0.21601016518424396" pickOnBounds="false" prefHeight="440.0" prefWidth="946.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="174.0" style="-fx-background-color: #dbf0fa;">
                      <children>
@@ -64,7 +64,7 @@
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <AnchorPane prefHeight="398.0" prefWidth="30.0" style="-fx-background-color: #ffff;">
+                        <AnchorPane prefHeight="438.0" prefWidth="30.0" style="-fx-background-color: #ffff;">
                            <effect>
                               <DropShadow />
                            </effect>
@@ -74,7 +74,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                <AnchorPane fx:id="Content" minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="678.0" />
+                <AnchorPane fx:id="Content" minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="730.0" />
               </items>
             </SplitPane>
          </children>
