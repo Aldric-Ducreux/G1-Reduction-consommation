@@ -5,12 +5,11 @@ Création d’application réduction du gaspillage
 Application : PolyGaspi
 
 Projet réalisé par :
-
-Aldric Ducreux
-Florent Robert
-Gabriel Revelli
-Jérôme Froment 
-Théo Fafet
+  - Aldric Ducreux
+  - Florent Robert
+  - Gabriel Revelli
+  - Jérôme Froment 
+  - Théo Fafet
 
 # Présentation du contexte
 
