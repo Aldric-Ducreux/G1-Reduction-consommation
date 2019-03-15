@@ -13,8 +13,23 @@ Projet réalisé par :
 
 # Présentation du contexte
 
-Aujourd’hui, un gaspillage alimentaire conséquent est causé par l’achat en trop grand nombre de produit et la péremption de ceux-ci dans les ménages et les magasins. Nous voudrions donc réduire ce gaspillage alimentaire en limitant le nombre de produits périmés avant consommation. Pour cela, nous avons pensé à une application qui a pour but la gestion des produits alimentaires achetés, et à acheter. L’application a donc une utilité à la maison et lors des courses.
+L’écologie est en pleine évolution de nos jours sur tous les sujets, déplacement , politique , et aussi dans la société de consommation. La société prend de plus en conscience de son impact écologique sur l'environnement et veut changer pour le mieux.
+Aujourd’hui, un gaspillage alimentaire conséquent est causé par l’achat en trop grand nombre de produits et la péremption de ceux-ci dans les ménages et les magasins. Nous voudrions donc réduire ce gaspillage alimentaire en limitant le nombre de produits périmés avant consommation et ainsi diminuer l’impact écologique de tous.
 
-Pour cela, un suivi des produits achetés sera possible et permettra à l’utilisateur d’éviter d’atteindre la péremption d’un produit et le sur-achat. Mais aussi avec la gestion d’annonces et d’offres de magasins sur des produits proches de leurs date de péremption, on pourra réduire le gaspillage alimentaire, ainsi que permettre aux clients d’acheter moins cher.
+Cette approche sera bénéfique pour les utilisateurs mais aussi pour la planète. En effet, une baisse de la consommation permet de rendre la société de consommation plus écologique, c’est à dire, si on ne surconsomme plus et ne gaspille plus les produits non consommés, comme avant, il y aura une baisse de la quantité de déchets et d'emballage. De plus, une baisse de la consommation entraînera une baisse de la quantité de gaz à effet de serre, moins de déchets et de produits, donc moins de transport et de fabrication d’emballages.
 
+# Utilisation de PolyGaspi
 
+Télécharger le fichier .Zip, décompresser l'archive.
+Pour lancer l'application, il vous faut utiliser IntelliJ ( ou autres logiciels )
+
+Identifiant de connexion :
+
+  ID  : Corinne
+  MDP : admin
+  
+  ID  : Bertrand
+  MDP : admin
+  
+  ID  : admin
+  MDP : admin
