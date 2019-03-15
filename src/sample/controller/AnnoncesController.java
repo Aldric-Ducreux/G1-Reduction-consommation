@@ -105,7 +105,7 @@ public class AnnoncesController {
         });
         bouton_commenter_ProduitAnnonces1.setOnMouseClicked (event -> {
             try{
-                commentaire(produits, primaryStage, Content,  nom_produit_ProduitAnnonces.getText(), date_limite_ProduitAnnonces.getText(), nom_magasin_ProduitAnnonces.getText());
+                commentaire(produits, primaryStage, Content,  nom_produit_ProduitAnnonces1.getText(), date_limite_ProduitAnnonces1.getText(), nom_magasin_ProduitAnnonces1.getText());
             } catch (Exception e){
                 e.printStackTrace();
             }
