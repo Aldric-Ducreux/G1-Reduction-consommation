@@ -30,7 +30,7 @@ public class View {
     public static final String LABEL_Produits = "Mes Produits";
     public static final String LABEL_Produit_Ajout = "Mes Produits - Ajout";
     public static final String LABEL_Produit_Modif = "Mes Produits - Modification";
-    public static final String LABEL_Course = "Liste de Course";
+    public static final String LABEL_Course = "Liste de Courses";
     public static final String LABEL_Course_Ajout = "Mes Courses - Ajout";
     public static final String LABEL_Course_Suppr = "Mes Courses - Acheter / Supprimer";
     public static final String LABEL_Historique = "Historique";
